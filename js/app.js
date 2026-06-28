@@ -3,15 +3,15 @@ import { APP_CONFIG } from './data.js';
 const translations = {
     en: {
         home: 'Home', invite: 'Invite', my: 'My',
-        spin_win: 'SPIN & WIN', lucky_box: 'LUCKY BOX',
-        get_more_spins: 'Get More Spins', get_more_boxes: 'Get More Boxes',
+        spin_win: 'SPIN & WIN',
+        get_more_spins: 'Get More Spins',
         watch_ad: 'Watch Reward AD', complete_tasks: 'Complete Tasks',
         watch: 'Watch', go: 'GO ➜',
         daily_tasks: 'Daily Tasks', daily_checkin: 'Daily Check-in',
         invite_3_friends: 'Invite 3 Friends', complete_10_tasks: 'Complete 10 Tasks',
         claim: 'Claim', progress: '{current}/{total}',
         gram_snake_tasks: 'GRAM SNAKE Tasks',
-        add_task: 'Add Task', back: '← Back',
+        add_task: 'Add Task', back: 'Back',
         task_name: 'Task Name', task_url: 'Task URL',
         verification: 'Verification', max_completions: 'Max Completions',
         yes: 'YES', no: 'NO',
@@ -22,7 +22,7 @@ const translations = {
         task_added: 'Task Added!',
         copy_success: 'Copied!',
         link_copied: 'Link copied to clipboard',
-        invite_earn: 'Invite & Earn',
+        invite_earn: 'Invite & Earn Money',
         total_earnings: 'Total Earnings',
         claim_rewards: 'Claim Rewards',
         withdraw_funds: 'Withdraw Funds',
@@ -64,19 +64,26 @@ const translations = {
         no_ads: 'No ads available',
         vip: 'VIP',
         free: 'FREE',
-        level: 'Level'
+        level: 'Level',
+        earn_30_ads: 'Earn 30% from ads earnings',
+        earn_10_tasks: 'Earn 10% from tasks earnings',
+        earn_1_spin: 'Earn 1 SPIN per valid referral',
+        total_referrals: 'Total Referrals',
+        active_referrals: 'Active Referrals',
+        invite_link: 'Invite Link',
+        task_reward: 'Task Reward'
     },
     ru: {
         home: 'Главная', invite: 'Пригласить', my: 'Мой',
-        spin_win: 'SPIN & WIN', lucky_box: 'LUCKY BOX',
-        get_more_spins: 'Получить больше спинов', get_more_boxes: 'Получить больше боксов',
+        spin_win: 'SPIN & WIN',
+        get_more_spins: 'Получить больше спинов',
         watch_ad: 'Смотреть рекламу', complete_tasks: 'Выполнить задания',
         watch: 'Смотреть', go: 'ПЕРЕЙТИ ➜',
         daily_tasks: 'Ежедневные задания', daily_checkin: 'Ежедневная проверка',
         invite_3_friends: 'Пригласить 3 друзей', complete_10_tasks: 'Выполнить 10 заданий',
         claim: 'Получить', progress: '{current}/{total}',
         gram_snake_tasks: 'GRAM SNAKE Задания',
-        add_task: 'Добавить задание', back: '← Назад',
+        add_task: 'Добавить задание', back: 'Назад',
         task_name: 'Название задания', task_url: 'Ссылка',
         verification: 'Проверка', max_completions: 'Макс. выполнений',
         yes: 'ДА', no: 'НЕТ',
@@ -87,7 +94,7 @@ const translations = {
         task_added: 'Задание добавлено!',
         copy_success: 'Скопировано!',
         link_copied: 'Ссылка скопирована',
-        invite_earn: 'Приглашай и зарабатывай',
+        invite_earn: 'Приглашай и зарабатывай деньги',
         total_earnings: 'Общий заработок',
         claim_rewards: 'Получить награды',
         withdraw_funds: 'Вывод средств',
@@ -129,19 +136,26 @@ const translations = {
         no_ads: 'Нет доступной рекламы',
         vip: 'VIP',
         free: 'БЕСПЛАТНО',
-        level: 'Уровень'
+        level: 'Уровень',
+        earn_30_ads: 'Зарабатывайте 30% от доходов с рекламы',
+        earn_10_tasks: 'Зарабатывайте 10% от доходов с заданий',
+        earn_1_spin: 'Зарабатывайте 1 СПИН за каждого подтвержденного реферала',
+        total_referrals: 'Всего рефералов',
+        active_referrals: 'Активных рефералов',
+        invite_link: 'Ссылка для приглашения',
+        task_reward: 'Награда за задание'
     },
     tr: {
         home: 'Ana Sayfa', invite: 'Davet', my: 'Benim',
-        spin_win: 'SPIN & KAZAN', lucky_box: 'LUCKY KUTU',
-        get_more_spins: 'Daha Fazla Spin Al', get_more_boxes: 'Daha Fazla Kutu Al',
+        spin_win: 'SPIN & KAZAN',
+        get_more_spins: 'Daha Fazla Spin Al',
         watch_ad: 'Ödüllü Reklam İzle', complete_tasks: 'Görevleri Tamamla',
         watch: 'İzle', go: 'GİT ➜',
         daily_tasks: 'Günlük Görevler', daily_checkin: 'Günlük Kontrol',
         invite_3_friends: '3 Arkadaş Davet Et', complete_10_tasks: '10 Görevi Tamamla',
         claim: 'Al', progress: '{current}/{total}',
         gram_snake_tasks: 'GRAM SNAKE Görevler',
-        add_task: 'Görev Ekle', back: '← Geri',
+        add_task: 'Görev Ekle', back: 'Geri',
         task_name: 'Görev Adı', task_url: 'Bağlantı',
         verification: 'Doğrulama', max_completions: 'Maks. Tamamlama',
         yes: 'EVET', no: 'HAYIR',
@@ -152,7 +166,7 @@ const translations = {
         task_added: 'Görev Eklendi!',
         copy_success: 'Kopyalandı!',
         link_copied: 'Bağlantı kopyalandı',
-        invite_earn: 'Davet Et ve Kazan',
+        invite_earn: 'Davet Et ve Para Kazan',
         total_earnings: 'Toplam Kazanç',
         claim_rewards: 'Ödülleri Al',
         withdraw_funds: 'Para Çek',
@@ -194,19 +208,26 @@ const translations = {
         no_ads: 'Reklam yok',
         vip: 'VIP',
         free: 'ÜCRETSİZ',
-        level: 'Seviye'
+        level: 'Seviye',
+        earn_30_ads: 'Reklam gelirlerinden %30 kazanın',
+        earn_10_tasks: 'Görev gelirlerinden %10 kazanın',
+        earn_1_spin: 'Her geçerli referans için 1 SPIN kazanın',
+        total_referrals: 'Toplam Referans',
+        active_referrals: 'Aktif Referanslar',
+        invite_link: 'Davet Bağlantısı',
+        task_reward: 'Görev Ödülü'
     },
     ar: {
         home: 'الرئيسية', invite: 'دعوة', my: 'حسابي',
-        spin_win: 'SPIN & WIN', lucky_box: 'LUCKY BOX',
-        get_more_spins: 'احصل على المزيد من الدورات', get_more_boxes: 'احصل على المزيد من الصناديق',
+        spin_win: 'SPIN & WIN',
+        get_more_spins: 'احصل على المزيد من الدورات',
         watch_ad: 'مشاهدة إعلان', complete_tasks: 'إكمال المهام',
         watch: 'مشاهدة', go: 'اذهب ➜',
         daily_tasks: 'المهام اليومية', daily_checkin: 'تسجيل الدخول اليومي',
         invite_3_friends: 'دعوة 3 أصدقاء', complete_10_tasks: 'إكمال 10 مهام',
         claim: 'استلام', progress: '{current}/{total}',
         gram_snake_tasks: 'مهام GRAM SNAKE',
-        add_task: 'إضافة مهمة', back: '← رجوع',
+        add_task: 'إضافة مهمة', back: 'رجوع',
         task_name: 'اسم المهمة', task_url: 'الرابط',
         verification: 'التحقق', max_completions: 'الحد الأقصى للإكمال',
         yes: 'نعم', no: 'لا',
@@ -217,7 +238,7 @@ const translations = {
         task_added: 'تمت إضافة المهمة!',
         copy_success: 'تم النسخ!',
         link_copied: 'تم نسخ الرابط',
-        invite_earn: 'دعوة واربح',
+        invite_earn: 'دعوة واربح المال',
         total_earnings: 'إجمالي الأرباح',
         claim_rewards: 'استلام المكافآت',
         withdraw_funds: 'سحب الأموال',
@@ -259,7 +280,14 @@ const translations = {
         no_ads: 'لا توجد إعلانات',
         vip: 'VIP',
         free: 'مجاني',
-        level: 'مستوى'
+        level: 'مستوى',
+        earn_30_ads: 'اربح 30% من أرباح الإعلانات',
+        earn_10_tasks: 'اربح 10% من أرباح المهام',
+        earn_1_spin: 'اربح 1 SPIN لكل إحالة صالحة',
+        total_referrals: 'إجمالي الإحالات',
+        active_referrals: 'الإحالات النشطة',
+        invite_link: 'رابط الدعوة',
+        task_reward: 'مكافأة المهمة'
     }
 };
 
@@ -275,9 +303,7 @@ class App {
         this.usdtBalance = 0;
         this.gramBalance = 0;
         this.starsBalance = 0;
-
         this.spins = 0;
-        this.boxes = 0;
 
         this.dailyCheckinClaimed = false;
         this.dailyCheckinDate = null;
@@ -286,13 +312,12 @@ class App {
         this.complete10Claimed = false;
         this.complete10Date = null;
         this.dailyTasksCompleted = 0;
-        this.dailyTasksTotal = 0;
 
         this.totalReferrals = 0;
         this.activeReferrals = 0;
-        this.referralEarnings = { usdt: 0, gram: 0, stars: 0 };
-        this.claimableEarnings = { usdt: 0, gram: 0, stars: 0 };
-        this.totalEarnings = { usdt: 0, gram: 0, stars: 0 };
+        this.referralEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
+        this.claimableEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
+        this.totalEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
 
         this.transactions = [];
         this.userTasks = [];
@@ -304,11 +329,7 @@ class App {
         this.vibrationEnabled = true;
         this.darkMode = true;
 
-        this.pendingTask = null;
-        this.pendingPaymentInterval = null;
         this.isTaskRunning = false;
-        this.taskCompletionTimers = new Map();
-
         this.membershipCache = new Map();
 
         this.loadSettings();
@@ -316,6 +337,8 @@ class App {
         this._dirty = false;
         this._saveTimeout = null;
         this._isSaving = false;
+        this._selectedCurrency = 'gram';
+        this._selectedStarsAmount = null;
     }
 
     t(key, params = {}) {
@@ -390,10 +413,26 @@ class App {
         this.vibrate(type);
         const el = document.createElement('div');
         el.className = `notif ${type}`;
-        const icon = type === 'success' ? 'fa-check-circle' : (type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle');
-        el.innerHTML = `<i class="fas ${icon}"></i><div><strong>${title}</strong><br><small>${message}</small></div>`;
+        const iconMap = {
+            success: 'fa-check-circle',
+            error: 'fa-exclamation-circle',
+            warning: 'fa-triangle-exclamation',
+            info: 'fa-circle-info'
+        };
+        const icon = iconMap[type] || iconMap.info;
+        el.innerHTML = `
+            <div class="notif-icon"><i class="fas ${icon}"></i></div>
+            <div class="notif-content">
+                <div class="notif-title">${title}</div>
+                <div class="notif-message">${message}</div>
+            </div>
+        `;
         document.body.appendChild(el);
-        setTimeout(() => el.remove(), 3000);
+        setTimeout(() => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateX(-50%) translateY(-20px)';
+            setTimeout(() => el.remove(), 300);
+        }, 3000);
     }
 
     async showAd() {
@@ -444,7 +483,6 @@ class App {
                 gramBalance: this.gramBalance,
                 starsBalance: this.starsBalance,
                 spins: this.spins,
-                boxes: this.boxes,
                 dailyCheckinClaimed: this.dailyCheckinClaimed,
                 dailyCheckinDate: this.dailyCheckinDate,
                 invite3Claimed: this.invite3Claimed,
@@ -563,7 +601,6 @@ class App {
             gramBalance: 0,
             starsBalance: 0,
             spins: 0,
-            boxes: 0,
             dailyCheckinClaimed: false,
             dailyCheckinDate: null,
             invite3Claimed: false,
@@ -573,9 +610,9 @@ class App {
             dailyTasksCompleted: 0,
             totalReferrals: 0,
             activeReferrals: 0,
-            referralEarnings: { usdt: 0, gram: 0, stars: 0 },
-            claimableEarnings: { usdt: 0, gram: 0, stars: 0 },
-            totalEarnings: { usdt: 0, gram: 0, stars: 0 },
+            referralEarnings: { usdt: 0, gram: 0, stars: 0, spins: 0 },
+            claimableEarnings: { usdt: 0, gram: 0, stars: 0, spins: 0 },
+            totalEarnings: { usdt: 0, gram: 0, stars: 0, spins: 0 },
             state: 'active'
         };
 
@@ -599,7 +636,6 @@ class App {
         this.gramBalance = 0;
         this.starsBalance = 0;
         this.spins = 0;
-        this.boxes = 0;
         this.dailyCheckinClaimed = false;
         this.dailyCheckinDate = null;
         this.invite3Claimed = false;
@@ -609,9 +645,9 @@ class App {
         this.dailyTasksCompleted = 0;
         this.totalReferrals = 0;
         this.activeReferrals = 0;
-        this.referralEarnings = { usdt: 0, gram: 0, stars: 0 };
-        this.claimableEarnings = { usdt: 0, gram: 0, stars: 0 };
-        this.totalEarnings = { usdt: 0, gram: 0, stars: 0 };
+        this.referralEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
+        this.claimableEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
+        this.totalEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
         this.transactions = [];
 
         const nameSpan = document.getElementById('user-name');
@@ -631,7 +667,6 @@ class App {
             this.gramBalance = data.gramBalance ?? 0;
             this.starsBalance = data.starsBalance ?? 0;
             this.spins = data.spins ?? 0;
-            this.boxes = data.boxes ?? 0;
             this.dailyCheckinClaimed = data.dailyCheckinClaimed ?? false;
             this.dailyCheckinDate = data.dailyCheckinDate ?? null;
             this.invite3Claimed = data.invite3Claimed ?? false;
@@ -641,9 +676,9 @@ class App {
             this.dailyTasksCompleted = data.dailyTasksCompleted ?? 0;
             this.totalReferrals = data.totalReferrals ?? 0;
             this.activeReferrals = data.activeReferrals ?? 0;
-            this.referralEarnings = data.referralEarnings ?? { usdt: 0, gram: 0, stars: 0 };
-            this.claimableEarnings = data.claimableEarnings ?? { usdt: 0, gram: 0, stars: 0 };
-            this.totalEarnings = data.totalEarnings ?? { usdt: 0, gram: 0, stars: 0 };
+            this.referralEarnings = data.referralEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
+            this.claimableEarnings = data.claimableEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
+            this.totalEarnings = data.totalEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
         }
 
         try {
@@ -655,7 +690,6 @@ class App {
                 this.gramBalance = d.gramBalance ?? this.gramBalance;
                 this.starsBalance = d.starsBalance ?? this.starsBalance;
                 this.spins = d.spins ?? this.spins;
-                this.boxes = d.boxes ?? this.boxes;
                 this.dailyCheckinClaimed = d.dailyCheckinClaimed ?? false;
                 this.dailyCheckinDate = d.dailyCheckinDate ?? null;
                 this.invite3Claimed = d.invite3Claimed ?? false;
@@ -665,16 +699,15 @@ class App {
                 this.dailyTasksCompleted = d.dailyTasksCompleted ?? 0;
                 this.totalReferrals = d.totalReferrals ?? 0;
                 this.activeReferrals = d.activeReferrals ?? 0;
-                this.referralEarnings = d.referralEarnings ?? { usdt: 0, gram: 0, stars: 0 };
-                this.claimableEarnings = d.claimableEarnings ?? { usdt: 0, gram: 0, stars: 0 };
-                this.totalEarnings = d.totalEarnings ?? { usdt: 0, gram: 0, stars: 0 };
+                this.referralEarnings = d.referralEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
+                this.claimableEarnings = d.claimableEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
+                this.totalEarnings = d.totalEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
 
                 const userDataForCache = {
                     usdtBalance: this.usdtBalance,
                     gramBalance: this.gramBalance,
                     starsBalance: this.starsBalance,
                     spins: this.spins,
-                    boxes: this.boxes,
                     dailyCheckinClaimed: this.dailyCheckinClaimed,
                     dailyCheckinDate: this.dailyCheckinDate,
                     invite3Claimed: this.invite3Claimed,
@@ -725,12 +758,18 @@ class App {
 
     addTransaction(type, amount, currency, isPositive = true) {
         const symbol = isPositive ? '+' : '-';
+        const iconMap = {
+            'USDT': 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png',
+            'GRAM': 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png',
+            'STARS': 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png'
+        };
         this.transactions.unshift({
             id: Date.now(),
             type: type,
             amount: amount,
             currency: currency,
             symbol: symbol,
+            icon: iconMap[currency] || '',
             timestamp: Date.now()
         });
         if (this.transactions.length > 10) this.transactions = this.transactions.slice(0, 10);
@@ -875,7 +914,6 @@ class App {
         }
     }
 
-    // ============ HOME PAGE ============
     renderHome() {
         const el = document.getElementById('home-page');
         if (!el) return;
@@ -889,61 +927,43 @@ class App {
         const complete10Progress = Math.min(this.dailyTasksCompleted, 10);
 
         el.innerHTML = `
-            <!-- SPIN & WIN -->
             <div class="game-card glass-card" id="spin-game-card">
                 <div class="game-card-left">
                     <div class="game-icon spin"><img src="https://cdn-icons-png.flaticon.com/512/8378/8378227.png" style="width:36px;height:36px;object-fit:contain;"></div>
                     <div class="game-info">
                         <h4>${this.t('spin_win')}</h4>
-                        <p>${this.t('vip')}</p>
                     </div>
                 </div>
                 <button class="game-go-btn" data-game="spin">${this.t('go')}</button>
             </div>
 
-            <div class="section-title"><i class="fas fa-plus-circle"></i> ${this.t('get_more_spins')}</div>
+            <div class="section-title">
+                <span class="icon-circle"><i class="fas fa-plus"></i></span>
+                ${this.t('get_more_spins')}
+            </div>
             <div class="earn-option glass-card">
                 <div class="earn-option-left">
-                    <i class="fas fa-play-circle"></i>
+                    <span class="icon-circle-small"><i class="fas fa-play"></i></span>
                     <span>${this.t('watch_ad')}</span>
                 </div>
                 <button class="earn-btn" id="watch-spin-ad">${this.t('watch')}</button>
             </div>
             <div class="earn-option glass-card">
                 <div class="earn-option-left">
-                    <i class="fas fa-tasks"></i>
+                    <span class="icon-circle-small"><i class="fas fa-tasks"></i></span>
                     <span>${this.t('complete_tasks')}</span>
                 </div>
                 <button class="earn-btn secondary" id="go-to-tasks">${this.t('go')}</button>
             </div>
 
-            <!-- LUCKY BOX -->
-            <div class="game-card glass-card" id="box-game-card">
-                <div class="game-card-left">
-                    <div class="game-icon box"><img src="https://cdn-icons-png.flaticon.com/512/18245/18245775.png" style="width:36px;height:36px;object-fit:contain;"></div>
-                    <div class="game-info">
-                        <h4>${this.t('lucky_box')}</h4>
-                        <p>${this.t('free')}</p>
-                    </div>
-                </div>
-                <button class="game-go-btn" data-game="box">${this.t('go')}</button>
+            <div class="section-title">
+                <span class="icon-circle"><i class="fas fa-calendar-day"></i></span>
+                ${this.t('daily_tasks')}
             </div>
-
-            <div class="section-title"><i class="fas fa-plus-circle"></i> ${this.t('get_more_boxes')}</div>
-            <div class="earn-option glass-card">
-                <div class="earn-option-left">
-                    <i class="fas fa-play-circle"></i>
-                    <span>${this.t('watch_ad')}</span>
-                </div>
-                <button class="earn-btn" id="watch-box-ad">${this.t('watch')}</button>
-            </div>
-
-            <!-- Daily Tasks -->
-            <div class="section-title"><i class="fas fa-calendar-day"></i> ${this.t('daily_tasks')}</div>
 
             <div class="daily-task-card glass-card">
                 <div class="daily-task-left">
-                    <i class="fas fa-calendar-check"></i>
+                    <span class="icon-circle-small"><i class="fas fa-calendar-check"></i></span>
                     <div class="daily-task-info">
                         <h4>${this.t('daily_checkin')}</h4>
                         <div class="task-reward"><img src="https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png"> 0.001 GRAM</div>
@@ -954,7 +974,7 @@ class App {
 
             <div class="daily-task-card glass-card">
                 <div class="daily-task-left">
-                    <i class="fas fa-user-plus"></i>
+                    <span class="icon-circle-small"><i class="fas fa-user-plus"></i></span>
                     <div class="daily-task-info">
                         <h4>${this.t('invite_3_friends')}</h4>
                         <div class="task-reward"><img src="https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png"> 0.003 GRAM</div>
@@ -966,7 +986,7 @@ class App {
 
             <div class="daily-task-card glass-card">
                 <div class="daily-task-left">
-                    <i class="fas fa-check-double"></i>
+                    <span class="icon-circle-small"><i class="fas fa-check-double"></i></span>
                     <div class="daily-task-info">
                         <h4>${this.t('complete_10_tasks')}</h4>
                         <div class="task-reward"><img src="https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png"> 0.002 GRAM</div>
@@ -976,15 +996,17 @@ class App {
                 <button class="daily-task-btn ${complete10Done ? 'done' : (this.dailyTasksCompleted >= 10 ? 'progress' : '')}" id="complete10-btn">${complete10Done ? this.t('claim') : (this.dailyTasksCompleted >= 10 ? this.t('claim') : `${this.dailyTasksCompleted}/10`)}</button>
             </div>
 
-            <!-- GRAM SNAKE Tasks -->
-            <div class="section-title"><i class="fas fa-list-check"></i> ${this.t('gram_snake_tasks')}</div>
+            <div class="section-title-with-btn">
+                <span class="section-title">
+                    <span class="icon-circle"><i class="fas fa-list-check"></i></span>
+                    ${this.t('gram_snake_tasks')}
+                </span>
+                <button class="add-task-icon-btn" id="add-task-home-btn"><i class="fas fa-plus"></i></button>
+            </div>
             <div id="social-tasks-container"></div>
-            <button class="add-task-btn" id="add-task-home-btn" style="margin-top:12px;"><i class="fas fa-plus"></i> ${this.t('add_task')}</button>
         `;
 
-        // Event listeners
         document.querySelector('[data-game="spin"]')?.addEventListener('click', () => this.navigateTo('spin-page'));
-        document.querySelector('[data-game="box"]')?.addEventListener('click', () => this.navigateTo('box-page'));
         document.getElementById('go-to-tasks')?.addEventListener('click', () => this.navigateTo('tasks-page'));
         document.getElementById('add-task-home-btn')?.addEventListener('click', () => this.navigateTo('add-task-page'));
 
@@ -994,16 +1016,6 @@ class App {
                 this._dirty = true;
                 this.saveUserData(false);
                 this.showNotification('+1 Spin', 'You earned 1 free spin!', 'success');
-                this.renderHome();
-            }
-        });
-
-        document.getElementById('watch-box-ad')?.addEventListener('click', async () => {
-            if (await this.showAd()) {
-                this.boxes++;
-                this._dirty = true;
-                this.saveUserData(false);
-                this.showNotification('+1 Box', 'You earned 1 lucky box!', 'success');
                 this.renderHome();
             }
         });
@@ -1080,10 +1092,10 @@ class App {
                                 <img src="${APP_CONFIG.TASK_IMAGE}" class="task-img">
                                 <div class="task-item-info">
                                     <h4>${t.name}</h4>
-                                    <div class="task-reward"><i class="fas fa-bolt"></i> ${APP_CONFIG.TASK_REWARD} Power</div>
+                                    <div class="task-reward"><img src="https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png"> ${APP_CONFIG.TASK_REWARD / 1000} GRAM</div>
                                 </div>
                             </div>
-                            <button class="task-btn start" data-id="${t.id}" data-reward="${APP_CONFIG.TASK_REWARD}" data-url="${t.url}" data-verify="${t.verification}">Start</button>
+                            <button class="task-btn start" data-id="${t.id}" data-reward="${APP_CONFIG.TASK_REWARD / 1000}" data-url="${t.url}" data-verify="${t.verification}" data-currency="GRAM">Start</button>
                         </div>
                     `).join('');
 
@@ -1094,14 +1106,15 @@ class App {
                                 return;
                             }
                             const id = btn.dataset.id;
-                            const reward = parseInt(btn.dataset.reward);
+                            const reward = parseFloat(btn.dataset.reward);
                             const url = btn.dataset.url;
                             const verify = btn.dataset.verify === 'true';
+                            const currency = btn.dataset.currency || 'GRAM';
                             const taskData = tasks.find(t => t.id === id);
 
                             window.open(url, '_blank');
                             this.isTaskRunning = true;
-                            btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i>';
+                            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                             btn.disabled = true;
 
                             let seconds = APP_CONFIG.TASK_VERIFICATION_DELAY || 10;
@@ -1119,7 +1132,7 @@ class App {
 
                                     newBtn.addEventListener('click', async (e) => {
                                         e.stopPropagation();
-                                        newBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i>';
+                                        newBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                                         newBtn.disabled = true;
 
                                         let isMember = false;
@@ -1140,8 +1153,17 @@ class App {
                                             this.dailyTasksCompleted++;
                                             this._dirty = true;
 
-                                            this.gramBalance += reward / 1000;
-                                            this.addTransaction(this.t('task_complete'), reward / 1000, 'GRAM', true);
+                                            if (currency === 'USDT') {
+                                                this.usdtBalance += reward;
+                                                this.addTransaction(this.t('task_complete'), reward, 'USDT', true);
+                                            } else if (currency === 'STARS') {
+                                                this.starsBalance += reward;
+                                                this.addTransaction(this.t('task_complete'), reward, 'STARS', true);
+                                            } else {
+                                                this.gramBalance += reward;
+                                                this.addTransaction(this.t('task_complete'), reward, 'GRAM', true);
+                                            }
+
                                             await this.saveUserData(false);
                                             this.updateHeaderBalances();
 
@@ -1150,8 +1172,9 @@ class App {
                                             newBtn.classList.add('done');
                                             newBtn.classList.remove('check');
 
-                                            this.showNotification('Task Completed!', `${reward / 1000} GRAM added`, 'success');
+                                            this.showNotification('Task Completed!', `+${reward} ${currency}`, 'success');
                                             this.renderHome();
+                                            this.renderTasksPage();
                                         } else {
                                             this.showNotification('Join Required', 'Please join the channel first', 'warning');
                                             newBtn.innerHTML = 'Start';
@@ -1172,27 +1195,27 @@ class App {
         });
     }
 
-    // ============ SPIN PAGE ============
     renderSpinPage() {
         const el = document.getElementById('spin-page');
         if (!el) return;
 
-        const segments = [
-            { label: '0.0001', currency: 'usdt', value: 0.0001, icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png', weight: 90 },
-            { label: '0.001', currency: 'usdt', value: 0.001, icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png', weight: 8 },
-            { label: '0.01', currency: 'usdt', value: 0.01, icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png', weight: 2 },
-            { label: '0.10', currency: 'usdt', value: 0.10, icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png', weight: 0 },
-            { label: '0.0001', currency: 'gram', value: 0.0001, icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png', weight: 90 },
-            { label: '0.001', currency: 'gram', value: 0.001, icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png', weight: 8 },
-            { label: '0.01', currency: 'gram', value: 0.01, icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png', weight: 2 },
-            { label: '0.10', currency: 'gram', value: 0.10, icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png', weight: 0 },
-            { label: '0.0001', currency: 'stars', value: 0.0001, icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png', weight: 90 },
-            { label: '0.001', currency: 'stars', value: 0.001, icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png', weight: 8 },
-            { label: '0.01', currency: 'stars', value: 0.01, icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png', weight: 2 },
-            { label: '0.10', currency: 'stars', value: 0.10, icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png', weight: 0 }
+        const prizes = [
+            { value: 0.0001, currency: 'USDT', icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png' },
+            { value: 0.001, currency: 'USDT', icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png' },
+            { value: 0.01, currency: 'USDT', icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png' },
+            { value: 0.10, currency: 'USDT', icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png' },
+            { value: 1.00, currency: 'USDT', icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png' },
+            { value: 0.0001, currency: 'GRAM', icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png' },
+            { value: 0.001, currency: 'GRAM', icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png' },
+            { value: 0.01, currency: 'GRAM', icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png' },
+            { value: 0.10, currency: 'GRAM', icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png' },
+            { value: 1.00, currency: 'GRAM', icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png' },
+            { value: 0.0001, currency: 'STARS', icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png' },
+            { value: 0.001, currency: 'STARS', icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png' },
+            { value: 0.01, currency: 'STARS', icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png' },
+            { value: 0.10, currency: 'STARS', icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png' },
+            { value: 1.00, currency: 'STARS', icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png' }
         ];
-
-        const totalWeight = segments.reduce((sum, s) => sum + s.weight, 0);
 
         el.innerHTML = `
             <div class="page-header">
@@ -1203,59 +1226,66 @@ class App {
             <div class="glass-card" style="padding:20px;text-align:center;">
                 <div class="spin-counter">Spins: <span id="spin-count">${this.spins}</span></div>
                 <div class="spin-wheel-container">
-                    <div class="spin-wheel" id="spin-wheel"></div>
                     <div class="spin-pointer">▼</div>
+                    <div class="spin-wheel-track">
+                        <div class="spin-wheel-track-inner" id="spin-track">
+                            ${prizes.map(p => `
+                                <div class="spin-prize-item">
+                                    <img src="${p.icon}">
+                                    <div class="prize-value">${p.value}</div>
+                                    <div class="prize-currency">${p.currency}</div>
+                                </div>
+                            `).join('')}
+                            ${prizes.map(p => `
+                                <div class="spin-prize-item">
+                                    <img src="${p.icon}">
+                                    <div class="prize-value">${p.value}</div>
+                                    <div class="prize-currency">${p.currency}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
                 </div>
                 <button class="spin-btn" id="spin-btn">SPIN</button>
             </div>
+
+            <div class="section-title">
+                <span class="icon-circle"><i class="fas fa-plus"></i></span>
+                ${this.t('get_more_spins')}
+            </div>
+            <div class="earn-option glass-card">
+                <div class="earn-option-left">
+                    <span class="icon-circle-small"><i class="fas fa-play"></i></span>
+                    <span>${this.t('watch_ad')}</span>
+                </div>
+                <button class="earn-btn" id="spin-watch-ad">${this.t('watch')}</button>
+            </div>
+            <div class="earn-option glass-card">
+                <div class="earn-option-left">
+                    <span class="icon-circle-small"><i class="fas fa-tasks"></i></span>
+                    <span>${this.t('complete_tasks')}</span>
+                </div>
+                <button class="earn-btn secondary" id="spin-go-tasks">${this.t('go')}</button>
+            </div>
         `;
 
-        // Build wheel
-        const wheel = document.getElementById('spin-wheel');
-        const segmentAngle = 360 / segments.length;
-        const colors = ['#4A7CF7', '#5A8CF7', '#6A9CF7', '#7AACF7', '#4A7CF7', '#5A8CF7', '#6A9CF7', '#7AACF7', '#4A7CF7', '#5A8CF7', '#6A9CF7', '#7AACF7'];
+        document.getElementById('spin-watch-ad')?.addEventListener('click', async () => {
+            if (await this.showAd()) {
+                this.spins++;
+                this._dirty = true;
+                this.saveUserData(false);
+                document.getElementById('spin-count').textContent = this.spins;
+                this.showNotification('+1 Spin', 'You earned 1 free spin!', 'success');
+            }
+        });
 
-        segments.forEach((seg, i) => {
-            const deg = i * segmentAngle;
-            const slice = document.createElement('div');
-            slice.className = 'segment';
-            slice.style.transform = `rotate(${deg}deg)`;
-            slice.style.background = colors[i % colors.length];
-            slice.style.clipPath = `polygon(0 0, 100% 0, 50% 100%)`;
-            slice.style.width = '50%';
-            slice.style.height = '50%';
-            slice.style.position = 'absolute';
-            slice.style.transformOrigin = '100% 100%';
-            slice.style.display = 'flex';
-            slice.style.alignItems = 'center';
-            slice.style.justifyContent = 'center';
-            slice.style.flexDirection = 'column';
-            slice.style.fontSize = '0.5rem';
-            slice.style.fontWeight = '600';
-            slice.style.color = 'white';
-            slice.style.padding = '4px';
-            slice.style.textAlign = 'center';
-            slice.style.border = '1px solid rgba(255,255,255,0.1)';
-
-            const img = document.createElement('img');
-            img.src = seg.icon;
-            img.style.width = '16px';
-            img.style.height = '16px';
-            img.style.borderRadius = '50%';
-            img.style.objectFit = 'cover';
-            img.style.marginBottom = '2px';
-            slice.appendChild(img);
-
-            const label = document.createElement('span');
-            label.textContent = seg.label;
-            slice.appendChild(label);
-
-            wheel.appendChild(slice);
+        document.getElementById('spin-go-tasks')?.addEventListener('click', () => {
+            this.navigateTo('tasks-page');
         });
 
         let isSpinning = false;
 
-        document.getElementById('spin-btn')?.addEventListener('click', async () => {
+        document.getElementById('spin-btn')?.addEventListener('click', () => {
             if (isSpinning) return;
             if (this.spins <= 0) {
                 this.showNotification('No Spins', 'Watch an ad to get more spins!', 'warning');
@@ -1271,70 +1301,68 @@ class App {
             btn.disabled = true;
             btn.textContent = 'SPINNING...';
 
-            // Random selection with weights
-            let rand = Math.random() * 100;
-            let cumulative = 0;
-            let selectedIndex = 0;
-            for (let i = 0; i < segments.length; i++) {
-                cumulative += segments[i].weight;
-                if (rand <= cumulative) {
-                    selectedIndex = i;
-                    break;
-                }
-            }
+            const track = document.getElementById('spin-track');
+            const itemWidth = 88;
+            const totalItems = prizes.length * 2;
 
-            // If weight is 0, fallback to first
-            if (segments[selectedIndex].weight === 0) {
-                selectedIndex = 0;
-            }
+            const selectedIndex = Math.floor(Math.random() * prizes.length);
+            const targetPosition = selectedIndex * itemWidth + (prizes.length * itemWidth);
 
-            const targetDeg = (360 - selectedIndex * segmentAngle - segmentAngle / 2) + 360 * 5;
-
-            const wheelEl = document.getElementById('spin-wheel');
-            wheelEl.style.transition = 'transform 5s cubic-bezier(0.17, 0.67, 0.12, 0.99)';
-            wheelEl.style.transform = `rotate(${targetDeg}deg)`;
+            track.style.transition = 'transform 5s cubic-bezier(0.17, 0.67, 0.12, 0.99)';
+            track.style.transform = `translateX(-${targetPosition}px)`;
 
             setTimeout(() => {
-                const prize = segments[selectedIndex];
-                const currencyMap = { usdt: 'USDT', gram: 'GRAM', stars: 'STARS' };
-                const currency = currencyMap[prize.currency] || prize.currency;
+                track.style.transition = 'transform 2s cubic-bezier(0.17, 0.67, 0.12, 0.99)';
+                const finalPos = targetPosition - (prizes.length * itemWidth * 2);
+                track.style.transform = `translateX(-${finalPos}px)`;
 
-                if (prize.currency === 'usdt') {
-                    this.usdtBalance += prize.value;
-                    this.addTransaction(this.t('spin_reward'), prize.value, 'USDT', true);
-                } else if (prize.currency === 'gram') {
-                    this.gramBalance += prize.value;
-                    this.addTransaction(this.t('spin_reward'), prize.value, 'GRAM', true);
-                } else if (prize.currency === 'stars') {
-                    this.starsBalance += prize.value;
-                    this.addTransaction(this.t('spin_reward'), prize.value, 'STARS', true);
-                }
+                setTimeout(() => {
+                    const prize = prizes[selectedIndex];
+                    const currency = prize.currency;
+                    const value = prize.value;
 
-                this._dirty = true;
-                this.saveUserData(false);
-                this.updateHeaderBalances();
+                    if (currency === 'USDT') {
+                        this.usdtBalance += value;
+                        this.addTransaction(this.t('spin_reward'), value, 'USDT', true);
+                    } else if (currency === 'GRAM') {
+                        this.gramBalance += value;
+                        this.addTransaction(this.t('spin_reward'), value, 'GRAM', true);
+                    } else {
+                        this.starsBalance += value;
+                        this.addTransaction(this.t('spin_reward'), value, 'STARS', true);
+                    }
 
-                // Show result
-                const modal = document.getElementById('spin-modal');
-                const icon = document.getElementById('spin-result-icon');
-                const amount = document.getElementById('spin-result-amount');
-                const currencyEl = document.getElementById('spin-result-currency');
-                if (icon) {
-                    icon.innerHTML = `<img src="${prize.icon}" style="width:50px;height:50px;border-radius:50%;object-fit:cover;">`;
-                }
-                if (amount) amount.textContent = `+${prize.value}`;
-                if (currencyEl) currencyEl.textContent = currency;
-                modal.style.display = 'flex';
+                    this._dirty = true;
+                    this.saveUserData(false);
+                    this.updateHeaderBalances();
 
-                isSpinning = false;
-                btn.disabled = false;
-                btn.textContent = 'SPIN';
-                this.renderHome();
-            }, 5500);
+                    const modal = document.getElementById('spin-result-modal');
+                    const icon = document.getElementById('spin-result-icon');
+                    const amount = document.getElementById('spin-result-amount');
+                    const currencyEl = document.getElementById('spin-result-currency');
+                    const effect = document.getElementById('spin-result-effect');
+
+                    if (icon) icon.innerHTML = `<img src="${prize.icon}">`;
+                    if (amount) amount.textContent = `+${value}`;
+                    if (currencyEl) currencyEl.textContent = currency;
+                    if (effect) {
+                        effect.className = 'spin-result-effect show';
+                        effect.innerHTML = '🎉';
+                        setTimeout(() => { effect.className = 'spin-result-effect'; }, 1000);
+                    }
+
+                    modal.style.display = 'flex';
+
+                    isSpinning = false;
+                    btn.disabled = false;
+                    btn.textContent = 'SPIN';
+                    this.renderHome();
+                }, 2000);
+            }, 5000);
         });
 
         document.getElementById('close-spin-result')?.addEventListener('click', () => {
-            document.getElementById('spin-modal').style.display = 'none';
+            document.getElementById('spin-result-modal').style.display = 'none';
         });
 
         document.querySelector('.back-btn[data-back="home"]')?.addEventListener('click', () => {
@@ -1342,69 +1370,6 @@ class App {
         });
     }
 
-    // ============ BOX PAGE ============
-    renderBoxPage() {
-        const el = document.getElementById('box-page');
-        if (!el) return;
-
-        el.innerHTML = `
-            <div class="page-header">
-                <button class="back-btn" data-back="home"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
-                <h2>${this.t('lucky_box')}</h2>
-            </div>
-
-            <div class="glass-card" style="padding:30px;text-align:center;">
-                <div style="font-size:3rem;margin-bottom:12px;">🎁</div>
-                <div style="font-size:1.2rem;font-weight:700;margin-bottom:8px;">${this.t('lucky_box')}</div>
-                <div style="color:var(--text-secondary);margin-bottom:20px;">Boxes: <span id="box-count">${this.boxes}</span></div>
-                <button class="spin-btn" id="open-box-btn" style="width:120px;height:120px;font-size:0.9rem;">OPEN</button>
-            </div>
-        `;
-
-        document.getElementById('open-box-btn')?.addEventListener('click', async () => {
-            if (this.boxes <= 0) {
-                this.showNotification('No Boxes', 'Watch an ad to get more boxes!', 'warning');
-                return;
-            }
-
-            this.boxes--;
-            this._dirty = true;
-            document.getElementById('box-count').textContent = this.boxes;
-
-            const currencies = ['usdt', 'gram', 'stars'];
-            const randCurrency = currencies[Math.floor(Math.random() * currencies.length)];
-            const values = [0.0001, 0.0005, 0.001, 0.005, 0.01];
-            const randValue = values[Math.floor(Math.random() * values.length)];
-
-            const currencyMap = { usdt: 'USDT', gram: 'GRAM', stars: 'STARS' };
-            const currency = currencyMap[randCurrency];
-
-            if (randCurrency === 'usdt') {
-                this.usdtBalance += randValue;
-                this.addTransaction(this.t('bonus'), randValue, 'USDT', true);
-            } else if (randCurrency === 'gram') {
-                this.gramBalance += randValue;
-                this.addTransaction(this.t('bonus'), randValue, 'GRAM', true);
-            } else {
-                this.starsBalance += randValue;
-                this.addTransaction(this.t('bonus'), randValue, 'STARS', true);
-            }
-
-            this._dirty = true;
-            this.saveUserData(false);
-            this.updateHeaderBalances();
-
-            this.showNotification(`+${randValue} ${currency}`, 'Lucky box opened!', 'success');
-            this.renderBoxPage();
-            this.renderHome();
-        });
-
-        document.querySelector('.back-btn[data-back="home"]')?.addEventListener('click', () => {
-            this.navigateTo('home-page');
-        });
-    }
-
-    // ============ TASKS PAGE ============
     renderTasksPage() {
         const el = document.getElementById('tasks-page');
         if (!el) return;
@@ -1413,7 +1378,7 @@ class App {
             <div class="page-header">
                 <button class="back-btn" data-back="home"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
                 <h2>${this.t('gram_snake_tasks')}</h2>
-                <button class="add-task-btn" id="add-task-from-tasks" style="padding:6px 14px;font-size:0.7rem;"><i class="fas fa-plus"></i></button>
+                <button class="add-task-icon-btn" id="add-task-from-tasks"><i class="fas fa-plus"></i></button>
             </div>
             <div id="tasks-page-container"></div>
         `;
@@ -1426,18 +1391,27 @@ class App {
             const container = document.getElementById('tasks-page-container');
             if (container) {
                 if (tasks.length > 0) {
-                    container.innerHTML = tasks.map(t => `
-                        <div class="task-item glass-card">
-                            <div class="task-item-left">
-                                <img src="${APP_CONFIG.TASK_IMAGE}" class="task-img">
-                                <div class="task-item-info">
-                                    <h4>${t.name}</h4>
-                                    <div class="task-reward"><i class="fas fa-bolt"></i> ${APP_CONFIG.TASK_REWARD} Power</div>
+                    container.innerHTML = tasks.map(t => {
+                        const rewardCurrency = t.rewardCurrency || 'GRAM';
+                        const rewardValue = t.rewardValue || (APP_CONFIG.TASK_REWARD / 1000);
+                        const iconMap = {
+                            'USDT': 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png',
+                            'GRAM': 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png',
+                            'STARS': 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png'
+                        };
+                        return `
+                            <div class="task-item glass-card">
+                                <div class="task-item-left">
+                                    <img src="${APP_CONFIG.TASK_IMAGE}" class="task-img">
+                                    <div class="task-item-info">
+                                        <h4>${t.name}</h4>
+                                        <div class="task-reward"><img src="${iconMap[rewardCurrency] || iconMap['GRAM']}"> ${rewardValue} ${rewardCurrency}</div>
+                                    </div>
                                 </div>
+                                <button class="task-btn start" data-id="${t.id}" data-reward="${rewardValue}" data-url="${t.url}" data-verify="${t.verification}" data-currency="${rewardCurrency}">Start</button>
                             </div>
-                            <button class="task-btn start" data-id="${t.id}" data-reward="${APP_CONFIG.TASK_REWARD}" data-url="${t.url}" data-verify="${t.verification}">Start</button>
-                        </div>
-                    `).join('');
+                        `;
+                    }).join('');
 
                     container.querySelectorAll('.task-btn.start').forEach(btn => {
                         btn.addEventListener('click', async () => {
@@ -1446,14 +1420,15 @@ class App {
                                 return;
                             }
                             const id = btn.dataset.id;
-                            const reward = parseInt(btn.dataset.reward);
+                            const reward = parseFloat(btn.dataset.reward);
                             const url = btn.dataset.url;
                             const verify = btn.dataset.verify === 'true';
+                            const currency = btn.dataset.currency || 'GRAM';
                             const taskData = tasks.find(t => t.id === id);
 
                             window.open(url, '_blank');
                             this.isTaskRunning = true;
-                            btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i>';
+                            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                             btn.disabled = true;
 
                             let seconds = APP_CONFIG.TASK_VERIFICATION_DELAY || 10;
@@ -1471,7 +1446,7 @@ class App {
 
                                     newBtn.addEventListener('click', async (e) => {
                                         e.stopPropagation();
-                                        newBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i>';
+                                        newBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                                         newBtn.disabled = true;
 
                                         let isMember = false;
@@ -1492,8 +1467,17 @@ class App {
                                             this.dailyTasksCompleted++;
                                             this._dirty = true;
 
-                                            this.gramBalance += reward / 1000;
-                                            this.addTransaction(this.t('task_complete'), reward / 1000, 'GRAM', true);
+                                            if (currency === 'USDT') {
+                                                this.usdtBalance += reward;
+                                                this.addTransaction(this.t('task_complete'), reward, 'USDT', true);
+                                            } else if (currency === 'STARS') {
+                                                this.starsBalance += reward;
+                                                this.addTransaction(this.t('task_complete'), reward, 'STARS', true);
+                                            } else {
+                                                this.gramBalance += reward;
+                                                this.addTransaction(this.t('task_complete'), reward, 'GRAM', true);
+                                            }
+
                                             await this.saveUserData(false);
                                             this.updateHeaderBalances();
 
@@ -1502,7 +1486,7 @@ class App {
                                             newBtn.classList.add('done');
                                             newBtn.classList.remove('check');
 
-                                            this.showNotification('Task Completed!', `${reward / 1000} GRAM added`, 'success');
+                                            this.showNotification('Task Completed!', `+${reward} ${currency}`, 'success');
                                             this.renderTasksPage();
                                             this.renderHome();
                                         } else {
@@ -1529,7 +1513,6 @@ class App {
         });
     }
 
-    // ============ ADD TASK PAGE ============
     renderAddTaskPage() {
         const el = document.getElementById('add-task-page');
         if (!el) return;
@@ -1568,6 +1551,18 @@ class App {
                         `).join('')}
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="form-label">${this.t('task_reward')}</label>
+                    <div class="toggle-group reward-currency-group">
+                        <button class="toggle-option active" data-currency="GRAM"><img src="https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png" style="width:16px;height:16px;border-radius:50%;vertical-align:middle;"> GRAM</button>
+                        <button class="toggle-option" data-currency="USDT"><img src="https://cdn-icons-png.flaticon.com/512/15207/15207964.png" style="width:16px;height:16px;border-radius:50%;vertical-align:middle;"> USDT</button>
+                        <button class="toggle-option" data-currency="STARS"><img src="https://cdn-icons-png.flaticon.com/512/7656/7656139.png" style="width:16px;height:16px;border-radius:50%;vertical-align:middle;"> STARS</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Reward Amount</label>
+                    <input type="number" id="reward-amount-input" class="form-input" value="${APP_CONFIG.TASK_REWARD / 1000}" step="0.0001">
+                </div>
                 <div class="payment-buttons-group">
                     <button class="pay-btn" id="pay-task-btn">${this.t('pay_stars', { stars: 0 })}</button>
                     <button class="check-btn" id="check-payment-btn" disabled>Check</button>
@@ -1575,13 +1570,15 @@ class App {
                 <div id="add-task-status" style="margin-top:12px;"></div>
             </div>
 
-            <div class="section-title" style="margin-top:20px;"><i class="fas fa-tasks"></i> ${this.t('my_tasks')}</div>
+            <div class="section-title">
+                <span class="icon-circle"><i class="fas fa-tasks"></i></span>
+                ${this.t('my_tasks')}
+            </div>
             <div id="my-tasks-list-container"></div>
         `;
 
         this.renderMyTasks();
 
-        // Verification toggle
         el.querySelectorAll('.toggle-option[data-value]').forEach(opt => {
             opt.addEventListener('click', () => {
                 const parent = opt.parentElement;
@@ -1601,25 +1598,25 @@ class App {
             });
         });
 
-        // Completions toggle
         el.querySelectorAll('.completions-group .toggle-option').forEach(opt => {
             opt.addEventListener('click', () => {
                 const parent = opt.parentElement;
                 parent.querySelectorAll('.toggle-option').forEach(o => o.classList.remove('active'));
                 opt.classList.add('active');
-
-                const max = parseInt(opt.dataset.value);
-                const price = (APP_CONFIG.TON_PRICE_PER_100 * (max / 100));
-                const payBtn = document.getElementById('pay-task-btn');
-                const checkBtn = document.getElementById('check-payment-btn');
-                if (payBtn) {
-                    payBtn.textContent = this.t('pay_stars', { stars: price });
-                    payBtn.disabled = false;
-                }
-                if (checkBtn) {
-                    checkBtn.disabled = false;
-                }
+                this.updatePayButton();
             });
+        });
+
+        el.querySelectorAll('.reward-currency-group .toggle-option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                const parent = opt.parentElement;
+                parent.querySelectorAll('.toggle-option').forEach(o => o.classList.remove('active'));
+                opt.classList.add('active');
+            });
+        });
+
+        document.getElementById('reward-amount-input')?.addEventListener('input', () => {
+            this.updatePayButton();
         });
 
         document.getElementById('pay-task-btn')?.addEventListener('click', async () => {
@@ -1627,6 +1624,8 @@ class App {
             const url = document.getElementById('task-url-input').value.trim();
             const verification = el.querySelector('.toggle-option.active[data-value]')?.dataset.value || 'false';
             const maxCompletions = parseInt(el.querySelector('.completions-group .toggle-option.active')?.dataset.value || 0);
+            const rewardCurrency = el.querySelector('.reward-currency-group .toggle-option.active')?.dataset.currency || 'GRAM';
+            const rewardAmount = parseFloat(document.getElementById('reward-amount-input')?.value || APP_CONFIG.TASK_REWARD / 1000);
 
             if (!name || name.length > 15 || !/^[a-zA-Z0-9\s]+$/.test(name)) {
                 this.showNotification('Error', 'Name must be max 15 chars, English only', 'error');
@@ -1642,10 +1641,9 @@ class App {
             }
 
             const status = document.getElementById('add-task-status');
-            status.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Processing...';
+            status.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
 
             const taskId = Date.now().toString();
-            const price = (APP_CONFIG.TON_PRICE_PER_100 * (maxCompletions / 100));
 
             if (verification === 'true') {
                 const checkResult = await this.checkBotAdminByUrl(url);
@@ -1655,7 +1653,6 @@ class App {
                 }
             }
 
-            // Simulate payment
             setTimeout(() => {
                 const taskData = {
                     name: name,
@@ -1666,7 +1663,9 @@ class App {
                     status: 'active',
                     owner: this.tgUser.id,
                     createdAt: Date.now(),
-                    reward: APP_CONFIG.TASK_REWARD,
+                    reward: 0,
+                    rewardCurrency: rewardCurrency,
+                    rewardValue: rewardAmount,
                     total: 0
                 };
 
@@ -1686,6 +1685,20 @@ class App {
         document.querySelector('.back-btn[data-back="tasks"]')?.addEventListener('click', () => {
             this.navigateTo('tasks-page');
         });
+    }
+
+    updatePayButton() {
+        const max = parseInt(document.querySelector('.completions-group .toggle-option.active')?.dataset.value || 0);
+        const price = (APP_CONFIG.TON_PRICE_PER_100 * (max / 100));
+        const payBtn = document.getElementById('pay-task-btn');
+        const checkBtn = document.getElementById('check-payment-btn');
+        if (payBtn) {
+            payBtn.textContent = this.t('pay_stars', { stars: price.toFixed(2) });
+            payBtn.disabled = false;
+        }
+        if (checkBtn) {
+            checkBtn.disabled = false;
+        }
     }
 
     renderMyTasks() {
@@ -1719,37 +1732,43 @@ class App {
         }).join('');
     }
 
-    // ============ INVITE PAGE ============
     renderInvite() {
         const el = document.getElementById('invite-page');
         if (!el) return;
 
         const link = APP_CONFIG.BOT_LINK + this.tgUser.id;
-
-        const totalEarnings = this.totalEarnings;
         const claimable = this.claimableEarnings;
+        const totalEarnings = this.totalEarnings;
 
         el.innerHTML = `
-            <div class="glass-card" style="padding:20px;text-align:center;margin-bottom:16px;">
-                <h3 style="margin-bottom:12px;"><i class="fas fa-users"></i> ${this.t('invite_earn')}</h3>
-                <p style="font-size:0.8rem;color:var(--text-secondary);margin-bottom:12px;">${this.t('earn_percent', { percent: APP_CONFIG.REFERRAL_PERCENTAGE })}</p>
-                <div class="invite-stats">
-                    <div class="invite-stat-card">
-                        <i class="fas fa-user-plus" style="font-size:1.5rem;color:var(--primary);"></i>
-                        <div class="stat-value">${this.totalReferrals}</div>
-                        <div class="stat-label">${this.t('total_members')}</div>
+            <div class="glass-card" style="padding:20px;margin-bottom:16px;">
+                <h3 style="text-align:center;margin-bottom:12px;"><i class="fas fa-users" style="color:var(--primary);"></i> ${this.t('invite_earn')}</h3>
+                <div class="invite-earnings-details">
+                    <div class="invite-earning-item">
+                        <span class="icon-circle-small"><i class="fas fa-ad"></i></span>
+                        <span class="earning-text">${this.t('earn_30_ads')}</span>
                     </div>
-                    <div class="invite-stat-card">
-                        <i class="fas fa-user-check" style="font-size:1.5rem;color:var(--success);"></i>
-                        <div class="stat-value">${this.activeReferrals}</div>
-                        <div class="stat-label">${this.t('active_members')}</div>
+                    <div class="invite-earning-item">
+                        <span class="icon-circle-small"><i class="fas fa-tasks"></i></span>
+                        <span class="earning-text">${this.t('earn_10_tasks')}</span>
                     </div>
-                    <div class="invite-stat-card">
-                        <i class="fas fa-coins" style="font-size:1.5rem;color:var(--warning);"></i>
-                        <div class="stat-value">${this.formatNumber(Object.values(totalEarnings).reduce((a,b) => a + b, 0))}</div>
-                        <div class="stat-label">${this.t('total_earnings')}</div>
+                    <div class="invite-earning-item">
+                        <span class="icon-circle-small"><i class="fas fa-sync-alt"></i></span>
+                        <span class="earning-text">${this.t('earn_1_spin')}</span>
                     </div>
                 </div>
+
+                <div class="invite-stats">
+                    <div class="invite-stat-card">
+                        <div class="stat-value">${this.totalReferrals}</div>
+                        <div class="stat-label">${this.t('total_referrals')}</div>
+                    </div>
+                    <div class="invite-stat-card">
+                        <div class="stat-value">${this.activeReferrals}</div>
+                        <div class="stat-label">${this.t('active_referrals')}</div>
+                    </div>
+                </div>
+
                 <div style="display:flex;gap:8px;margin-top:12px;">
                     <button class="earn-btn" id="copy-invite-link" style="flex:1;"><i class="fas fa-copy"></i> ${this.t('copy')}</button>
                     <button class="earn-btn secondary" id="share-invite-link" style="flex:1;"><i class="fas fa-share"></i> ${this.t('share')}</button>
@@ -1757,7 +1776,10 @@ class App {
             </div>
 
             <div class="earnings-section">
-                <h4>${this.t('claim_rewards')}</h4>
+                <div class="section-title">
+                    <span class="icon-circle"><i class="fas fa-gift"></i></span>
+                    ${this.t('claim_rewards')}
+                </div>
                 <div class="claim-section">
                     <div class="claim-card">
                         <img src="https://cdn-icons-png.flaticon.com/512/15207/15207964.png">
@@ -1781,7 +1803,10 @@ class App {
             </div>
 
             <div class="earnings-section">
-                <h4>${this.t('total_earnings')}</h4>
+                <div class="section-title">
+                    <span class="icon-circle"><i class="fas fa-coins"></i></span>
+                    ${this.t('total_earnings')}
+                </div>
                 <div class="claim-section">
                     <div class="claim-card">
                         <img src="https://cdn-icons-png.flaticon.com/512/15207/15207964.png">
@@ -1854,19 +1879,20 @@ class App {
         });
     }
 
-    // ============ MY PAGE ============
     renderMy() {
         const el = document.getElementById('my-page');
         if (!el) return;
 
         const selectedCurrency = this._selectedCurrency || 'gram';
         const currencies = [
-            { id: 'usdt', label: 'USDT', icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png' },
-            { id: 'gram', label: 'GRAM', icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png' },
-            { id: 'stars', label: 'STARS', icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png' }
+            { id: 'usdt', label: 'USDT', icon: 'https://cdn-icons-png.flaticon.com/512/15207/15207964.png', minWithdraw: 0.03 },
+            { id: 'gram', label: 'GRAM', icon: 'https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png', minWithdraw: 0.03 },
+            { id: 'stars', label: 'STARS', icon: 'https://cdn-icons-png.flaticon.com/512/7656/7656139.png', minWithdraw: 15 }
         ];
 
         const showStarsOptions = selectedCurrency === 'stars';
+        const currencyInfo = currencies.find(c => c.id === selectedCurrency);
+        const minWithdraw = currencyInfo?.minWithdraw || 0.03;
 
         el.innerHTML = `
             <div class="promo-card glass-card">
@@ -1893,6 +1919,11 @@ class App {
                         <label class="form-label">${this.t('wallet')}</label>
                         <input type="text" id="wallet-input" class="form-input" placeholder="Enter wallet address">
                     </div>
+                    <div class="withdraw-user-info" id="withdraw-user-info" style="display:none;">
+                        <img id="withdraw-user-avatar" src="">
+                        <span class="user-name" id="withdraw-user-name"></span>
+                        <span class="user-handle" id="withdraw-user-handle"></span>
+                    </div>
                     <div class="form-group">
                         <label class="form-label">${this.t('amount')}</label>
                         <div class="input-wrapper">
@@ -1900,7 +1931,7 @@ class App {
                             <button class="action-btn" id="max-btn">MAX</button>
                         </div>
                     </div>
-                    <div class="withdraw-note">${this.t('min_withdraw', { min: APP_CONFIG.MINIMUM_WITHDRAW })}</div>
+                    <div class="withdraw-note">${this.t('min_withdraw', { min: minWithdraw })} ${selectedCurrency.toUpperCase()}</div>
                     ${APP_CONFIG.WITHDRAWAL_FEES > 0 ? `<div class="withdraw-note">${this.t('withdrawal_fees_note', { fees: APP_CONFIG.WITHDRAWAL_FEES })}</div>` : ''}
                     <button class="withdraw-confirm-btn disabled" id="withdraw-btn">${this.t('confirm_withdrawal')}</button>
                 ` : `
@@ -1926,11 +1957,13 @@ class App {
                 `}
             </div>
 
-            <div class="section-title"><i class="fas fa-clock-rotate-left"></i> ${this.t('transactions')}</div>
+            <div class="section-title">
+                <span class="icon-circle"><i class="fas fa-clock-rotate-left"></i></span>
+                ${this.t('transactions')}
+            </div>
             <div id="transactions-container"></div>
         `;
 
-        // Currency selection
         el.querySelectorAll('.withdraw-option').forEach(opt => {
             opt.addEventListener('click', () => {
                 const currency = opt.dataset.currency;
@@ -1939,7 +1972,6 @@ class App {
             });
         });
 
-        // Promo code
         const promoInput = document.getElementById('promo-input');
         const promoSubmit = document.getElementById('promo-submit');
         if (promoInput && promoSubmit) {
@@ -1956,22 +1988,34 @@ class App {
             });
         }
 
-        // Withdraw
         if (!showStarsOptions) {
             const walletInput = document.getElementById('wallet-input');
             const amountInput = document.getElementById('amount-input');
             const withdrawBtn = document.getElementById('withdraw-btn');
             const maxBtn = document.getElementById('max-btn');
+            const userInfo = document.getElementById('withdraw-user-info');
+            const userAvatar = document.getElementById('withdraw-user-avatar');
+            const userName = document.getElementById('withdraw-user-name');
+            const userHandle = document.getElementById('withdraw-user-handle');
 
             const checkWithdraw = () => {
                 const wallet = walletInput?.value.trim();
                 const amount = parseFloat(amountInput?.value);
                 const balance = selectedCurrency === 'usdt' ? this.usdtBalance : this.gramBalance;
                 const totalRequired = amount + (APP_CONFIG.WITHDRAWAL_FEES || 0);
-                const isValid = wallet && wallet.length >= 20 && amount >= APP_CONFIG.MINIMUM_WITHDRAW && totalRequired <= balance;
+                const isValid = wallet && wallet.length >= 20 && amount >= minWithdraw && totalRequired <= balance;
                 if (withdrawBtn) {
                     if (isValid) withdrawBtn.classList.remove('disabled');
                     else withdrawBtn.classList.add('disabled');
+                }
+
+                if (wallet && wallet.length >= 20) {
+                    userInfo.style.display = 'flex';
+                    userAvatar.src = 'https://i.ibb.co/XxXhyZYf/file-000000006f8c720e9ab4c76b6e560062.png';
+                    userName.textContent = 'Fragment User';
+                    userHandle.textContent = '@' + wallet.substring(0, 10) + '...';
+                } else {
+                    userInfo.style.display = 'none';
                 }
             };
 
@@ -2043,7 +2087,6 @@ class App {
             });
         }
 
-        // Transactions
         const container = document.getElementById('transactions-container');
         if (container) {
             if (this.transactions.length === 0) {
@@ -2052,7 +2095,7 @@ class App {
                 container.innerHTML = this.transactions.map(tx => `
                     <div class="transaction-item">
                         <div class="transaction-left">
-                            <i class="fas ${tx.type === this.t('withdrawal') ? 'fa-arrow-up-right-from-square' : 'fa-gift'}"></i>
+                            ${tx.icon ? `<img src="${tx.icon}" class="tx-icon">` : '<i class="fas fa-gift"></i>'}
                             <span class="transaction-name">${tx.type}</span>
                         </div>
                         <span class="transaction-amount ${tx.symbol === '+' ? 'positive' : 'negative'}">${tx.symbol}${tx.amount.toFixed(4)} ${tx.currency}</span>
@@ -2118,7 +2161,6 @@ class App {
         return false;
     }
 
-    // ============ NAVIGATION ============
     navigateTo(page) {
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
         document.getElementById(page).classList.add('active');
@@ -2133,19 +2175,15 @@ class App {
             document.querySelectorAll('.nav-btn')[navMap[page]]?.classList.add('active');
         }
 
-        // Render page
         if (page === 'home-page') this.renderHome();
         else if (page === 'invite-page') this.renderInvite();
         else if (page === 'my-page') this.renderMy();
         else if (page === 'spin-page') this.renderSpinPage();
-        else if (page === 'box-page') this.renderBoxPage();
         else if (page === 'tasks-page') this.renderTasksPage();
         else if (page === 'add-task-page') this.renderAddTaskPage();
     }
 
-    // ============ SETUP ============
     setupEventListeners() {
-        // Navigation
         document.querySelectorAll('.nav-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const page = btn.dataset.page;
@@ -2153,11 +2191,13 @@ class App {
             });
         });
 
-        // Settings
-        document.getElementById('settings-btn')?.addEventListener('click', (e) => {
+        const settingsBtn = document.getElementById('settings-btn');
+        settingsBtn?.addEventListener('click', (e) => {
             e.stopPropagation();
             const menu = document.getElementById('settings-menu');
-            menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+            const isOpen = menu.style.display === 'block';
+            menu.style.display = isOpen ? 'none' : 'block';
+            settingsBtn.classList.toggle('active', !isOpen);
             this.updateSettingsUI();
         });
 
@@ -2166,10 +2206,10 @@ class App {
             const btn = document.getElementById('settings-btn');
             if (menu && !menu.contains(e.target) && !btn?.contains(e.target)) {
                 menu.style.display = 'none';
+                btn?.classList.remove('active');
             }
         });
 
-        // Settings toggles
         document.getElementById('dark-mode-toggle')?.addEventListener('change', (e) => {
             this.darkMode = e.target.checked;
             this.applyTheme();
@@ -2178,6 +2218,7 @@ class App {
 
         document.getElementById('vibration-toggle')?.addEventListener('change', (e) => {
             this.vibrationEnabled = e.target.checked;
+            if (this.vibrationEnabled) this.vibrate('success');
             this.saveSettings();
         });
 
@@ -2189,7 +2230,6 @@ class App {
             this.showNotification('Language', 'Changed language', 'success');
         });
 
-        // Daily reset check
         setInterval(() => {
             const today = this.getTodayUTC();
             if (this.dailyCheckinDate !== today) {
@@ -2203,6 +2243,16 @@ class App {
             }
             this.dailyTasksCompleted = 0;
         }, 60000);
+
+        // Loader animation
+        let dotCount = 1;
+        const loaderText = document.getElementById('loader-text');
+        if (loaderText) {
+            setInterval(() => {
+                dotCount = (dotCount % 4) + 1;
+                loaderText.textContent = 'Loading' + '.'.repeat(dotCount);
+            }, 500);
+        }
     }
 
     updateSettingsUI() {
@@ -2233,10 +2283,8 @@ class App {
             await this.initFirebase();
             await this.checkUserState();
             await this.checkDevice();
-
             await this.loadUserData();
 
-            // Show app
             const loader = document.getElementById('app-loader');
             if (loader) {
                 loader.style.opacity = '0';
