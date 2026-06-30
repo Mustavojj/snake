@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>GRAM SNAKE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -18,7 +18,7 @@
 <div id="app-loader">
     <div class="loader-container">
         <img src="https://i.ibb.co/bjyVgYqJ/256e636cf3a0.jpg" class="loader-logo" alt="GRAM SNAKE">
-        <div class="loader-text" id="loader-text">Loading.</div>
+        <div class="loader-text" id="loader-text">Loading</div>
     </div>
 </div>
 
@@ -73,15 +73,16 @@
 
     <main id="main-content">
         <div id="home-page" class="page active"></div>
+        <div id="tasks-page" class="page"></div>
         <div id="invite-page" class="page"></div>
         <div id="my-page" class="page"></div>
         <div id="spin-page" class="page"></div>
-        <div id="tasks-page" class="page"></div>
         <div id="add-task-page" class="page"></div>
     </main>
 
     <nav class="bottom-nav">
         <button class="nav-btn active" data-page="home-page"><i class="fas fa-home"></i><span id="nav-home">Home</span></button>
+        <button class="nav-btn" data-page="tasks-page"><i class="fas fa-tasks"></i><span id="nav-tasks">Tasks</span></button>
         <button class="nav-btn" data-page="invite-page"><i class="fas fa-users"></i><span id="nav-invite">Invite</span></button>
         <button class="nav-btn" data-page="my-page"><i class="fas fa-user"></i><span id="nav-my">My</span></button>
     </nav>
@@ -132,20 +133,43 @@
             <div class="spin-result-amount" id="spin-result-amount">+0.00</div>
             <div class="spin-result-currency" id="spin-result-currency">GRAM</div>
             <div class="spin-result-effect" id="spin-result-effect"></div>
+            <button class="claim-prize-btn" id="spin-claim-prize">Claim</button>
         </div>
     </div>
 </div>
 
-<div id="daily-bonus-modal" class="modal" style="display:none;">
-    <div class="modal-content glass-modal">
+<div id="dice-result-modal" class="modal" style="display:none;">
+    <div class="modal-content glass-modal dice-modal">
         <div class="modal-header">
-            <h3><i class="fas fa-gift"></i> Daily Check-in</h3>
-            <button class="modal-close" id="close-daily-bonus">&times;</button>
+            <h3><i class="fas fa-gift"></i> Dice Result</h3>
+            <button class="modal-close" id="close-dice-result">&times;</button>
         </div>
         <div class="modal-body" style="text-align:center">
-            <div class="bonus-icon"><i class="fas fa-calendar-check"></i></div>
-            <div class="reward-amount" id="daily-bonus-amount">+0.001 GRAM</div>
-            <button id="claim-daily-bonus-btn" class="confirm-ad-btn" style="width:100%; margin-top:16px;">Claim</button>
+            <div class="dice-result-display" id="dice-result-display">
+                <div class="dice-result-item">🎲 <span id="dice-result-1">1</span></div>
+                <div class="dice-result-item">🎲 <span id="dice-result-2">1</span></div>
+                <div class="dice-result-item">🎲 <span id="dice-result-3">1</span></div>
+            </div>
+            <div class="dice-result-total" id="dice-result-total">+0.0000 GRAM</div>
+            <button class="claim-prize-btn" id="dice-claim-prize">Claim</button>
+        </div>
+    </div>
+</div>
+
+<div id="lottery-result-modal" class="modal" style="display:none;">
+    <div class="modal-content glass-modal lottery-modal">
+        <div class="modal-header">
+            <h3><i class="fas fa-gift"></i> Lottery Result</h3>
+            <button class="modal-close" id="close-lottery-result">&times;</button>
+        </div>
+        <div class="modal-body" style="text-align:center">
+            <div class="lottery-result-display" id="lottery-result-display">
+                <div class="lottery-slot" id="lottery-slot-1">🍋</div>
+                <div class="lottery-slot" id="lottery-slot-2">🍋</div>
+                <div class="lottery-slot" id="lottery-slot-3">🍋</div>
+            </div>
+            <div class="lottery-result-total" id="lottery-result-total">+0.0000 GRAM</div>
+            <button class="claim-prize-btn" id="lottery-claim-prize">Claim</button>
         </div>
     </div>
 </div>
