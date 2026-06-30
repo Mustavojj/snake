@@ -1,4 +1,3 @@
-[file name: app.js]
 import { APP_CONFIG } from './data.js';
 
 const translations = {
