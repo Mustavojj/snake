@@ -1,23 +1,25 @@
+[file name: styles.css]
 :root {
     --primary: #4A7CF7;
     --primary-dark: #3A5FC7;
     --primary-light: #7AA0FF;
-    --primary-glow: rgba(74, 124, 247, 0.3);
+    --primary-glow: rgba(74, 124, 247, 0.4);
     --bg-dark: #0a0a12;
     --bg-card: rgba(20, 22, 36, 0.85);
-    --bg-elevated: rgba(30, 33, 50, 0.9);
+    --bg-elevated: rgba(30, 33, 50, 0.95);
     --text-primary: #ffffff;
     --text-secondary: #a0a0b8;
     --border-radius: 20px;
     --border-radius-sm: 14px;
     --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
     --success: #2ecc71;
     --warning: #f39c12;
     --error: #e74c3c;
     --usdt-color: #26a17b;
     --gram-color: #0088CC;
     --stars-color: #f5b342;
+    --card-glow: 0 0 40px rgba(74, 124, 247, 0.15);
 }
 
 * {
@@ -47,11 +49,12 @@ body {
 body.light-mode {
     --bg-dark: #f0f2f8;
     --bg-card: rgba(255, 255, 255, 0.85);
-    --bg-elevated: rgba(255, 255, 255, 0.9);
+    --bg-elevated: rgba(255, 255, 255, 0.95);
     --text-primary: #1a1a2e;
     --text-secondary: #666;
     --glass-border: rgba(0, 0, 0, 0.08);
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --card-glow: 0 0 40px rgba(74, 124, 247, 0.1);
 }
 
 .loader-container {
@@ -81,6 +84,8 @@ body.light-mode {
     font-size: 0.9rem;
     color: var(--text-secondary);
     font-weight: 500;
+    min-width: 80px;
+    text-align: center;
 }
 
 @keyframes pulse-logo {
@@ -134,7 +139,7 @@ body.light-mode .app-header {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--primary);
-    box-shadow: 0 0 15px var(--primary-glow);
+    box-shadow: 0 0 20px var(--primary-glow);
 }
 
 .avatar-badge {
@@ -187,6 +192,12 @@ body.light-mode .app-header {
     color: var(--text-secondary);
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(12px);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.header-balance:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(74, 124, 247, 0.2);
 }
 
 .header-balance .balance-icon {
@@ -337,19 +348,19 @@ body.light-mode .lang-select {
     transform: translateX(-50%);
     width: calc(100% - 32px);
     max-width: 440px;
-    background: rgba(17, 17, 25, 0.9);
+    background: rgba(17, 17, 25, 0.92);
     backdrop-filter: blur(20px);
     display: flex;
     padding: 8px 12px;
     border-radius: 60px;
-    gap: 8px;
+    gap: 4px;
     z-index: 100;
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
 }
 
 body.light-mode .bottom-nav {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.92);
 }
 
 .nav-btn {
@@ -357,7 +368,7 @@ body.light-mode .bottom-nav {
     background: none;
     border: none;
     color: var(--text-secondary);
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -365,16 +376,33 @@ body.light-mode .bottom-nav {
     gap: 2px;
     padding: 6px 0;
     border-radius: 40px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav-btn i {
     font-size: 1.2rem;
+    transition: transform 0.3s;
 }
 
 .nav-btn.active {
-    background: var(--primary);
     color: white;
+}
+
+.nav-btn.active i {
+    transform: scale(1.1);
+}
+
+.nav-btn.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 40px;
+    z-index: -1;
     box-shadow: 0 0 20px var(--primary-glow);
 }
 
@@ -410,11 +438,11 @@ body.light-mode .bottom-nav {
     box-shadow: var(--glass-shadow);
     position: relative;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.glass-card:active {
-    transform: scale(0.98);
+.glass-card:hover {
+    box-shadow: var(--glass-shadow), var(--card-glow);
 }
 
 .glass-card::before {
@@ -433,11 +461,10 @@ body.light-mode .bottom-nav {
     font-weight: 700;
     margin: 20px 0 14px;
     color: var(--text-primary);
-    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
+    gap: 10px;
+    padding: 0 4px;
 }
 
 .section-title .icon-circle {
@@ -446,17 +473,17 @@ body.light-mode .bottom-nav {
     justify-content: center;
     width: 32px;
     height: 32px;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border-radius: 50%;
     color: white;
     font-size: 0.8rem;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .section-title-with-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
+    justify-content: space-between;
     margin: 20px 0 14px;
 }
 
@@ -465,18 +492,19 @@ body.light-mode .bottom-nav {
 }
 
 .add-task-icon-btn {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border: none;
     color: white;
-    font-size: 0.9rem;
+    font-size: 1rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .add-task-icon-btn:active {
@@ -484,13 +512,17 @@ body.light-mode .bottom-nav {
 }
 
 .game-card {
-    padding: 16px;
+    padding: 16px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    border-radius: var(--border-radius);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
 }
 
 .game-card:active {
@@ -503,7 +535,7 @@ body.light-mode .bottom-nav {
     gap: 14px;
 }
 
-.game-icon {
+.game-icon-wrapper {
     width: 52px;
     height: 52px;
     border-radius: 14px;
@@ -511,10 +543,14 @@ body.light-mode .bottom-nav {
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;
+    background: linear-gradient(135deg, rgba(74, 124, 247, 0.2), rgba(74, 124, 247, 0.05));
+    border: 1px solid var(--glass-border);
 }
 
-.game-icon.spin {
-    background: linear-gradient(135deg, #4A7CF7, #7AA0FF);
+.game-icon-wrapper img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 .game-info h4 {
@@ -529,19 +565,39 @@ body.light-mode .bottom-nav {
 }
 
 .game-go-btn {
-    padding: 8px 18px;
-    background: var(--primary);
+    padding: 8px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border: none;
     border-radius: 40px;
     color: white;
     font-weight: 600;
     font-size: 0.75rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .game-go-btn:active {
     transform: scale(0.95);
+}
+
+.game-balance-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    background: var(--bg-card);
+    border-radius: 40px;
+    border: 1px solid var(--glass-border);
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.game-balance-badge img {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .earn-option {
@@ -550,6 +606,10 @@ body.light-mode .bottom-nav {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
 }
 
 .earn-option-left {
@@ -576,15 +636,16 @@ body.light-mode .bottom-nav {
 }
 
 .earn-btn {
-    padding: 6px 16px;
-    background: var(--primary);
+    padding: 6px 18px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border: none;
     border-radius: 40px;
     color: white;
     font-weight: 600;
     font-size: 0.7rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .earn-btn:active {
@@ -595,6 +656,12 @@ body.light-mode .bottom-nav {
     background: transparent;
     border: 1px solid var(--primary);
     color: var(--primary);
+    box-shadow: none;
+}
+
+.earn-btn:disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .daily-task-card {
@@ -603,12 +670,22 @@ body.light-mode .bottom-nav {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s;
+}
+
+.daily-task-card:hover {
+    box-shadow: var(--card-glow);
 }
 
 .daily-task-left {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex: 1;
 }
 
 .daily-task-left .icon-circle-small {
@@ -621,6 +698,10 @@ body.light-mode .bottom-nav {
     border-radius: 50%;
     color: var(--primary);
     font-size: 1rem;
+}
+
+.daily-task-info {
+    flex: 1;
 }
 
 .daily-task-info h4 {
@@ -643,29 +724,42 @@ body.light-mode .bottom-nav {
     object-fit: cover;
 }
 
+.daily-task-info .task-progress-text {
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
 .daily-task-btn {
     padding: 6px 16px;
-    background: var(--primary);
     border: none;
     border-radius: 40px;
     color: white;
     font-weight: 600;
     font-size: 0.7rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    flex-shrink: 0;
 }
 
 .daily-task-btn:active {
     transform: scale(0.95);
 }
 
+.daily-task-btn.primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
+
 .daily-task-btn.done {
     background: var(--success);
     cursor: default;
+    box-shadow: none;
 }
 
 .daily-task-btn.progress {
     background: var(--warning);
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
 }
 
 .task-item {
@@ -674,12 +768,22 @@ body.light-mode .bottom-nav {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    transition: all 0.3s;
+}
+
+.task-item:hover {
+    box-shadow: var(--card-glow);
 }
 
 .task-item-left {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex: 1;
 }
 
 .task-item-left .task-img {
@@ -687,6 +791,10 @@ body.light-mode .bottom-nav {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.task-item-info {
+    flex: 1;
 }
 
 .task-item-info h4 {
@@ -699,7 +807,8 @@ body.light-mode .bottom-nav {
     color: var(--text-secondary);
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    flex-wrap: wrap;
 }
 
 .task-item-info .task-reward img {
@@ -709,16 +818,36 @@ body.light-mode .bottom-nav {
     object-fit: cover;
 }
 
+.task-reward-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: var(--bg-card);
+    border-radius: 40px;
+    border: 1px solid var(--glass-border);
+    font-size: 0.6rem;
+}
+
+.task-reward-badge img {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .task-btn {
     padding: 6px 16px;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border: none;
     border-radius: 40px;
     color: white;
     font-weight: 600;
     font-size: 0.7rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .task-btn:active {
@@ -728,15 +857,21 @@ body.light-mode .bottom-nav {
 .task-btn.done {
     background: var(--success);
     cursor: default;
+    box-shadow: none;
 }
 
 .task-btn.check {
     background: var(--warning);
     animation: pulse-glow 1s infinite;
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
 }
 
 .task-btn .fa-spinner {
     animation: spin 0.8s linear infinite;
+}
+
+.task-btn.slow-spin .fa-spinner {
+    animation-duration: 1.5s;
 }
 
 @keyframes spin {
@@ -802,11 +937,20 @@ body.light-mode .bottom-nav {
     backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius-sm);
+    transition: all 0.3s;
+}
+
+.invite-stat-card:hover {
+    box-shadow: var(--card-glow);
 }
 
 .invite-stat-card .stat-value {
     font-size: 1.2rem;
     font-weight: 700;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .invite-stat-card .stat-label {
@@ -828,11 +972,16 @@ body.light-mode .bottom-nav {
     backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius-sm);
+    transition: all 0.3s;
+}
+
+.claim-card:hover {
+    box-shadow: var(--card-glow);
 }
 
 .claim-card img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 4px;
@@ -851,7 +1000,7 @@ body.light-mode .bottom-nav {
 .claim-btn {
     width: 100%;
     padding: 6px;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border: none;
     border-radius: 40px;
     color: white;
@@ -859,7 +1008,8 @@ body.light-mode .bottom-nav {
     font-size: 0.65rem;
     cursor: pointer;
     margin-top: 6px;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .claim-btn:active {
@@ -869,6 +1019,7 @@ body.light-mode .bottom-nav {
 .claim-btn.done {
     background: var(--success);
     cursor: default;
+    box-shadow: none;
 }
 
 .withdraw-options {
@@ -886,12 +1037,12 @@ body.light-mode .bottom-nav {
     border: 2px solid var(--glass-border);
     border-radius: var(--border-radius-sm);
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
 
 .withdraw-option.active {
     border-color: var(--primary);
-    box-shadow: 0 0 20px var(--primary-glow);
+    box-shadow: 0 0 30px var(--primary-glow);
 }
 
 .withdraw-option img {
@@ -922,12 +1073,12 @@ body.light-mode .bottom-nav {
     border: 2px solid var(--glass-border);
     border-radius: var(--border-radius-sm);
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
 
 .stars-option.active {
     border-color: var(--primary);
-    box-shadow: 0 0 20px var(--primary-glow);
+    box-shadow: 0 0 30px var(--primary-glow);
 }
 
 .stars-option img {
@@ -1009,7 +1160,7 @@ body.light-mode .bottom-nav {
 }
 
 .glass-modal {
-    background: var(--bg-card);
+    background: var(--bg-elevated);
     backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius);
@@ -1068,9 +1219,29 @@ body.light-mode .bottom-nav {
     font-weight: 700;
     cursor: pointer;
     font-size: 1rem;
+    box-shadow: 0 4px 20px var(--primary-glow);
 }
 
 .confirm-ad-btn:active {
+    transform: scale(0.98);
+}
+
+.claim-prize-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, var(--success), #27ae60);
+    border: none;
+    border-radius: 60px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 16px;
+    box-shadow: 0 4px 20px rgba(46, 204, 113, 0.3);
+    transition: all 0.3s;
+}
+
+.claim-prize-btn:active {
     transform: scale(0.98);
 }
 
@@ -1093,6 +1264,10 @@ body.light-mode .bottom-nav {
 .spin-result-amount {
     font-size: 2rem;
     font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .spin-result-currency {
@@ -1102,7 +1277,7 @@ body.light-mode .bottom-nav {
 
 .spin-result-effect {
     margin-top: 12px;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 @keyframes confetti {
@@ -1124,30 +1299,39 @@ body.light-mode .bottom-nav {
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 8px;
-    transition: color 0.2s;
+    padding: 8px 12px;
+    transition: all 0.2s;
+    border-radius: 40px;
 }
 
 .back-btn:hover {
     color: var(--text-primary);
+    background: rgba(255,255,255,0.05);
 }
 
 .page-header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
+    justify-content: center;
+    margin-bottom: 20px;
     padding: 8px 0;
+    position: relative;
+}
+
+.page-header .back-btn {
+    position: absolute;
+    left: 0;
 }
 
 .page-header h2 {
     font-size: 1.1rem;
-    flex: 1;
+    font-weight: 700;
     text-align: center;
 }
 
-.page-header .back-btn {
-    flex-shrink: 0;
+.page-header .header-action {
+    position: absolute;
+    right: 0;
 }
 
 .no-data {
@@ -1175,6 +1359,7 @@ body.light-mode .bottom-nav {
     font-size: 0.75rem;
     color: var(--text-secondary);
     margin-bottom: 6px;
+    font-weight: 500;
 }
 
 .form-input {
@@ -1191,7 +1376,7 @@ body.light-mode .bottom-nav {
 .form-input:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 10px var(--primary-glow);
+    box-shadow: 0 0 20px var(--primary-glow);
 }
 
 .input-wrapper {
@@ -1208,13 +1393,14 @@ body.light-mode .bottom-nav {
     position: absolute;
     right: 6px;
     padding: 6px 16px;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border: none;
     border-radius: 40px;
     color: white;
     font-size: 0.7rem;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .toggle-group {
@@ -1239,9 +1425,10 @@ body.light-mode .bottom-nav {
 }
 
 .toggle-option.active {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: white;
     border-color: var(--primary);
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .my-tasks-list {
@@ -1256,6 +1443,11 @@ body.light-mode .bottom-nav {
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius-sm);
     margin-bottom: 8px;
+    transition: all 0.3s;
+}
+
+.my-task-card:hover {
+    box-shadow: var(--card-glow);
 }
 
 .my-task-card .task-header {
@@ -1294,7 +1486,7 @@ body.light-mode .bottom-nav {
 
 .progress-bar {
     height: 4px;
-    background: var(--primary);
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
     border-radius: 10px;
     width: 0%;
     transition: width 0.3s;
@@ -1375,7 +1567,7 @@ body.light-mode .bottom-nav {
 
 .add-task-btn {
     padding: 10px 20px;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border: none;
     border-radius: 40px;
     color: white;
@@ -1385,6 +1577,7 @@ body.light-mode .bottom-nav {
     align-items: center;
     gap: 8px;
     font-size: 0.85rem;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .add-task-btn:active {
@@ -1402,6 +1595,7 @@ body.light-mode .bottom-nav {
     cursor: pointer;
     margin-top: 8px;
     font-size: 0.75rem;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .payment-buttons-group {
@@ -1426,8 +1620,9 @@ body.light-mode .bottom-nav {
 }
 
 .pay-btn {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: white;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .check-btn {
@@ -1439,6 +1634,10 @@ body.light-mode .bottom-nav {
 .promo-card {
     padding: 16px;
     margin-bottom: 16px;
+    border-radius: var(--border-radius);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
 }
 
 .promo-card .promo-title {
@@ -1461,14 +1660,15 @@ body.light-mode .bottom-nav {
 
 .promo-submit-btn {
     padding: 10px 20px;
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border: none;
     border-radius: 40px;
     color: white;
     font-weight: 600;
     cursor: pointer;
     opacity: 0.5;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .promo-submit-btn.active {
@@ -1478,6 +1678,10 @@ body.light-mode .bottom-nav {
 .withdraw-card {
     padding: 16px;
     margin-bottom: 16px;
+    border-radius: var(--border-radius);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
 }
 
 .withdraw-card .withdraw-title {
@@ -1503,11 +1707,70 @@ body.light-mode .bottom-nav {
     font-weight: 700;
     cursor: pointer;
     font-size: 0.9rem;
+    box-shadow: 0 4px 20px var(--primary-glow);
+    transition: all 0.3s;
+}
+
+.withdraw-confirm-btn:active {
+    transform: scale(0.98);
 }
 
 .withdraw-confirm-btn.disabled {
     opacity: 0.5;
     pointer-events: none;
+}
+
+.deposit-card {
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: var(--border-radius);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+}
+
+.deposit-card .deposit-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.deposit-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.deposit-info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--bg-dark);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--glass-border);
+}
+
+.deposit-info-item .label {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+
+.deposit-info-item .value {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.deposit-info-item .copy-btn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 0.8rem;
 }
 
 .spin-wheel-container {
@@ -1520,6 +1783,7 @@ body.light-mode .bottom-nav {
     background: var(--bg-card);
     border: 1px solid var(--glass-border);
     padding: 10px 0;
+    min-height: 120px;
 }
 
 .spin-wheel-track {
@@ -1535,11 +1799,14 @@ body.light-mode .bottom-nav {
 .spin-wheel-track-inner {
     display: flex;
     gap: 8px;
-    transition: transform 5s cubic-bezier(0.17, 0.67, 0.12, 0.99);
     will-change: transform;
 }
 
-.spin-wheel-track-inner.slow {
+.spin-wheel-track-inner.spinning-fast {
+    transition: transform 0.1s linear;
+}
+
+.spin-wheel-track-inner.spinning-slow {
     transition: transform 2s cubic-bezier(0.17, 0.67, 0.12, 0.99);
 }
 
@@ -1590,18 +1857,19 @@ body.light-mode .bottom-nav {
 
 .spin-btn {
     display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 200px;
+    padding: 14px 20px;
+    border-radius: 60px;
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     border: none;
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 700;
     cursor: pointer;
     margin: 0 auto;
-    box-shadow: 0 0 30px var(--primary-glow);
-    transition: all 0.2s;
+    box-shadow: 0 4px 30px var(--primary-glow);
+    transition: all 0.3s;
 }
 
 .spin-btn:active {
@@ -1613,48 +1881,216 @@ body.light-mode .bottom-nav {
     pointer-events: none;
 }
 
-.spin-counter {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin-top: 12px;
-}
-
-.spin-counter span {
-    color: var(--primary);
-    font-weight: 700;
-}
-
-.withdraw-user-info {
+.game-balance-display {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    background: rgba(74, 124, 247, 0.08);
-    border-radius: var(--border-radius-sm);
+    gap: 6px;
+    padding: 6px 14px;
+    background: var(--bg-card);
+    border-radius: 40px;
     border: 1px solid var(--glass-border);
-    margin: 8px 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
-.withdraw-user-info img {
-    width: 32px;
-    height: 32px;
+.game-balance-display img {
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.withdraw-user-info .user-name {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    background: none;
-    -webkit-background-clip: unset;
-    background-clip: unset;
-    color: var(--text-primary);
-    max-width: 150px;
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    margin: 12px 0;
 }
 
-.withdraw-user-info .user-handle {
-    font-size: 0.7rem;
+.dice-item {
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.dice-item.rolling {
+    animation: diceRoll 0.15s infinite;
+}
+
+@keyframes diceRoll {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(10deg) scale(1.05); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.dice-item .dice-dots {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+}
+
+.dice-dots-grid-1 { grid-template: 1fr / 1fr; place-items: center; }
+.dice-dots-grid-2 { grid-template: 1fr 1fr / 1fr 1fr; }
+.dice-dots-grid-3 { grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr; }
+.dice-dots-grid-4 { grid-template: 1fr 1fr / 1fr 1fr; }
+.dice-dots-grid-5 { grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr; }
+.dice-dots-grid-6 { grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr; }
+
+.dice-dot {
+    width: 12px;
+    height: 12px;
+    background: #1a1a2e;
+    border-radius: 50%;
+}
+
+.dice-result-display {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px 0;
+}
+
+.dice-result-item {
+    font-size: 3rem;
+    padding: 10px 20px;
+    background: var(--bg-card);
+    border-radius: var(--border-radius-sm);
+    border: 2px solid var(--glass-border);
+    min-width: 80px;
+    text-align: center;
+}
+
+.dice-result-item span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.dice-result-total {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 12px 0;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.lottery-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 0;
+    margin: 12px 0;
+}
+
+.lottery-slot {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-card);
+    border-radius: var(--border-radius-sm);
+    border: 2px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    transition: all 0.3s;
+}
+
+.lottery-slot.rolling {
+    animation: slotRoll 0.1s infinite;
+}
+
+@keyframes slotRoll {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.lottery-result-display {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 0;
+}
+
+.lottery-result-display .lottery-slot {
+    font-size: 4rem;
+    width: 90px;
+    height: 90px;
+    background: var(--bg-card);
+    border-radius: var(--border-radius-sm);
+    border: 2px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lottery-result-total {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 12px 0;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.tab-bar {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+    background: var(--bg-card);
+    border-radius: 40px;
+    padding: 4px;
+    border: 1px solid var(--glass-border);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    border-radius: 40px;
     color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+.transaction-tab-content {
+    display: none;
+}
+
+.transaction-tab-content.active {
+    display: block;
+}
+
+body.light-mode .dice-item {
+    background: #f0f2f8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body.light-mode .dice-dot {
+    background: #1a1a2e;
 }
