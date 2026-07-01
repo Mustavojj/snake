@@ -1,3 +1,4 @@
+[file name: styles.css]
 :root {
     --primary: #4A7CF7;
     --primary-dark: #3A5FC7;
@@ -15,9 +16,6 @@
     --success: #2ecc71;
     --warning: #f39c12;
     --error: #e74c3c;
-    --usdt-color: #26a17b;
-    --gram-color: #0088CC;
-    --stars-color: #f5b342;
     --card-glow: 0 0 40px rgba(74, 124, 247, 0.15);
 }
 
@@ -350,9 +348,9 @@ body.light-mode .lang-select {
     background: rgba(17, 17, 25, 0.92);
     backdrop-filter: blur(20px);
     display: flex;
-    padding: 8px 12px;
+    padding: 6px 10px;
     border-radius: 60px;
-    gap: 4px;
+    gap: 2px;
     z-index: 100;
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
@@ -367,12 +365,12 @@ body.light-mode .bottom-nav {
     background: none;
     border: none;
     color: var(--text-secondary);
-    font-size: 0.55rem;
+    font-size: 0.5rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
+    gap: 1px;
     padding: 6px 0;
     border-radius: 40px;
     transition: all 0.3s ease;
@@ -380,7 +378,7 @@ body.light-mode .bottom-nav {
 }
 
 .nav-btn i {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     transition: transform 0.3s;
 }
 
@@ -396,8 +394,8 @@ body.light-mode .bottom-nav {
     content: '';
     position: absolute;
     top: 0;
-    left: 10%;
-    right: 10%;
+    left: 5%;
+    right: 5%;
     height: 100%;
     background: var(--primary);
     border-radius: 40px;
@@ -422,11 +420,6 @@ body.light-mode .bottom-nav {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px) scale(0.95); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .glass-card {
@@ -477,37 +470,6 @@ body.light-mode .bottom-nav {
     color: white;
     font-size: 0.8rem;
     box-shadow: 0 4px 15px var(--primary-glow);
-}
-
-.section-title-with-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0 14px;
-}
-
-.section-title-with-btn .section-title {
-    margin: 0;
-}
-
-.add-task-icon-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-    box-shadow: 0 4px 15px var(--primary-glow);
-}
-
-.add-task-icon-btn:active {
-    transform: scale(0.9);
 }
 
 .game-card {
@@ -649,13 +611,6 @@ body.light-mode .bottom-nav {
 
 .earn-btn:active {
     transform: scale(0.95);
-}
-
-.earn-btn.secondary {
-    background: transparent;
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    box-shadow: none;
 }
 
 .earn-btn:disabled {
@@ -1023,7 +978,7 @@ body.light-mode .bottom-nav {
 
 .withdraw-options {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 10px;
     margin: 12px 0;
 }
@@ -1055,41 +1010,6 @@ body.light-mode .bottom-nav {
     font-size: 0.7rem;
     font-weight: 600;
     margin-top: 4px;
-}
-
-.stars-options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 12px 0;
-}
-
-.stars-option {
-    padding: 12px;
-    text-align: center;
-    background: var(--bg-card);
-    backdrop-filter: blur(12px);
-    border: 2px solid var(--glass-border);
-    border-radius: var(--border-radius-sm);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.stars-option.active {
-    border-color: var(--primary);
-    box-shadow: 0 0 30px var(--primary-glow);
-}
-
-.stars-option img {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.stars-option .option-value {
-    font-size: 0.85rem;
-    font-weight: 700;
 }
 
 .transaction-list {
@@ -1202,29 +1122,6 @@ body.light-mode .bottom-nav {
     padding: 20px;
 }
 
-.reward-amount {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin: 12px 0;
-}
-
-.confirm-ad-btn {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    border: none;
-    border-radius: 60px;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 1rem;
-    box-shadow: 0 4px 20px var(--primary-glow);
-}
-
-.confirm-ad-btn:active {
-    transform: scale(0.98);
-}
-
 .claim-prize-btn {
     width: 100%;
     padding: 14px;
@@ -1244,23 +1141,19 @@ body.light-mode .bottom-nav {
     transform: scale(0.98);
 }
 
-.spin-modal .modal-content {
-    max-width: 340px;
-}
-
-.spin-result-icon {
-    font-size: 3rem;
+.game-result-icon {
+    font-size: 4rem;
     margin-bottom: 8px;
 }
 
-.spin-result-icon img {
-    width: 50px;
-    height: 50px;
+.game-result-icon img {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.spin-result-amount {
+.game-result-amount {
     font-size: 2rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
@@ -1269,12 +1162,13 @@ body.light-mode .bottom-nav {
     color: transparent;
 }
 
-.spin-result-currency {
+.game-result-detail {
     font-size: 1rem;
     color: var(--text-secondary);
+    margin-bottom: 8px;
 }
 
-.spin-result-effect {
+.game-result-effect {
     margin-top: 12px;
     font-size: 3rem;
 }
@@ -1285,7 +1179,7 @@ body.light-mode .bottom-nav {
     100% { transform: scale(1); opacity: 1; }
 }
 
-.spin-result-effect.show {
+.game-result-effect.show {
     animation: confetti 0.5s ease;
 }
 
@@ -1546,24 +1440,6 @@ body.light-mode .bottom-nav {
     to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-.task-loading {
-    text-align: center;
-    padding: 40px;
-    color: var(--text-secondary);
-}
-
-.task-loading i {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    animation: spin 1s linear infinite;
-}
-
-.bonus-icon {
-    font-size: 3rem;
-    color: var(--primary);
-    margin-bottom: 8px;
-}
-
 .add-task-btn {
     padding: 10px 20px;
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -1595,39 +1471,6 @@ body.light-mode .bottom-nav {
     margin-top: 8px;
     font-size: 0.75rem;
     box-shadow: 0 4px 15px var(--primary-glow);
-}
-
-.payment-buttons-group {
-    display: flex;
-    gap: 10px;
-    margin-top: 16px;
-}
-
-.payment-buttons-group button {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 40px;
-    font-weight: 600;
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.payment-buttons-group button:active {
-    transform: scale(0.95);
-}
-
-.pay-btn {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
-    box-shadow: 0 4px 15px var(--primary-glow);
-}
-
-.check-btn {
-    background: var(--bg-card);
-    color: var(--text-primary);
-    border: 1px solid var(--glass-border);
 }
 
 .promo-card {
@@ -1772,132 +1615,75 @@ body.light-mode .bottom-nav {
     font-size: 0.8rem;
 }
 
-.spin-wheel-container {
-    position: relative;
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto 20px;
-    overflow: hidden;
-    border-radius: var(--border-radius);
-    background: var(--bg-card);
-    border: 1px solid var(--glass-border);
-    padding: 10px 0;
-    min-height: 120px;
-}
-
-.spin-wheel-track {
-    display: flex;
-    gap: 4px;
-    padding: 0 10px;
-    overflow: hidden;
-    position: relative;
-    height: 100px;
-    align-items: center;
-}
-
-.spin-wheel-track-inner {
-    display: flex;
-    gap: 8px;
-    will-change: transform;
-}
-
-.spin-wheel-track-inner.spinning-fast {
-    transition: transform 0.1s linear;
-}
-
-.spin-wheel-track-inner.spinning-slow {
-    transition: transform 2s cubic-bezier(0.17, 0.67, 0.12, 0.99);
-}
-
-.spin-prize-item {
-    flex-shrink: 0;
-    width: 80px;
-    height: 80px;
-    background: var(--bg-card);
-    border: 2px solid var(--glass-border);
-    border-radius: var(--border-radius-sm);
+.game-board-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
-    padding: 8px;
-    transition: all 0.3s;
+    padding: 20px 0;
 }
 
-.spin-prize-item img {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.spin-prize-item .prize-value {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.spin-prize-item .prize-currency {
-    font-size: 0.55rem;
-    color: var(--text-secondary);
-}
-
-.spin-pointer {
-    position: absolute;
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: var(--primary);
-    z-index: 5;
-    filter: drop-shadow(0 0 15px var(--primary-glow));
-}
-
-.spin-btn {
-    display: block;
+.tic-tac-toe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 320px;
     width: 100%;
-    max-width: 200px;
-    padding: 14px 20px;
-    border-radius: 60px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    border: none;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin: 0 auto;
-    box-shadow: 0 4px 30px var(--primary-glow);
-    transition: all 0.3s;
+    aspect-ratio: 1/1;
 }
 
-.spin-btn:active {
-    transform: scale(0.95);
-}
-
-.spin-btn:disabled {
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-.game-balance-display {
+.ttt-cell {
+    background: var(--bg-card);
+    border: 2px solid var(--glass-border);
+    border-radius: 16px;
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    background: var(--bg-card);
-    border-radius: 40px;
-    border: 1px solid var(--glass-border);
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-bottom: 12px;
+    justify-content: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    aspect-ratio: 1/1;
+    min-height: 80px;
+    position: relative;
 }
 
-.game-balance-display img {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    object-fit: cover;
+.ttt-cell:hover:not(.taken) {
+    background: rgba(74, 124, 247, 0.1);
+    border-color: var(--primary);
+    transform: scale(1.02);
+}
+
+.ttt-cell.taken {
+    cursor: default;
+}
+
+.ttt-cell.x {
+    color: #4A7CF7;
+    text-shadow: 0 0 30px rgba(74, 124, 247, 0.4);
+    animation: popIn 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+}
+
+.ttt-cell.o {
+    color: #f39c12;
+    text-shadow: 0 0 30px rgba(243, 156, 18, 0.4);
+    animation: popIn 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+}
+
+.ttt-cell.winning {
+    animation: winPulse 0.8s ease-in-out infinite;
+    background: rgba(46, 204, 113, 0.2);
+    border-color: var(--success);
+    box-shadow: 0 0 30px rgba(46, 204, 113, 0.3);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes winPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 .dice-container {
@@ -1905,26 +1691,23 @@ body.light-mode .bottom-nav {
     justify-content: center;
     gap: 20px;
     padding: 20px 0;
-    margin: 12px 0;
 }
 
 .dice-item {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background: white;
-    border-radius: 12px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    font-weight: 800;
-    color: #1a1a2e;
     box-shadow: 0 8px 30px rgba(0,0,0,0.3);
     transition: all 0.3s;
+    border: 2px solid var(--glass-border);
 }
 
 .dice-item.rolling {
-    animation: diceRoll 0.15s infinite;
+    animation: diceRoll 0.1s infinite;
 }
 
 @keyframes diceRoll {
@@ -1937,7 +1720,7 @@ body.light-mode .bottom-nav {
     display: grid;
     width: 100%;
     height: 100%;
-    padding: 12px;
+    padding: 14px;
 }
 
 .dice-dots-grid-1 { grid-template: 1fr / 1fr; place-items: center; }
@@ -1948,10 +1731,19 @@ body.light-mode .bottom-nav {
 .dice-dots-grid-6 { grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr; }
 
 .dice-dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background: #1a1a2e;
     border-radius: 50%;
+}
+
+body.light-mode .dice-item {
+    background: #f0f2f8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body.light-mode .dice-dot {
+    background: #1a1a2e;
 }
 
 .dice-result-display {
@@ -1962,18 +1754,18 @@ body.light-mode .bottom-nav {
 }
 
 .dice-result-item {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 10px 20px;
     background: var(--bg-card);
     border-radius: var(--border-radius-sm);
     border: 2px solid var(--glass-border);
-    min-width: 80px;
+    min-width: 70px;
     text-align: center;
 }
 
 .dice-result-item span {
     display: block;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--text-primary);
 }
@@ -1993,29 +1785,28 @@ body.light-mode .bottom-nav {
     justify-content: center;
     gap: 16px;
     padding: 20px 0;
-    margin: 12px 0;
 }
 
 .lottery-slot {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     background: var(--bg-card);
     border-radius: var(--border-radius-sm);
     border: 2px solid var(--glass-border);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     transition: all 0.3s;
 }
 
 .lottery-slot.rolling {
-    animation: slotRoll 0.1s infinite;
+    animation: slotRoll 0.08s infinite;
 }
 
 @keyframes slotRoll {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+    50% { transform: translateY(-8px); }
     100% { transform: translateY(0); }
 }
 
@@ -2030,12 +1821,6 @@ body.light-mode .bottom-nav {
     font-size: 4rem;
     width: 90px;
     height: 90px;
-    background: var(--bg-card);
-    border-radius: var(--border-radius-sm);
-    border: 2px solid var(--glass-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .lottery-result-total {
@@ -2046,6 +1831,90 @@ body.light-mode .bottom-nav {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+.game-btn {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 24px;
+    border-radius: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border: none;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0 auto;
+    box-shadow: 0 4px 30px var(--primary-glow);
+    transition: all 0.3s;
+}
+
+.game-btn:active {
+    transform: scale(0.95);
+}
+
+.game-btn:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.game-balance-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-card);
+    border-radius: 40px;
+    border: 1px solid var(--glass-border);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.game-balance-display img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.game-status {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 12px 0;
+    padding: 8px;
+    border-radius: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+}
+
+.difficulty-selector {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.difficulty-btn {
+    padding: 6px 18px;
+    border: 2px solid var(--glass-border);
+    border-radius: 40px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.difficulty-btn.active {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .tab-bar {
@@ -2085,11 +1954,59 @@ body.light-mode .bottom-nav {
     display: block;
 }
 
-body.light-mode .dice-item {
-    background: #f0f2f8;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.games-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 12px 0;
 }
 
-body.light-mode .dice-dot {
-    background: #1a1a2e;
+.game-grid-card {
+    padding: 20px 16px;
+    text-align: center;
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.game-grid-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-glow);
+}
+
+.game-grid-card:active {
+    transform: scale(0.95);
+}
+
+.game-grid-card .game-icon {
+    font-size: 3rem;
+    margin-bottom: 8px;
+}
+
+.game-grid-card .game-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.game-grid-card .game-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+    padding: 2px 12px;
+    background: var(--bg-card);
+    border-radius: 40px;
+    border: 1px solid var(--glass-border);
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.game-grid-card .game-badge img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    object-fit: cover;
 }
