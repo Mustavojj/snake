@@ -29,64 +29,42 @@ export const APP_CONFIG = {
     REFERRAL_LINK: "https://t.me/NEJARS",
     
     ICONS: {
-        SPIN: "https://cdn-icons-png.flaticon.com/512/17917/17917938.png",
+        TICTACTOE: "https://cdn-icons-png.flaticon.com/512/1508/1508947.png",
         DICE: "https://cdn-icons-png.flaticon.com/512/12907/12907818.png",
         LOTTERY: "https://cdn-icons-png.flaticon.com/512/2108/2108661.png",
-        USDT: "https://cdn-icons-png.flaticon.com/512/15207/15207964.png",
-        GRAM: "https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png",
-        STARS: "https://cdn-icons-png.flaticon.com/512/7656/7656139.png"
+        GRAM: "https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png"
     },
     
     GAME_REWARDS: {
-        SPIN: {
-            prizes: [
-                { value: 0.0001, currency: 'GRAM' },
-                { value: 0.001, currency: 'GRAM' },
-                { value: 0.01, currency: 'GRAM' },
-                { value: 0.10, currency: 'GRAM' },
-                { value: 1.00, currency: 'GRAM' },
-                { value: 0.0001, currency: 'USDT' },
-                { value: 0.001, currency: 'USDT' },
-                { value: 0.01, currency: 'USDT' },
-                { value: 0.10, currency: 'USDT' },
-                { value: 1.00, currency: 'USDT' },
-                { value: 0.0001, currency: 'STARS' },
-                { value: 0.001, currency: 'STARS' },
-                { value: 0.01, currency: 'STARS' },
-                { value: 0.10, currency: 'STARS' },
-                { value: 1.00, currency: 'STARS' }
-            ]
+        TICTACTOE: {
+            win: 0.0005,
+            draw: 0.0002,
+            lose: 0.0001
         },
         DICE: {
-            rewards: {
-                '666': 0.001,
-                '555': 0.0005,
-                '444': 0.0004,
-                '333': 0.0003,
-                '222': 0.0002,
-                '111': 0.0001
-            },
+            '666': 0.001,
+            '555': 0.0005,
+            '444': 0.0004,
+            '333': 0.0003,
+            '222': 0.0002,
+            '111': 0.0001,
             defaultMultiplier: 0.0001
         },
         LOTTERY: {
-            symbols: ['🍋', '🍇', '🍒', '777'],
-            rewards: {
-                '🍇🍇🍇': 0.0006,
-                '🍋🍋🍋': 0.0003,
-                '777777777': 0.001
-            },
+            '🍇🍇🍇': 0.0006,
+            '🍋🍋🍋': 0.0003,
+            '777777777': 0.001,
             defaultReward: 0.0001
         }
     },
     
     AD_LIMITS: {
-        SPIN: { dailyLimit: 3, cooldownMinutes: 1 },
+        TICTACTOE: { dailyLimit: 3, cooldownMinutes: 1 },
         DICE: { dailyLimit: 3, cooldownMinutes: 1 },
         LOTTERY: { dailyLimit: 3, cooldownMinutes: 1 }
     },
     
     SOCIAL_TASK_REWARDS: {
-        GRAM: 0.0001,
-        SPIN: 1
+        GRAM: 0.0001
     }
 };
