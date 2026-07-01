@@ -35,9 +35,7 @@
                 </div>
             </div>
             <div class="header-balances" id="header-balances">
-                <div class="header-balance" id="header-usdt"><img src="https://cdn-icons-png.flaticon.com/512/15207/15207964.png" class="balance-icon"> <span id="usdt-balance">0.0000</span></div>
                 <div class="header-balance" id="header-gram"><img src="https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png" class="balance-icon"> <span id="gram-balance">0.0000</span></div>
-                <div class="header-balance" id="header-stars"><img src="https://cdn-icons-png.flaticon.com/512/7656/7656139.png" class="balance-icon"> <span id="stars-balance">0</span></div>
             </div>
             <button id="settings-btn" class="header-icon-btn"><i class="fas fa-cog"></i></button>
         </div>
@@ -76,12 +74,16 @@
         <div id="tasks-page" class="page"></div>
         <div id="invite-page" class="page"></div>
         <div id="my-page" class="page"></div>
-        <div id="spin-page" class="page"></div>
+        <div id="games-page" class="page"></div>
+        <div id="tictactoe-page" class="page"></div>
+        <div id="dice-page" class="page"></div>
+        <div id="lottery-page" class="page"></div>
         <div id="add-task-page" class="page"></div>
     </main>
 
     <nav class="bottom-nav">
         <button class="nav-btn active" data-page="home-page"><i class="fas fa-home"></i><span id="nav-home">Home</span></button>
+        <button class="nav-btn" data-page="games-page"><i class="fas fa-gamepad"></i><span id="nav-games">Games</span></button>
         <button class="nav-btn" data-page="tasks-page"><i class="fas fa-tasks"></i><span id="nav-tasks">Tasks</span></button>
         <button class="nav-btn" data-page="invite-page"><i class="fas fa-users"></i><span id="nav-invite">Invite</span></button>
         <button class="nav-btn" data-page="my-page"><i class="fas fa-user"></i><span id="nav-my">My</span></button>
@@ -122,54 +124,18 @@
     </div>
 </div>
 
-<div id="spin-result-modal" class="modal" style="display:none;">
-    <div class="modal-content glass-modal spin-modal">
+<div id="game-result-modal" class="modal" style="display:none;">
+    <div class="modal-content glass-modal game-modal">
         <div class="modal-header">
-            <h3><i class="fas fa-gift"></i> <span id="spin-result-title">Your Prize</span></h3>
-            <button class="modal-close" id="close-spin-result">&times;</button>
+            <h3><i class="fas fa-gift"></i> <span id="game-result-title">Result</span></h3>
+            <button class="modal-close" id="close-game-result">&times;</button>
         </div>
         <div class="modal-body" style="text-align:center">
-            <div class="spin-result-icon" id="spin-result-icon"><i class="fas fa-trophy"></i></div>
-            <div class="spin-result-amount" id="spin-result-amount">+0.00</div>
-            <div class="spin-result-currency" id="spin-result-currency">GRAM</div>
-            <div class="spin-result-effect" id="spin-result-effect"></div>
-            <button class="claim-prize-btn" id="spin-claim-prize">Claim</button>
-        </div>
-    </div>
-</div>
-
-<div id="dice-result-modal" class="modal" style="display:none;">
-    <div class="modal-content glass-modal dice-modal">
-        <div class="modal-header">
-            <h3><i class="fas fa-gift"></i> Dice Result</h3>
-            <button class="modal-close" id="close-dice-result">&times;</button>
-        </div>
-        <div class="modal-body" style="text-align:center">
-            <div class="dice-result-display" id="dice-result-display">
-                <div class="dice-result-item">🎲 <span id="dice-result-1">1</span></div>
-                <div class="dice-result-item">🎲 <span id="dice-result-2">1</span></div>
-                <div class="dice-result-item">🎲 <span id="dice-result-3">1</span></div>
-            </div>
-            <div class="dice-result-total" id="dice-result-total">+0.0000 GRAM</div>
-            <button class="claim-prize-btn" id="dice-claim-prize">Claim</button>
-        </div>
-    </div>
-</div>
-
-<div id="lottery-result-modal" class="modal" style="display:none;">
-    <div class="modal-content glass-modal lottery-modal">
-        <div class="modal-header">
-            <h3><i class="fas fa-gift"></i> Lottery Result</h3>
-            <button class="modal-close" id="close-lottery-result">&times;</button>
-        </div>
-        <div class="modal-body" style="text-align:center">
-            <div class="lottery-result-display" id="lottery-result-display">
-                <div class="lottery-slot" id="lottery-slot-1">🍋</div>
-                <div class="lottery-slot" id="lottery-slot-2">🍋</div>
-                <div class="lottery-slot" id="lottery-slot-3">🍋</div>
-            </div>
-            <div class="lottery-result-total" id="lottery-result-total">+0.0000 GRAM</div>
-            <button class="claim-prize-btn" id="lottery-claim-prize">Claim</button>
+            <div id="game-result-icon" class="game-result-icon"><i class="fas fa-trophy"></i></div>
+            <div id="game-result-detail" class="game-result-detail"></div>
+            <div id="game-result-amount" class="game-result-amount">+0.0000 GRAM</div>
+            <div id="game-result-effect" class="game-result-effect"></div>
+            <button class="claim-prize-btn" id="game-claim-prize">Claim</button>
         </div>
     </div>
 </div>
