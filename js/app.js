@@ -1,9 +1,9 @@
+[file name: app.js]
 import { APP_CONFIG } from './data.js';
 
 const translations = {
     en: {
-        home: 'Home', tasks: 'Tasks', invite: 'Invite', my: 'My',
-        spin_win: 'SPIN & WIN',
+        home: 'Home', games: 'Games', tasks: 'Tasks', invite: 'Invite', my: 'My',
         watch_ad: 'Watch Reward AD',
         watch: 'Watch',
         daily_tasks: 'Daily Tasks', daily_checkin: 'Daily Check-in',
@@ -26,7 +26,6 @@ const translations = {
         total_earnings: 'Total Earnings',
         available_rewards: 'Available Rewards',
         withdraw_funds: 'Withdraw Funds',
-        select_currency: 'Select Currency',
         wallet: 'Wallet', amount: 'Amount',
         min_withdraw: 'Min. withdrawal: {min}',
         confirm_withdrawal: 'Confirm Withdrawal',
@@ -34,12 +33,11 @@ const translations = {
         deposits: 'Deposits',
         withdrawals: 'Withdrawals',
         no_transactions: 'No transactions yet',
-        spin_reward: 'Spin Reward',
         daily_checkin_reward: 'Daily Check-in',
         task_complete: 'Task Complete',
         withdrawal: 'Withdrawal',
         bonus: 'Bonus',
-        usdt: 'USDT', gram: 'GRAM', stars: 'STARS',
+        gram: 'GRAM',
         enter_promo: 'Enter promo code',
         promo_code: 'Promo Code',
         loading: 'Loading...',
@@ -64,18 +62,13 @@ const translations = {
         new_referral: 'New Referral',
         daily_bonus_claimed: 'Already Claimed',
         no_ads: 'No ads available',
-        vip: 'VIP',
-        free: 'FREE',
-        level: 'Level',
-        earn_30_ads: 'Earn 30% from ads earnings',
-        earn_10_tasks: 'Earn 10% from tasks earnings',
-        earn_1_spin: 'Earn 1 SPIN per valid referral',
         total_referrals: 'Total Referrals',
         active_referrals: 'Active Referrals',
         invite_link: 'Invite Link',
         task_reward: 'Task Reward',
-        roll_dice: 'ROLL DICE',
-        lottery_game: 'LOTTERY GAME',
+        tic_tac_toe: 'Tic-Tac-Toe',
+        roll_dice: 'Roll Dice',
+        lottery_game: 'Lottery Game',
         play: 'PLAY ({available})',
         spin: 'SPIN ({available})',
         ad_limit_reached: 'Daily ad limit reached for this game',
@@ -98,11 +91,21 @@ const translations = {
         go: 'GO ➜',
         social_tasks: 'Social Tasks',
         partner_tasks: 'Partner Tasks',
-        reward: 'Reward'
+        reward: 'Reward',
+        tictactoe: 'Tic-Tac-Toe',
+        dice: 'Roll Dice',
+        lottery: 'Lottery',
+        easy: 'Easy',
+        medium: 'Medium',
+        hard: 'Hard',
+        your_turn: 'Your turn ({symbol})',
+        ai_thinking: 'AI thinking...',
+        you_win: '🎉 You win!',
+        ai_wins: '😔 AI wins!',
+        draw: '🤝 Draw!'
     },
     ru: {
-        home: 'Главная', tasks: 'Задания', invite: 'Пригласить', my: 'Мой',
-        spin_win: 'SPIN & WIN',
+        home: 'Главная', games: 'Игры', tasks: 'Задания', invite: 'Пригласить', my: 'Мой',
         watch_ad: 'Смотреть рекламу',
         watch: 'Смотреть',
         daily_tasks: 'Ежедневные задания', daily_checkin: 'Ежедневная проверка',
@@ -125,7 +128,6 @@ const translations = {
         total_earnings: 'Общий заработок',
         available_rewards: 'Доступные награды',
         withdraw_funds: 'Вывод средств',
-        select_currency: 'Выберите валюту',
         wallet: 'Кошелек', amount: 'Сумма',
         min_withdraw: 'Мин. вывод: {min}',
         confirm_withdrawal: 'Подтвердить вывод',
@@ -133,12 +135,11 @@ const translations = {
         deposits: 'Депозиты',
         withdrawals: 'Выводы',
         no_transactions: 'Пока нет транзакций',
-        spin_reward: 'Награда за спин',
         daily_checkin_reward: 'Ежедневная проверка',
         task_complete: 'Задание выполнено',
         withdrawal: 'Вывод',
         bonus: 'Бонус',
-        usdt: 'USDT', gram: 'GRAM', stars: 'STARS',
+        gram: 'GRAM',
         enter_promo: 'Введите промокод',
         promo_code: 'Промокод',
         loading: 'Загрузка...',
@@ -163,18 +164,13 @@ const translations = {
         new_referral: 'Новый реферал',
         daily_bonus_claimed: 'Уже получено',
         no_ads: 'Нет доступной рекламы',
-        vip: 'VIP',
-        free: 'БЕСПЛАТНО',
-        level: 'Уровень',
-        earn_30_ads: 'Зарабатывайте 30% от доходов с рекламы',
-        earn_10_tasks: 'Зарабатывайте 10% от доходов с заданий',
-        earn_1_spin: 'Зарабатывайте 1 СПИН за каждого подтвержденного реферала',
         total_referrals: 'Всего рефералов',
         active_referrals: 'Активных рефералов',
         invite_link: 'Ссылка для приглашения',
         task_reward: 'Награда за задание',
-        roll_dice: 'ROLL DICE',
-        lottery_game: 'LOTTERY GAME',
+        tic_tac_toe: 'Крестики-нолики',
+        roll_dice: 'Бросить кости',
+        lottery_game: 'Лотерея',
         play: 'ИГРАТЬ ({available})',
         spin: 'SPIN ({available})',
         ad_limit_reached: 'Дневной лимит рекламы для этой игры достигнут',
@@ -197,11 +193,21 @@ const translations = {
         go: 'ПЕРЕЙТИ ➜',
         social_tasks: 'Социальные задания',
         partner_tasks: 'Партнерские задания',
-        reward: 'Награда'
+        reward: 'Награда',
+        tictactoe: 'Крестики-нолики',
+        dice: 'Бросить кости',
+        lottery: 'Лотерея',
+        easy: 'Легкий',
+        medium: 'Средний',
+        hard: 'Сложный',
+        your_turn: 'Ваш ход ({symbol})',
+        ai_thinking: 'ИИ думает...',
+        you_win: '🎉 Вы победили!',
+        ai_wins: '😔 ИИ победил!',
+        draw: '🤝 Ничья!'
     },
     tr: {
-        home: 'Ana Sayfa', tasks: 'Görevler', invite: 'Davet', my: 'Benim',
-        spin_win: 'SPIN & KAZAN',
+        home: 'Ana Sayfa', games: 'Oyunlar', tasks: 'Görevler', invite: 'Davet', my: 'Benim',
         watch_ad: 'Ödüllü Reklam İzle',
         watch: 'İzle',
         daily_tasks: 'Günlük Görevler', daily_checkin: 'Günlük Kontrol',
@@ -224,7 +230,6 @@ const translations = {
         total_earnings: 'Toplam Kazanç',
         available_rewards: 'Mevcut Ödüller',
         withdraw_funds: 'Para Çek',
-        select_currency: 'Para Birimi Seç',
         wallet: 'Cüzdan', amount: 'Miktar',
         min_withdraw: 'Min. çekim: {min}',
         confirm_withdrawal: 'Çekimi Onayla',
@@ -232,12 +237,11 @@ const translations = {
         deposits: 'Yatırımlar',
         withdrawals: 'Çekimler',
         no_transactions: 'İşlem yok',
-        spin_reward: 'Spin Ödülü',
         daily_checkin_reward: 'Günlük Kontrol',
         task_complete: 'Görev Tamamlandı',
         withdrawal: 'Para Çekme',
         bonus: 'Bonus',
-        usdt: 'USDT', gram: 'GRAM', stars: 'STARS',
+        gram: 'GRAM',
         enter_promo: 'Promosyon kodunu girin',
         promo_code: 'Promosyon Kodu',
         loading: 'Yükleniyor...',
@@ -262,18 +266,13 @@ const translations = {
         new_referral: 'Yeni Referans',
         daily_bonus_claimed: 'Zaten Alındı',
         no_ads: 'Reklam yok',
-        vip: 'VIP',
-        free: 'ÜCRETSİZ',
-        level: 'Seviye',
-        earn_30_ads: 'Reklam gelirlerinden %30 kazanın',
-        earn_10_tasks: 'Görev gelirlerinden %10 kazanın',
-        earn_1_spin: 'Her geçerli referans için 1 SPIN kazanın',
         total_referrals: 'Toplam Referans',
         active_referrals: 'Aktif Referanslar',
         invite_link: 'Davet Bağlantısı',
         task_reward: 'Görev Ödülü',
-        roll_dice: 'ROLL DICE',
-        lottery_game: 'LOTTERY GAME',
+        tic_tac_toe: 'X-O Oyunu',
+        roll_dice: 'Zar At',
+        lottery_game: 'Piyango',
         play: 'OYNA ({available})',
         spin: 'SPIN ({available})',
         ad_limit_reached: 'Bu oyun için günlük reklam limiti aşıldı',
@@ -296,11 +295,21 @@ const translations = {
         go: 'GİT ➜',
         social_tasks: 'Sosyal Görevler',
         partner_tasks: 'Ortak Görevler',
-        reward: 'Ödül'
+        reward: 'Ödül',
+        tictactoe: 'X-O Oyunu',
+        dice: 'Zar At',
+        lottery: 'Piyango',
+        easy: 'Kolay',
+        medium: 'Orta',
+        hard: 'Zor',
+        your_turn: 'Sıra sende ({symbol})',
+        ai_thinking: 'Yapay zeka düşünüyor...',
+        you_win: '🎉 Kazandın!',
+        ai_wins: '😔 Yapay zeka kazandı!',
+        draw: '🤝 Berabere!'
     },
     ar: {
-        home: 'الرئيسية', tasks: 'المهام', invite: 'دعوة', my: 'حسابي',
-        spin_win: 'SPIN & WIN',
+        home: 'الرئيسية', games: 'الألعاب', tasks: 'المهام', invite: 'دعوة', my: 'حسابي',
         watch_ad: 'مشاهدة إعلان',
         watch: 'مشاهدة',
         daily_tasks: 'المهام اليومية', daily_checkin: 'تسجيل الدخول اليومي',
@@ -323,7 +332,6 @@ const translations = {
         total_earnings: 'إجمالي الأرباح',
         available_rewards: 'المكافآت المتاحة',
         withdraw_funds: 'سحب الأموال',
-        select_currency: 'اختر العملة',
         wallet: 'المحفظة', amount: 'المبلغ',
         min_withdraw: 'الحد الأدنى للسحب: {min}',
         confirm_withdrawal: 'تأكيد السحب',
@@ -331,12 +339,11 @@ const translations = {
         deposits: 'الإيداعات',
         withdrawals: 'السحوبات',
         no_transactions: 'لا توجد معاملات بعد',
-        spin_reward: 'مكافأة الدوران',
         daily_checkin_reward: 'تسجيل الدخول اليومي',
         task_complete: 'اكتملت المهمة',
         withdrawal: 'سحب',
         bonus: 'مكافأة',
-        usdt: 'USDT', gram: 'GRAM', stars: 'STARS',
+        gram: 'GRAM',
         enter_promo: 'أدخل الرمز الترويجي',
         promo_code: 'الرمز الترويجي',
         loading: 'جاري التحميل...',
@@ -361,18 +368,13 @@ const translations = {
         new_referral: 'إحالة جديدة',
         daily_bonus_claimed: 'تم الاستلام بالفعل',
         no_ads: 'لا توجد إعلانات',
-        vip: 'VIP',
-        free: 'مجاني',
-        level: 'مستوى',
-        earn_30_ads: 'اربح 30% من أرباح الإعلانات',
-        earn_10_tasks: 'اربح 10% من أرباح المهام',
-        earn_1_spin: 'اربح 1 SPIN لكل إحالة صالحة',
         total_referrals: 'إجمالي الإحالات',
         active_referrals: 'الإحالات النشطة',
         invite_link: 'رابط الدعوة',
         task_reward: 'مكافأة المهمة',
-        roll_dice: 'ROLL DICE',
-        lottery_game: 'LOTTERY GAME',
+        tic_tac_toe: 'إكس-أو',
+        roll_dice: 'رمي النرد',
+        lottery_game: 'لعبة اليانصيب',
         play: 'لعب ({available})',
         spin: 'SPIN ({available})',
         ad_limit_reached: 'تم الوصول إلى الحد اليومي للإعلانات لهذه اللعبة',
@@ -395,7 +397,18 @@ const translations = {
         go: 'اذهب ➜',
         social_tasks: 'المهام الاجتماعية',
         partner_tasks: 'مهام الشركاء',
-        reward: 'المكافأة'
+        reward: 'المكافأة',
+        tictactoe: 'إكس-أو',
+        dice: 'رمي النرد',
+        lottery: 'اليانصيب',
+        easy: 'سهل',
+        medium: 'متوسط',
+        hard: 'صعب',
+        your_turn: 'دورك ({symbol})',
+        ai_thinking: 'الذكاء الاصطناعي يفكر...',
+        you_win: '🎉 لقد فزت!',
+        ai_wins: '😔 فاز الذكاء الاصطناعي!',
+        draw: '🤝 تعادل!'
     }
 };
 
@@ -408,10 +421,8 @@ class App {
         this.isInitialized = false;
         this.deviceId = null;
 
-        this.usdtBalance = 0;
         this.gramBalance = 0;
-        this.starsBalance = 0;
-        this.spins = 0;
+        this.tictactoeGames = 0;
         this.diceGames = 0;
         this.lotteryGames = 0;
 
@@ -427,9 +438,9 @@ class App {
 
         this.totalReferrals = 0;
         this.activeReferrals = 0;
-        this.referralEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
-        this.claimableEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
-        this.totalEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
+        this.referralEarnings = { gram: 0 };
+        this.claimableEarnings = { gram: 0 };
+        this.totalEarnings = { gram: 0 };
 
         this.transactions = [];
         this.deposits = [];
@@ -446,9 +457,9 @@ class App {
         this.isTaskRunning = false;
         this.membershipCache = new Map();
 
-        this.adCounts = { SPIN: 0, DICE: 0, LOTTERY: 0 };
+        this.adCounts = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
         this.adCountDate = null;
-        this.adCooldowns = { SPIN: 0, DICE: 0, LOTTERY: 0 };
+        this.adCooldowns = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
 
         this.depositMemo = null;
         this.pendingDepositCheck = false;
@@ -458,8 +469,6 @@ class App {
         this._dirty = false;
         this._saveTimeout = null;
         this._isSaving = false;
-        this._selectedCurrency = 'gram';
-        this._selectedStarsAmount = null;
     }
 
     t(key, params = {}) {
@@ -564,8 +573,8 @@ class App {
             const today = this.getTodayUTC();
             if (this.adCountDate !== today) {
                 this.adCountDate = today;
-                this.adCounts = { SPIN: 0, DICE: 0, LOTTERY: 0 };
-                this.adCooldowns = { SPIN: 0, DICE: 0, LOTTERY: 0 };
+                this.adCounts = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
+                this.adCooldowns = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
             }
             
             const limit = APP_CONFIG.AD_LIMITS[gameType]?.dailyLimit || 3;
@@ -598,12 +607,8 @@ class App {
     }
 
     updateHeaderBalances() {
-        const usdtEl = document.getElementById('usdt-balance');
         const gramEl = document.getElementById('gram-balance');
-        const starsEl = document.getElementById('stars-balance');
-        if (usdtEl) usdtEl.textContent = this.usdtBalance.toFixed(4);
         if (gramEl) gramEl.textContent = this.gramBalance.toFixed(4);
-        if (starsEl) starsEl.textContent = Math.floor(this.starsBalance);
     }
 
     scheduleSave() {
@@ -630,10 +635,8 @@ class App {
         this._isSaving = true;
         try {
             const data = {
-                usdtBalance: this.usdtBalance,
                 gramBalance: this.gramBalance,
-                starsBalance: this.starsBalance,
-                spins: this.spins,
+                tictactoeGames: this.tictactoeGames,
                 diceGames: this.diceGames,
                 lotteryGames: this.lotteryGames,
                 dailyCheckinClaimed: this.dailyCheckinClaimed,
@@ -754,10 +757,8 @@ class App {
             photoUrl: this.tgUser.photo_url || APP_CONFIG.DEFAULT_USER_AVATAR,
             referredBy: referredBy,
             createdAt: Date.now(),
-            usdtBalance: 0,
             gramBalance: 0,
-            starsBalance: 0,
-            spins: 0,
+            tictactoeGames: 0,
             diceGames: 0,
             lotteryGames: 0,
             dailyCheckinClaimed: false,
@@ -771,9 +772,9 @@ class App {
             dailyTasksCompleted: 0,
             totalReferrals: 0,
             activeReferrals: 0,
-            referralEarnings: { usdt: 0, gram: 0, stars: 0, spins: 0 },
-            claimableEarnings: { usdt: 0, gram: 0, stars: 0, spins: 0 },
-            totalEarnings: { usdt: 0, gram: 0, stars: 0, spins: 0 },
+            referralEarnings: { gram: 0 },
+            claimableEarnings: { gram: 0 },
+            totalEarnings: { gram: 0 },
             state: 'active'
         };
 
@@ -793,10 +794,8 @@ class App {
             }
         }
 
-        this.usdtBalance = 0;
         this.gramBalance = 0;
-        this.starsBalance = 0;
-        this.spins = 0;
+        this.tictactoeGames = 0;
         this.diceGames = 0;
         this.lotteryGames = 0;
         this.dailyCheckinClaimed = false;
@@ -810,9 +809,9 @@ class App {
         this.dailyTasksCompleted = 0;
         this.totalReferrals = 0;
         this.activeReferrals = 0;
-        this.referralEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
-        this.claimableEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
-        this.totalEarnings = { usdt: 0, gram: 0, stars: 0, spins: 0 };
+        this.referralEarnings = { gram: 0 };
+        this.claimableEarnings = { gram: 0 };
+        this.totalEarnings = { gram: 0 };
         this.transactions = [];
         this.deposits = [];
         this.withdrawals = [];
@@ -830,10 +829,8 @@ class App {
         const cachedUser = localStorage.getItem(`gram_snake_user_${this.tgUser.id}`);
         if (cachedUser) {
             const data = JSON.parse(cachedUser);
-            this.usdtBalance = data.usdtBalance ?? 0;
             this.gramBalance = data.gramBalance ?? 0;
-            this.starsBalance = data.starsBalance ?? 0;
-            this.spins = data.spins ?? 0;
+            this.tictactoeGames = data.tictactoeGames ?? 0;
             this.diceGames = data.diceGames ?? 0;
             this.lotteryGames = data.lotteryGames ?? 0;
             this.dailyCheckinClaimed = data.dailyCheckinClaimed ?? false;
@@ -847,10 +844,10 @@ class App {
             this.dailyTasksCompleted = data.dailyTasksCompleted ?? 0;
             this.totalReferrals = data.totalReferrals ?? 0;
             this.activeReferrals = data.activeReferrals ?? 0;
-            this.referralEarnings = data.referralEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
-            this.claimableEarnings = data.claimableEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
-            this.totalEarnings = data.totalEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
-            this.adCounts = data.adCounts ?? { SPIN: 0, DICE: 0, LOTTERY: 0 };
+            this.referralEarnings = data.referralEarnings ?? { gram: 0 };
+            this.claimableEarnings = data.claimableEarnings ?? { gram: 0 };
+            this.totalEarnings = data.totalEarnings ?? { gram: 0 };
+            this.adCounts = data.adCounts ?? { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
             this.adCountDate = data.adCountDate ?? null;
         }
 
@@ -859,10 +856,8 @@ class App {
             const snap = await userRef.once('value');
             if (snap.exists()) {
                 const d = snap.val();
-                this.usdtBalance = d.usdtBalance ?? this.usdtBalance;
                 this.gramBalance = d.gramBalance ?? this.gramBalance;
-                this.starsBalance = d.starsBalance ?? this.starsBalance;
-                this.spins = d.spins ?? this.spins;
+                this.tictactoeGames = d.tictactoeGames ?? this.tictactoeGames;
                 this.diceGames = d.diceGames ?? this.diceGames;
                 this.lotteryGames = d.lotteryGames ?? this.lotteryGames;
                 this.dailyCheckinClaimed = d.dailyCheckinClaimed ?? false;
@@ -876,17 +871,15 @@ class App {
                 this.dailyTasksCompleted = d.dailyTasksCompleted ?? 0;
                 this.totalReferrals = d.totalReferrals ?? 0;
                 this.activeReferrals = d.activeReferrals ?? 0;
-                this.referralEarnings = d.referralEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
-                this.claimableEarnings = d.claimableEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
-                this.totalEarnings = d.totalEarnings ?? { usdt: 0, gram: 0, stars: 0, spins: 0 };
-                this.adCounts = d.adCounts ?? { SPIN: 0, DICE: 0, LOTTERY: 0 };
+                this.referralEarnings = d.referralEarnings ?? { gram: 0 };
+                this.claimableEarnings = d.claimableEarnings ?? { gram: 0 };
+                this.totalEarnings = d.totalEarnings ?? { gram: 0 };
+                this.adCounts = d.adCounts ?? { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
                 this.adCountDate = d.adCountDate ?? null;
 
                 const userDataForCache = {
-                    usdtBalance: this.usdtBalance,
                     gramBalance: this.gramBalance,
-                    starsBalance: this.starsBalance,
-                    spins: this.spins,
+                    tictactoeGames: this.tictactoeGames,
                     diceGames: this.diceGames,
                     lotteryGames: this.lotteryGames,
                     dailyCheckinClaimed: this.dailyCheckinClaimed,
@@ -918,7 +911,7 @@ class App {
         const today = this.getTodayUTC();
         if (this.adCountDate !== today) {
             this.adCountDate = today;
-            this.adCounts = { SPIN: 0, DICE: 0, LOTTERY: 0 };
+            this.adCounts = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
         }
 
         const nameSpan = document.getElementById('user-name');
@@ -1145,9 +1138,7 @@ class App {
 
         const invite3Progress = this.totalReferrals >= 3 ? 3 : this.totalReferrals;
         const complete10Progress = Math.min(this.dailyTasksCompleted, 10);
-        const watch10AdsProgress = this.adCounts.SPIN + this.adCounts.DICE + this.adCounts.LOTTERY;
-
-        const totalAdsWatched = this.adCounts.SPIN + this.adCounts.DICE + this.adCounts.LOTTERY;
+        const totalAdsWatched = this.adCounts.TICTACTOE + this.adCounts.DICE + this.adCounts.LOTTERY;
 
         el.innerHTML = `
             <div class="promo-card glass-card">
@@ -1158,37 +1149,27 @@ class App {
                 </div>
             </div>
 
-            <div class="game-card" data-game="spin">
-                <div class="game-card-left">
-                    <div class="game-icon-wrapper"><img src="${APP_CONFIG.ICONS.SPIN}" alt="spin"></div>
-                    <div class="game-info">
-                        <h4>${this.t('spin_win')}</h4>
-                        <div class="game-balance-badge"><img src="${APP_CONFIG.ICONS.SPIN}"> ${this.spins}</div>
-                    </div>
-                </div>
-                <button class="game-go-btn" data-game="spin">${this.t('go')}</button>
+            <div class="section-title">
+                <span class="icon-circle"><i class="fas fa-gamepad"></i></span>
+                ${this.t('games')}
             </div>
 
-            <div class="game-card" data-game="dice">
-                <div class="game-card-left">
-                    <div class="game-icon-wrapper"><img src="${APP_CONFIG.ICONS.DICE}" alt="dice"></div>
-                    <div class="game-info">
-                        <h4>${this.t('roll_dice')}</h4>
-                        <div class="game-balance-badge"><img src="${APP_CONFIG.ICONS.DICE}"> ${this.diceGames}</div>
-                    </div>
+            <div class="games-grid">
+                <div class="game-grid-card" data-game="tictactoe">
+                    <div class="game-icon">❌</div>
+                    <div class="game-name">${this.t('tictactoe')}</div>
+                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${this.tictactoeGames}</div>
                 </div>
-                <button class="game-go-btn" data-game="dice">${this.t('go')}</button>
-            </div>
-
-            <div class="game-card" data-game="lottery">
-                <div class="game-card-left">
-                    <div class="game-icon-wrapper"><img src="${APP_CONFIG.ICONS.LOTTERY}" alt="lottery"></div>
-                    <div class="game-info">
-                        <h4>${this.t('lottery_game')}</h4>
-                        <div class="game-balance-badge"><img src="${APP_CONFIG.ICONS.LOTTERY}"> ${this.lotteryGames}</div>
-                    </div>
+                <div class="game-grid-card" data-game="dice">
+                    <div class="game-icon">🎲</div>
+                    <div class="game-name">${this.t('dice')}</div>
+                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.DICE}"> ${this.diceGames}</div>
                 </div>
-                <button class="game-go-btn" data-game="lottery">${this.t('go')}</button>
+                <div class="game-grid-card" data-game="lottery">
+                    <div class="game-icon">🎰</div>
+                    <div class="game-name">${this.t('lottery')}</div>
+                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.LOTTERY}"> ${this.lotteryGames}</div>
+                </div>
             </div>
 
             <div class="section-title">
@@ -1247,7 +1228,7 @@ class App {
         document.querySelectorAll('[data-game]').forEach(card => {
             card.addEventListener('click', () => {
                 const game = card.dataset.game;
-                if (game === 'spin') this.navigateTo('spin-page');
+                if (game === 'tictactoe') this.navigateTo('tictactoe-page');
                 else if (game === 'dice') this.navigateTo('dice-page');
                 else if (game === 'lottery') this.navigateTo('lottery-page');
             });
@@ -1274,7 +1255,7 @@ class App {
                 this.showNotification('Info', this.t('daily_bonus_claimed'), 'warning');
                 return;
             }
-            if (await this.showAd('SPIN')) {
+            if (await this.showAd('TICTACTOE')) {
                 this.gramBalance += 0.001;
                 this.dailyCheckinClaimed = true;
                 this.dailyCheckinDate = today;
@@ -1295,7 +1276,7 @@ class App {
                 this.navigateTo('invite-page');
                 return;
             }
-            if (await this.showAd('SPIN')) {
+            if (await this.showAd('TICTACTOE')) {
                 this.gramBalance += 0.003;
                 this.invite3Claimed = true;
                 this.invite3Date = today;
@@ -1316,7 +1297,7 @@ class App {
                 this.navigateTo('tasks-page');
                 return;
             }
-            if (await this.showAd('SPIN')) {
+            if (await this.showAd('TICTACTOE')) {
                 this.gramBalance += 0.002;
                 this.complete10Claimed = true;
                 this.complete10Date = today;
@@ -1337,7 +1318,7 @@ class App {
                 this.showNotification('Info', 'Watch 10 ads first!', 'warning');
                 return;
             }
-            if (await this.showAd('SPIN')) {
+            if (await this.showAd('TICTACTOE')) {
                 this.gramBalance += 0.001;
                 this.watch10AdsClaimed = true;
                 this.watch10AdsDate = today;
@@ -1350,41 +1331,84 @@ class App {
         });
     }
 
-    renderSpinPage() {
-        const el = document.getElementById('spin-page');
+    renderGamesPage() {
+        const el = document.getElementById('games-page');
         if (!el) return;
-
-        const prizes = APP_CONFIG.GAME_REWARDS.SPIN.prizes;
-        const displayPrizes = [...prizes, ...prizes];
-
-        const spinLimit = APP_CONFIG.AD_LIMITS.SPIN.dailyLimit || 3;
-        const today = this.getTodayUTC();
-        const adCount = this.adCountDate === today ? this.adCounts.SPIN : 0;
-        const adsLeft = Math.max(0, spinLimit - adCount);
 
         el.innerHTML = `
             <div class="page-header">
-                <button class="back-btn" data-back="home"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
-                <h2>${this.t('spin_win')}</h2>
+                <h2>${this.t('games')}</h2>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-grid-card" data-game="tictactoe">
+                    <div class="game-icon">❌</div>
+                    <div class="game-name">${this.t('tictactoe')}</div>
+                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${this.tictactoeGames}</div>
+                    <div style="font-size:0.6rem;color:var(--text-secondary);margin-top:4px;">Win up to 0.0005 GRAM</div>
+                </div>
+                <div class="game-grid-card" data-game="dice">
+                    <div class="game-icon">🎲</div>
+                    <div class="game-name">${this.t('dice')}</div>
+                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.DICE}"> ${this.diceGames}</div>
+                    <div style="font-size:0.6rem;color:var(--text-secondary);margin-top:4px;">Win up to 0.001 GRAM</div>
+                </div>
+                <div class="game-grid-card" data-game="lottery">
+                    <div class="game-icon">🎰</div>
+                    <div class="game-name">${this.t('lottery')}</div>
+                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.LOTTERY}"> ${this.lotteryGames}</div>
+                    <div style="font-size:0.6rem;color:var(--text-secondary);margin-top:4px;">Win up to 0.001 GRAM</div>
+                </div>
+            </div>
+
+            <div style="text-align:center;padding:20px;color:var(--text-secondary);font-size:0.8rem;">
+                <i class="fas fa-info-circle"></i> Watch ads to get more game plays
+            </div>
+        `;
+
+        document.querySelectorAll('[data-game]').forEach(card => {
+            card.addEventListener('click', () => {
+                const game = card.dataset.game;
+                if (game === 'tictactoe') this.navigateTo('tictactoe-page');
+                else if (game === 'dice') this.navigateTo('dice-page');
+                else if (game === 'lottery') this.navigateTo('lottery-page');
+            });
+        });
+    }
+
+    renderTicTacToePage() {
+        const el = document.getElementById('tictactoe-page');
+        if (!el) return;
+
+        const limit = APP_CONFIG.AD_LIMITS.TICTACTOE.dailyLimit || 3;
+        const today = this.getTodayUTC();
+        const adCount = this.adCountDate === today ? this.adCounts.TICTACTOE : 0;
+        const adsLeft = Math.max(0, limit - adCount);
+
+        el.innerHTML = `
+            <div class="page-header">
+                <button class="back-btn" data-back="games"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
+                <h2>${this.t('tictactoe')}</h2>
             </div>
 
             <div class="glass-card" style="padding:20px;">
-                <div class="game-balance-display"><img src="${APP_CONFIG.ICONS.SPIN}"> ${this.spins} SPINS</div>
-                <div class="spin-wheel-container">
-                    <div class="spin-pointer">▼</div>
-                    <div class="spin-wheel-track">
-                        <div class="spin-wheel-track-inner" id="spin-track">
-                            ${displayPrizes.map(p => `
-                                <div class="spin-prize-item">
-                                    <img src="${APP_CONFIG.ICONS[p.currency] || APP_CONFIG.ICONS.GRAM}">
-                                    <div class="prize-value">${p.value}</div>
-                                    <div class="prize-currency">${p.currency}</div>
-                                </div>
-                            `).join('')}
-                        </div>
+                <div class="game-balance-display"><img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${this.tictactoeGames} GAMES</div>
+                
+                <div class="difficulty-selector">
+                    <button class="difficulty-btn active" data-difficulty="easy">${this.t('easy')}</button>
+                    <button class="difficulty-btn" data-difficulty="medium">${this.t('medium')}</button>
+                    <button class="difficulty-btn" data-difficulty="hard">${this.t('hard')}</button>
+                </div>
+
+                <div class="game-board-container">
+                    <div class="tic-tac-toe-board" id="ttt-board">
+                        ${Array(9).fill(0).map((_, i) => `<div class="ttt-cell" data-index="${i}"></div>`).join('')}
                     </div>
                 </div>
-                <button class="spin-btn" id="spin-btn">${this.t('spin', { available: this.spins })}</button>
+
+                <div class="game-status" id="ttt-status">${this.t('your_turn', { symbol: 'X' })}</div>
+                
+                <button class="game-btn" id="ttt-new-game">New Game</button>
             </div>
 
             <div class="earn-option glass-card">
@@ -1392,148 +1416,287 @@ class App {
                     <span class="icon-circle-small"><i class="fas fa-play"></i></span>
                     <span>${this.t('watch_ad')} <span style="font-size:0.6rem;color:var(--text-secondary);">(${adsLeft} left)</span></span>
                 </div>
-                <button class="earn-btn" id="spin-watch-ad" ${adsLeft <= 0 ? 'disabled' : ''}>${this.t('watch')}</button>
+                <button class="earn-btn" id="ttt-watch-ad" ${adsLeft <= 0 ? 'disabled' : ''}>${this.t('watch')}</button>
             </div>
         `;
 
-        document.getElementById('spin-watch-ad')?.addEventListener('click', async () => {
-            if (await this.showAd('SPIN')) {
-                this.spins++;
+        document.getElementById('ttt-watch-ad')?.addEventListener('click', async () => {
+            if (await this.showAd('TICTACTOE')) {
+                this.tictactoeGames++;
                 this._dirty = true;
                 this.saveUserData(false);
-                this.showNotification('+1 SPIN', 'You earned 1 free spin!', 'success');
-                this.renderSpinPage();
+                this.showNotification('+1 Game', 'Tic-Tac-Toe game added!', 'success');
+                this.renderTicTacToePage();
             }
         });
 
-        let isSpinning = false;
+        this.initTicTacToe();
 
-        document.getElementById('spin-btn')?.addEventListener('click', () => {
-            if (isSpinning) return;
-            if (this.spins <= 0) {
-                this.showNotification('No Spins', 'Watch an ad to get more spins!', 'warning');
-                return;
-            }
-
-            isSpinning = true;
-            this.spins--;
-            this._dirty = true;
-
-            const btn = document.getElementById('spin-btn');
-            btn.disabled = true;
-            btn.textContent = 'SPINNING...';
-
-            const track = document.getElementById('spin-track');
-            const itemWidth = 88;
-            const totalItems = prizes.length * 2;
-
-            const selectedIndex = Math.floor(Math.random() * prizes.length);
-            const targetPosition = selectedIndex * itemWidth + (prizes.length * itemWidth);
-            const startPosition = -(Math.floor(Math.random() * 500) + 200) * itemWidth;
-
-            track.style.transition = 'none';
-            track.style.transform = `translateX(${startPosition}px)`;
-
-            requestAnimationFrame(() => {
-                track.style.transition = 'transform 0.08s linear';
-                let currentPos = startPosition;
-                const totalSteps = 50;
-                let step = 0;
-                const interval = setInterval(() => {
-                    step++;
-                    currentPos -= itemWidth * 0.5;
-                    track.style.transform = `translateX(${currentPos}px)`;
-                    if (step >= totalSteps) {
-                        clearInterval(interval);
-                        const finalPos = -(targetPosition + (prizes.length * itemWidth * 2));
-                        track.style.transition = 'transform 2s cubic-bezier(0.17, 0.67, 0.12, 0.99)';
-                        track.style.transform = `translateX(${finalPos}px)`;
-
-                        setTimeout(() => {
-                            const prize = prizes[selectedIndex];
-                            const currency = prize.currency;
-                            const value = prize.value;
-
-                            if (currency === 'USDT') {
-                                this.usdtBalance += value;
-                            } else if (currency === 'GRAM') {
-                                this.gramBalance += value;
-                            } else {
-                                this.starsBalance += value;
-                            }
-
-                            this._dirty = true;
-                            this.saveUserData(false);
-                            this.updateHeaderBalances();
-
-                            const modal = document.getElementById('spin-result-modal');
-                            const icon = document.getElementById('spin-result-icon');
-                            const amount = document.getElementById('spin-result-amount');
-                            const currencyEl = document.getElementById('spin-result-currency');
-                            const effect = document.getElementById('spin-result-effect');
-
-                            if (icon) icon.innerHTML = `<img src="${APP_CONFIG.ICONS[currency] || APP_CONFIG.ICONS.GRAM}">`;
-                            if (amount) amount.textContent = `+${value}`;
-                            if (currencyEl) currencyEl.textContent = currency;
-                            if (effect) {
-                                effect.className = 'spin-result-effect show';
-                                effect.innerHTML = '🎉';
-                                setTimeout(() => { effect.className = 'spin-result-effect'; }, 1000);
-                            }
-
-                            modal.style.display = 'flex';
-
-                            isSpinning = false;
-                            btn.disabled = false;
-                            btn.textContent = this.t('spin', { available: this.spins });
-
-                            document.getElementById('spin-claim-prize')?.addEventListener('click', () => {
-                                modal.style.display = 'none';
-                                this.renderSpinPage();
-                                this.renderHome();
-                            });
-
-                            document.getElementById('close-spin-result')?.addEventListener('click', () => {
-                                modal.style.display = 'none';
-                                this.renderSpinPage();
-                                this.renderHome();
-                            });
-                        }, 2200);
-                    }
-                }, 60);
-            });
-        });
-
-        document.querySelector('.back-btn[data-back="home"]')?.addEventListener('click', () => {
-            this.navigateTo('home-page');
+        document.querySelector('.back-btn[data-back="games"]')?.addEventListener('click', () => {
+            this.navigateTo('games-page');
         });
     }
 
-    renderDicePage() {
-        const el = document.createElement('div');
-        el.id = 'dice-page';
-        el.className = 'page';
-        document.getElementById('main-content').appendChild(el);
+    initTicTacToe() {
+        let board = Array(9).fill(null);
+        let currentPlayer = 'X';
+        let gameActive = true;
+        let difficulty = 'easy';
+        let gamesAvailable = this.tictactoeGames;
 
-        const diceLimit = APP_CONFIG.AD_LIMITS.DICE.dailyLimit || 3;
+        const cells = document.querySelectorAll('.ttt-cell');
+        const status = document.getElementById('ttt-status');
+        const newGameBtn = document.getElementById('ttt-new-game');
+
+        document.querySelectorAll('.difficulty-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.difficulty-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                difficulty = btn.dataset.difficulty;
+                if (!gameActive) {
+                    this.startNewTicTacToeGame();
+                }
+            });
+        });
+
+        const checkWinner = (board) => {
+            const lines = [
+                [0,1,2], [3,4,5], [6,7,8],
+                [0,3,6], [1,4,7], [2,5,8],
+                [0,4,8], [2,4,6]
+            ];
+            
+            for (const line of lines) {
+                const [a,b,c] = line;
+                if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+                    return { winner: board[a], line: line };
+                }
+            }
+            return board.every(cell => cell !== null) ? { winner: 'draw' } : null;
+        };
+
+        const getAIMove = (board, difficulty) => {
+            if (difficulty === 'easy') {
+                const empty = board.map((v, i) => v === null ? i : null).filter(v => v !== null);
+                return empty[Math.floor(Math.random() * empty.length)];
+            }
+            
+            if (difficulty === 'medium') {
+                for (let i = 0; i < 9; i++) {
+                    if (board[i] === null) {
+                        board[i] = 'O';
+                        const result = checkWinner(board);
+                        board[i] = null;
+                        if (result && result.winner === 'O') return i;
+                    }
+                }
+                for (let i = 0; i < 9; i++) {
+                    if (board[i] === null) {
+                        board[i] = 'X';
+                        const result = checkWinner(board);
+                        board[i] = null;
+                        if (result && result.winner === 'X') return i;
+                    }
+                }
+                const empty = board.map((v, i) => v === null ? i : null).filter(v => v !== null);
+                return empty[Math.floor(Math.random() * empty.length)];
+            }
+            
+            if (difficulty === 'hard') {
+                const minimax = (board, depth, isMaximizing) => {
+                    const result = checkWinner(board);
+                    if (result) {
+                        if (result.winner === 'O') return 10 - depth;
+                        if (result.winner === 'X') return depth - 10;
+                        if (result.winner === 'draw') return 0;
+                    }
+                    
+                    if (isMaximizing) {
+                        let best = -Infinity;
+                        for (let i = 0; i < 9; i++) {
+                            if (board[i] === null) {
+                                board[i] = 'O';
+                                const score = minimax(board, depth + 1, false);
+                                board[i] = null;
+                                best = Math.max(best, score);
+                            }
+                        }
+                        return best;
+                    } else {
+                        let best = Infinity;
+                        for (let i = 0; i < 9; i++) {
+                            if (board[i] === null) {
+                                board[i] = 'X';
+                                const score = minimax(board, depth + 1, true);
+                                board[i] = null;
+                                best = Math.min(best, score);
+                            }
+                        }
+                        return best;
+                    }
+                };
+                
+                let bestScore = -Infinity;
+                let bestMove = null;
+                for (let i = 0; i < 9; i++) {
+                    if (board[i] === null) {
+                        board[i] = 'O';
+                        const score = minimax(board, 0, false);
+                        board[i] = null;
+                        if (score > bestScore) {
+                            bestScore = score;
+                            bestMove = i;
+                        }
+                    }
+                }
+                return bestMove;
+            }
+        };
+
+        const handleMove = (index) => {
+            if (!gameActive || board[index] !== null || currentPlayer === 'O' || gamesAvailable <= 0) {
+                if (gamesAvailable <= 0) {
+                    this.showNotification('No Games', 'Watch an ad to get more games!', 'warning');
+                }
+                return;
+            }
+            
+            board[index] = 'X';
+            cells[index].textContent = 'X';
+            cells[index].classList.add('taken', 'x');
+            
+            const result = checkWinner(board);
+            if (result) {
+                this.handleTicTacToeEnd(result);
+                return;
+            }
+            
+            currentPlayer = 'O';
+            status.textContent = this.t('ai_thinking');
+            
+            setTimeout(() => {
+                const aiMove = getAIMove(board, difficulty);
+                if (aiMove !== null) {
+                    board[aiMove] = 'O';
+                    cells[aiMove].textContent = 'O';
+                    cells[aiMove].classList.add('taken', 'o');
+                    
+                    const result2 = checkWinner(board);
+                    if (result2) {
+                        this.handleTicTacToeEnd(result2);
+                        return;
+                    }
+                    
+                    currentPlayer = 'X';
+                    status.textContent = this.t('your_turn', { symbol: 'X' });
+                }
+            }, 500);
+        };
+
+        cells.forEach(cell => {
+            cell.addEventListener('click', () => {
+                const index = parseInt(cell.dataset.index);
+                handleMove(index);
+            });
+        });
+
+        this.startNewTicTacToeGame = () => {
+            board = Array(9).fill(null);
+            currentPlayer = 'X';
+            gameActive = true;
+            cells.forEach(cell => {
+                cell.textContent = '';
+                cell.className = 'ttt-cell';
+            });
+            status.textContent = this.t('your_turn', { symbol: 'X' });
+        };
+
+        newGameBtn?.addEventListener('click', () => {
+            if (gamesAvailable <= 0) {
+                this.showNotification('No Games', 'Watch an ad to get more games!', 'warning');
+                return;
+            }
+            gamesAvailable--;
+            this.tictactoeGames = gamesAvailable;
+            this._dirty = true;
+            this.saveUserData(false);
+            this.startNewTicTacToeGame();
+            document.querySelector('.game-balance-display').innerHTML = `<img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${gamesAvailable} GAMES`;
+        });
+
+        this.handleTicTacToeEnd = (result) => {
+            gameActive = false;
+            gamesAvailable--;
+            this.tictactoeGames = gamesAvailable;
+            this._dirty = true;
+            this.saveUserData(false);
+            document.querySelector('.game-balance-display').innerHTML = `<img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${gamesAvailable} GAMES`;
+
+            let reward = 0;
+            let title = '';
+            let icon = '';
+
+            if (result.winner === 'X') {
+                reward = APP_CONFIG.GAME_REWARDS.TICTACTOE.win;
+                status.textContent = this.t('you_win');
+                this.showNotification(`+${reward.toFixed(4)} GRAM`, this.t('you_win'), 'success');
+            } else if (result.winner === 'O') {
+                reward = APP_CONFIG.GAME_REWARDS.TICTACTOE.lose;
+                status.textContent = this.t('ai_wins');
+                this.showNotification(`+${reward.toFixed(4)} GRAM`, this.t('ai_wins'), 'info');
+            } else if (result.winner === 'draw') {
+                reward = APP_CONFIG.GAME_REWARDS.TICTACTOE.draw;
+                status.textContent = this.t('draw');
+                this.showNotification(`+${reward.toFixed(4)} GRAM`, this.t('draw'), 'info');
+            }
+
+            this.gramBalance += reward;
+            this.saveUserData(false);
+            this.updateHeaderBalances();
+
+            if (result.line) {
+                result.line.forEach(i => {
+                    cells[i].classList.add('winning');
+                });
+            }
+
+            setTimeout(() => {
+                this.showGameResult('Tic-Tac-Toe', result, reward);
+            }, 500);
+        };
+    }
+
+    renderDicePage() {
+        const el = document.getElementById('dice-page');
+        if (!el) return;
+
+        const limit = APP_CONFIG.AD_LIMITS.DICE.dailyLimit || 3;
         const today = this.getTodayUTC();
         const adCount = this.adCountDate === today ? this.adCounts.DICE : 0;
-        const adsLeft = Math.max(0, diceLimit - adCount);
+        const adsLeft = Math.max(0, limit - adCount);
 
         el.innerHTML = `
             <div class="page-header">
-                <button class="back-btn" data-back="home"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
+                <button class="back-btn" data-back="games"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
                 <h2>${this.t('roll_dice')}</h2>
             </div>
 
             <div class="glass-card" style="padding:20px;">
-                <div class="game-balance-display"><img src="${APP_CONFIG.ICONS.DICE}"> ${this.diceGames} DICE</div>
-                <div class="dice-container" id="dice-container">
-                    <div class="dice-item" id="dice-1"><div class="dice-dots dice-dots-grid-1"><div class="dice-dot"></div></div></div>
-                    <div class="dice-item" id="dice-2"><div class="dice-dots dice-dots-grid-1"><div class="dice-dot"></div></div></div>
-                    <div class="dice-item" id="dice-3"><div class="dice-dots dice-dots-grid-1"><div class="dice-dot"></div></div></div>
+                <div class="game-balance-display"><img src="${APP_CONFIG.ICONS.DICE}"> ${this.diceGames} ROLLS</div>
+                
+                <div class="dice-container" id="dice-game-container">
+                    <div class="dice-item" id="dice-1">
+                        <div class="dice-dots dice-dots-grid-1"><div class="dice-dot"></div></div>
+                    </div>
+                    <div class="dice-item" id="dice-2">
+                        <div class="dice-dots dice-dots-grid-1"><div class="dice-dot"></div></div>
+                    </div>
+                    <div class="dice-item" id="dice-3">
+                        <div class="dice-dots dice-dots-grid-1"><div class="dice-dot"></div></div>
+                    </div>
                 </div>
-                <button class="spin-btn" id="dice-btn">${this.t('play', { available: this.diceGames })}</button>
+
+                <button class="game-btn" id="dice-roll-btn">${this.t('play', { available: this.diceGames })}</button>
             </div>
 
             <div class="earn-option glass-card">
@@ -1550,12 +1713,26 @@ class App {
                 this.diceGames++;
                 this._dirty = true;
                 this.saveUserData(false);
-                this.showNotification('+1 DICE', 'You earned 1 free dice game!', 'success');
+                this.showNotification('+1 Roll', 'Dice roll added!', 'success');
                 this.renderDicePage();
             }
         });
 
+        this.initDiceGame();
+
+        document.querySelector('.back-btn[data-back="games"]')?.addEventListener('click', () => {
+            this.navigateTo('games-page');
+        });
+    }
+
+    initDiceGame() {
+        let rollCount = this.diceGames;
         let isRolling = false;
+
+        const dice1 = document.getElementById('dice-1');
+        const dice2 = document.getElementById('dice-2');
+        const dice3 = document.getElementById('dice-3');
+        const rollBtn = document.getElementById('dice-roll-btn');
 
         const diceDotsMap = {
             1: 'dice-dots-grid-1',
@@ -1583,139 +1760,121 @@ class App {
             return dots.join('');
         };
 
-        document.getElementById('dice-btn')?.addEventListener('click', () => {
+        const updateDiceDisplay = (dice, value) => {
+            dice.innerHTML = `<div class="dice-dots ${diceDotsMap[value]}">${getDotsHtml(value)}</div>`;
+        };
+
+        const rollDiceValue = () => Math.floor(Math.random() * 6) + 1;
+
+        const calculateDiceReward = (values) => {
+            const [v1, v2, v3] = values;
+            
+            if (v1 === v2 && v2 === v3) {
+                const key = `${v1}${v1}${v1}`;
+                return APP_CONFIG.GAME_REWARDS.DICE[key] || 0;
+            }
+            
+            const sum = v1 + v2 + v3;
+            return sum * APP_CONFIG.GAME_REWARDS.DICE.defaultMultiplier;
+        };
+
+        rollBtn?.addEventListener('click', () => {
             if (isRolling) return;
-            if (this.diceGames <= 0) {
-                this.showNotification('No DICE', 'Watch an ad to get more dice games!', 'warning');
+            if (rollCount <= 0) {
+                this.showNotification('No Rolls', 'Watch an ad to get more rolls!', 'warning');
                 return;
             }
 
             isRolling = true;
-            this.diceGames--;
+            rollCount--;
+            this.diceGames = rollCount;
             this._dirty = true;
+            this.saveUserData(false);
 
-            const btn = document.getElementById('dice-btn');
-            btn.disabled = true;
-            btn.textContent = 'ROLLING...';
-
-            const dice1 = document.getElementById('dice-1');
-            const dice2 = document.getElementById('dice-2');
-            const dice3 = document.getElementById('dice-3');
+            rollBtn.textContent = 'ROLLING...';
+            rollBtn.disabled = true;
+            document.querySelector('.game-balance-display').innerHTML = `<img src="${APP_CONFIG.ICONS.DICE}"> ${rollCount} ROLLS`;
 
             let results = [];
-            let interval1, interval2, interval3;
+            let resultCount = 0;
 
-            const rollDice = (element, callback) => {
+            const rollDiceAnimated = (element, callback) => {
                 let count = 0;
-                const maxCount = 15 + Math.floor(Math.random() * 10);
+                const maxCount = 12 + Math.floor(Math.random() * 8);
                 const interval = setInterval(() => {
-                    const val = Math.floor(Math.random() * 6) + 1;
-                    element.innerHTML = `<div class="dice-dots ${diceDotsMap[val]}">${getDotsHtml(val)}</div>`;
+                    const val = rollDiceValue();
+                    updateDiceDisplay(element, val);
                     element.classList.add('rolling');
                     count++;
                     if (count >= maxCount) {
                         clearInterval(interval);
                         element.classList.remove('rolling');
-                        const finalVal = Math.floor(Math.random() * 6) + 1;
-                        element.innerHTML = `<div class="dice-dots ${diceDotsMap[finalVal]}">${getDotsHtml(finalVal)}</div>`;
+                        const finalVal = rollDiceValue();
+                        updateDiceDisplay(element, finalVal);
                         callback(finalVal);
                     }
-                }, 50);
+                }, 60);
                 return interval;
             };
 
-            let resultsCount = 0;
             const onResult = (val) => {
                 results.push(val);
-                resultsCount++;
-                if (resultsCount >= 3) {
+                resultCount++;
+                if (resultCount >= 3) {
                     setTimeout(() => {
-                        const total = results.reduce((a, b) => a + b, 0);
-                        let reward = 0;
-                        const sorted = [...results].sort().join('');
-                        const rewards = APP_CONFIG.GAME_REWARDS.DICE.rewards;
-                        if (results[0] === results[1] && results[1] === results[2]) {
-                            reward = rewards[`${results[0]}${results[0]}${results[0]}`] || 0;
-                        } else {
-                            reward = total * APP_CONFIG.GAME_REWARDS.DICE.defaultMultiplier;
-                        }
-
+                        const reward = calculateDiceReward(results);
                         this.gramBalance += reward;
-                        this._dirty = true;
                         this.saveUserData(false);
                         this.updateHeaderBalances();
 
-                        const modal = document.getElementById('dice-result-modal');
-                        document.getElementById('dice-result-1').textContent = results[0];
-                        document.getElementById('dice-result-2').textContent = results[1];
-                        document.getElementById('dice-result-3').textContent = results[2];
-                        document.getElementById('dice-result-total').textContent = `+${reward.toFixed(4)} GRAM`;
-                        modal.style.display = 'flex';
+                        this.showGameResult('Dice', { values: results }, reward);
 
                         isRolling = false;
-                        btn.disabled = false;
-                        btn.textContent = this.t('play', { available: this.diceGames });
-
-                        document.getElementById('dice-claim-prize')?.addEventListener('click', () => {
-                            modal.style.display = 'none';
-                            this.renderDicePage();
-                            this.renderHome();
-                        });
-
-                        document.getElementById('close-dice-result')?.addEventListener('click', () => {
-                            modal.style.display = 'none';
-                            this.renderDicePage();
-                            this.renderHome();
-                        });
+                        rollBtn.disabled = false;
+                        rollBtn.textContent = this.t('play', { available: rollCount });
                     }, 500);
                 }
             };
 
             setTimeout(() => {
-                interval1 = rollDice(dice1, onResult);
+                rollDiceAnimated(dice1, onResult);
                 setTimeout(() => {
-                    interval2 = rollDice(dice2, onResult);
+                    rollDiceAnimated(dice2, onResult);
                     setTimeout(() => {
-                        interval3 = rollDice(dice3, onResult);
-                    }, 1000);
-                }, 1000);
-            }, 500);
+                        rollDiceAnimated(dice3, onResult);
+                    }, 500);
+                }, 500);
+            }, 300);
         });
-
-        document.querySelector('.back-btn[data-back="home"]')?.addEventListener('click', () => {
-            this.navigateTo('home-page');
-        });
-
-        this.renderPage('dice-page');
     }
 
     renderLotteryPage() {
-        const el = document.createElement('div');
-        el.id = 'lottery-page';
-        el.className = 'page';
-        document.getElementById('main-content').appendChild(el);
+        const el = document.getElementById('lottery-page');
+        if (!el) return;
 
-        const lotteryLimit = APP_CONFIG.AD_LIMITS.LOTTERY.dailyLimit || 3;
+        const limit = APP_CONFIG.AD_LIMITS.LOTTERY.dailyLimit || 3;
         const today = this.getTodayUTC();
         const adCount = this.adCountDate === today ? this.adCounts.LOTTERY : 0;
-        const adsLeft = Math.max(0, lotteryLimit - adCount);
+        const adsLeft = Math.max(0, limit - adCount);
 
-        const symbols = APP_CONFIG.GAME_REWARDS.LOTTERY.symbols;
+        const symbols = ['🍋', '🍇', '🍒', '777'];
 
         el.innerHTML = `
             <div class="page-header">
-                <button class="back-btn" data-back="home"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
+                <button class="back-btn" data-back="games"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
                 <h2>${this.t('lottery_game')}</h2>
             </div>
 
             <div class="glass-card" style="padding:20px;">
                 <div class="game-balance-display"><img src="${APP_CONFIG.ICONS.LOTTERY}"> ${this.lotteryGames} GAMES</div>
+                
                 <div class="lottery-container" id="lottery-container">
                     <div class="lottery-slot" id="lottery-1">🍋</div>
                     <div class="lottery-slot" id="lottery-2">🍋</div>
                     <div class="lottery-slot" id="lottery-3">🍋</div>
                 </div>
-                <button class="spin-btn" id="lottery-btn">${this.t('spin', { available: this.lotteryGames })}</button>
+
+                <button class="game-btn" id="lottery-spin-btn">${this.t('spin', { available: this.lotteryGames })}</button>
             </div>
 
             <div class="earn-option glass-card">
@@ -1732,38 +1891,59 @@ class App {
                 this.lotteryGames++;
                 this._dirty = true;
                 this.saveUserData(false);
-                this.showNotification('+1 GAME', 'You earned 1 free lottery game!', 'success');
+                this.showNotification('+1 Game', 'Lottery game added!', 'success');
                 this.renderLotteryPage();
             }
         });
 
-        let isSpinning = false;
+        this.initLotteryGame();
 
-        document.getElementById('lottery-btn')?.addEventListener('click', () => {
+        document.querySelector('.back-btn[data-back="games"]')?.addEventListener('click', () => {
+            this.navigateTo('games-page');
+        });
+    }
+
+    initLotteryGame() {
+        let gameCount = this.lotteryGames;
+        let isSpinning = false;
+        const symbols = ['🍋', '🍇', '🍒', '777'];
+
+        const slot1 = document.getElementById('lottery-1');
+        const slot2 = document.getElementById('lottery-2');
+        const slot3 = document.getElementById('lottery-3');
+        const spinBtn = document.getElementById('lottery-spin-btn');
+
+        const calculateLotteryReward = (results) => {
+            const key = results.join('');
+            if (APP_CONFIG.GAME_REWARDS.LOTTERY[key]) {
+                return APP_CONFIG.GAME_REWARDS.LOTTERY[key];
+            }
+            return APP_CONFIG.GAME_REWARDS.LOTTERY.defaultReward;
+        };
+
+        spinBtn?.addEventListener('click', () => {
             if (isSpinning) return;
-            if (this.lotteryGames <= 0) {
+            if (gameCount <= 0) {
                 this.showNotification('No Games', 'Watch an ad to get more lottery games!', 'warning');
                 return;
             }
 
             isSpinning = true;
-            this.lotteryGames--;
+            gameCount--;
+            this.lotteryGames = gameCount;
             this._dirty = true;
+            this.saveUserData(false);
 
-            const btn = document.getElementById('lottery-btn');
-            btn.disabled = true;
-            btn.textContent = 'SPINNING...';
-
-            const slot1 = document.getElementById('lottery-1');
-            const slot2 = document.getElementById('lottery-2');
-            const slot3 = document.getElementById('lottery-3');
+            spinBtn.textContent = 'SPINNING...';
+            spinBtn.disabled = true;
+            document.querySelector('.game-balance-display').innerHTML = `<img src="${APP_CONFIG.ICONS.LOTTERY}"> ${gameCount} GAMES`;
 
             let results = [];
-            let interval1, interval2, interval3;
+            let resultCount = 0;
 
             const spinSlot = (element, callback) => {
                 let count = 0;
-                const maxCount = 15 + Math.floor(Math.random() * 10);
+                const maxCount = 12 + Math.floor(Math.random() * 8);
                 const interval = setInterval(() => {
                     const idx = Math.floor(Math.random() * symbols.length);
                     element.textContent = symbols[idx];
@@ -1774,84 +1954,86 @@ class App {
                         element.classList.remove('rolling');
                         const finalIdx = Math.floor(Math.random() * symbols.length);
                         element.textContent = symbols[finalIdx];
-                        callback(finalIdx);
+                        callback(symbols[finalIdx]);
                     }
-                }, 50);
+                }, 60);
                 return interval;
             };
 
-            let resultsCount = 0;
-            const onResult = (idx) => {
-                results.push(symbols[idx]);
-                resultsCount++;
-                if (resultsCount >= 3) {
+            const onResult = (val) => {
+                results.push(val);
+                resultCount++;
+                if (resultCount >= 3) {
                     setTimeout(() => {
-                        const resultStr = results.join('');
-                        let reward = APP_CONFIG.GAME_REWARDS.LOTTERY.defaultReward;
-                        const rewards = APP_CONFIG.GAME_REWARDS.LOTTERY.rewards;
-                        if (rewards[resultStr]) {
-                            reward = rewards[resultStr];
-                        }
-                        if (results[0] === results[1] && results[1] === results[2]) {
-                            if (results[0] === '777') {
-                                reward = 0.001;
-                            }
-                        }
-
+                        const reward = calculateLotteryReward(results);
                         this.gramBalance += reward;
-                        this._dirty = true;
                         this.saveUserData(false);
                         this.updateHeaderBalances();
 
-                        const modal = document.getElementById('lottery-result-modal');
-                        document.getElementById('lottery-slot-1').textContent = results[0];
-                        document.getElementById('lottery-slot-2').textContent = results[1];
-                        document.getElementById('lottery-slot-3').textContent = results[2];
-                        document.getElementById('lottery-result-total').textContent = `+${reward.toFixed(4)} GRAM`;
-                        modal.style.display = 'flex';
+                        this.showGameResult('Lottery', { symbols: results }, reward);
 
                         isSpinning = false;
-                        btn.disabled = false;
-                        btn.textContent = this.t('spin', { available: this.lotteryGames });
-
-                        document.getElementById('lottery-claim-prize')?.addEventListener('click', () => {
-                            modal.style.display = 'none';
-                            this.renderLotteryPage();
-                            this.renderHome();
-                        });
-
-                        document.getElementById('close-lottery-result')?.addEventListener('click', () => {
-                            modal.style.display = 'none';
-                            this.renderLotteryPage();
-                            this.renderHome();
-                        });
+                        spinBtn.disabled = false;
+                        spinBtn.textContent = this.t('spin', { available: gameCount });
                     }, 500);
                 }
             };
 
             setTimeout(() => {
-                interval1 = spinSlot(slot1, onResult);
+                spinSlot(slot1, onResult);
                 setTimeout(() => {
-                    interval2 = spinSlot(slot2, onResult);
+                    spinSlot(slot2, onResult);
                     setTimeout(() => {
-                        interval3 = spinSlot(slot3, onResult);
-                    }, 1000);
-                }, 1000);
-            }, 500);
+                        spinSlot(slot3, onResult);
+                    }, 500);
+                }, 500);
+            }, 300);
         });
-
-        document.querySelector('.back-btn[data-back="home"]')?.addEventListener('click', () => {
-            this.navigateTo('home-page');
-        });
-
-        this.renderPage('lottery-page');
     }
 
-    renderPage(pageId) {
-        const pages = document.querySelectorAll('.page');
-        pages.forEach(p => p.classList.remove('active'));
-        const target = document.getElementById(pageId);
-        if (target) target.classList.add('active');
+    showGameResult(gameName, result, reward) {
+        const modal = document.getElementById('game-result-modal');
+        const title = document.getElementById('game-result-title');
+        const icon = document.getElementById('game-result-icon');
+        const detail = document.getElementById('game-result-detail');
+        const amount = document.getElementById('game-result-amount');
+        const effect = document.getElementById('game-result-effect');
+
+        title.textContent = gameName + ' Result';
+
+        if (gameName === 'Tic-Tac-Toe') {
+            if (result.winner === 'X') {
+                icon.innerHTML = '🎉';
+                detail.textContent = 'You Win!';
+            } else if (result.winner === 'O') {
+                icon.innerHTML = '😔';
+                detail.textContent = 'AI Wins';
+            } else {
+                icon.innerHTML = '🤝';
+                detail.textContent = 'Draw';
+            }
+        } else if (gameName === 'Dice') {
+            icon.innerHTML = '🎲';
+            detail.textContent = `${result.values[0]} ${result.values[1]} ${result.values[2]}`;
+        } else if (gameName === 'Lottery') {
+            icon.innerHTML = '🎰';
+            detail.textContent = `${result.symbols[0]} ${result.symbols[1]} ${result.symbols[2]}`;
+        }
+
+        amount.textContent = `+${reward.toFixed(4)} GRAM`;
+        effect.className = 'game-result-effect show';
+        effect.innerHTML = '✨';
+        setTimeout(() => { effect.className = 'game-result-effect'; }, 1000);
+
+        modal.style.display = 'flex';
+
+        document.getElementById('game-claim-prize')?.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        document.getElementById('close-game-result')?.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
     }
 
     renderTasksPage() {
@@ -1886,7 +2068,6 @@ class App {
         if (socialTasks.length > 0) {
             html += socialTasks.map(t => {
                 const rewardGram = APP_CONFIG.SOCIAL_TASK_REWARDS.GRAM || 0.0001;
-                const rewardSpin = APP_CONFIG.SOCIAL_TASK_REWARDS.SPIN || 1;
                 return `
                     <div class="task-item glass-card">
                         <div class="task-item-left">
@@ -1895,11 +2076,10 @@ class App {
                                 <h4>${t.name}</h4>
                                 <div class="task-reward">
                                     <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS.GRAM}"> ${rewardGram} GRAM</span>
-                                    <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS.SPIN}"> ${rewardSpin} SPIN</span>
                                 </div>
                             </div>
                         </div>
-                        <button class="task-btn start" data-id="${t.id}" data-reward-gram="${rewardGram}" data-reward-spin="${rewardSpin}" data-url="${t.url}" data-verify="${t.verification}">Start</button>
+                        <button class="task-btn start" data-id="${t.id}" data-reward-gram="${rewardGram}" data-url="${t.url}" data-verify="${t.verification}">Start</button>
                     </div>
                 `;
             }).join('');
@@ -1919,11 +2099,11 @@ class App {
                             <div class="task-item-info">
                                 <h4>${t.name}</h4>
                                 <div class="task-reward">
-                                    <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS[currency] || APP_CONFIG.ICONS.GRAM}"> ${reward} ${currency}</span>
+                                    <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS.GRAM}"> ${reward} ${currency}</span>
                                 </div>
                             </div>
                         </div>
-                        <button class="task-btn start" data-id="partner_${t.id}" data-reward-gram="${reward}" data-reward-spin="0" data-url="${t.url}" data-verify="${t.verification || false}" data-partner="true">Start</button>
+                        <button class="task-btn start" data-id="partner_${t.id}" data-reward-gram="${reward}" data-url="${t.url}" data-verify="${t.verification || false}" data-partner="true">Start</button>
                     </div>
                 `;
             }).join('');
@@ -1941,7 +2121,6 @@ class App {
                 }
                 const id = btn.dataset.id;
                 const rewardGram = parseFloat(btn.dataset.rewardGram) || 0;
-                const rewardSpin = parseFloat(btn.dataset.rewardSpin) || 0;
                 const url = btn.dataset.url;
                 const verify = btn.dataset.verify === 'true';
                 const isPartner = btn.dataset.partner === 'true';
@@ -1991,9 +2170,6 @@ class App {
                                 if (rewardGram > 0) {
                                     this.gramBalance += rewardGram;
                                 }
-                                if (rewardSpin > 0) {
-                                    this.spins += rewardSpin;
-                                }
 
                                 this._dirty = true;
                                 await this.saveUserData(false);
@@ -2004,10 +2180,7 @@ class App {
                                 newBtn.classList.add('done');
                                 newBtn.classList.remove('check');
 
-                                let msg = '';
-                                if (rewardGram > 0) msg += `+${rewardGram} GRAM `;
-                                if (rewardSpin > 0) msg += `+${rewardSpin} SPIN`;
-                                this.showNotification('Task Completed!', msg, 'success');
+                                this.showNotification('Task Completed!', `+${rewardGram} GRAM`, 'success');
                                 this.renderTaskLists();
                                 this.renderHome();
                             } else {
@@ -2231,8 +2404,6 @@ class App {
         const claimable = this.claimableEarnings;
         const totalEarnings = this.totalEarnings;
 
-        const hasClaimable = claimable.usdt > 0 || claimable.gram > 0 || claimable.stars > 0 || claimable.spins > 0;
-
         el.innerHTML = `
             <div class="glass-card" style="padding:20px;margin-bottom:16px;">
                 <h3 style="text-align:center;margin-bottom:12px;"><i class="fas fa-users" style="color:var(--primary);"></i> ${this.t('invite_earn')}</h3>
@@ -2244,10 +2415,6 @@ class App {
                     <div class="invite-earning-item">
                         <span class="icon-circle-small"><i class="fas fa-tasks"></i></span>
                         <span class="earning-text">${this.t('earn_10_tasks')}</span>
-                    </div>
-                    <div class="invite-earning-item">
-                        <span class="icon-circle-small"><i class="fas fa-sync-alt"></i></span>
-                        <span class="earning-text">${this.t('earn_1_spin')}</span>
                     </div>
                 </div>
 
@@ -2274,22 +2441,10 @@ class App {
                 </div>
                 <div class="claim-section">
                     <div class="claim-card">
-                        <img src="${APP_CONFIG.ICONS.USDT}">
-                        <div class="claim-amount">${claimable.usdt.toFixed(4)}</div>
-                        <div class="claim-label">USDT</div>
-                        <button class="claim-btn ${claimable.usdt <= 0 ? 'done' : ''}" id="claim-usdt">${claimable.usdt <= 0 ? '0' : 'Claim'}</button>
-                    </div>
-                    <div class="claim-card">
                         <img src="${APP_CONFIG.ICONS.GRAM}">
                         <div class="claim-amount">${claimable.gram.toFixed(4)}</div>
                         <div class="claim-label">GRAM</div>
                         <button class="claim-btn ${claimable.gram <= 0 ? 'done' : ''}" id="claim-gram">${claimable.gram <= 0 ? '0' : 'Claim'}</button>
-                    </div>
-                    <div class="claim-card">
-                        <img src="${APP_CONFIG.ICONS.STARS}">
-                        <div class="claim-amount">${claimable.stars.toFixed(0)}</div>
-                        <div class="claim-label">STARS</div>
-                        <button class="claim-btn ${claimable.stars <= 0 ? 'done' : ''}" id="claim-stars">${claimable.stars <= 0 ? '0' : 'Claim'}</button>
                     </div>
                 </div>
             </div>
@@ -2301,19 +2456,9 @@ class App {
                 </div>
                 <div class="claim-section">
                     <div class="claim-card">
-                        <img src="${APP_CONFIG.ICONS.USDT}">
-                        <div class="claim-amount">${totalEarnings.usdt.toFixed(4)}</div>
-                        <div class="claim-label">USDT</div>
-                    </div>
-                    <div class="claim-card">
                         <img src="${APP_CONFIG.ICONS.GRAM}">
                         <div class="claim-amount">${totalEarnings.gram.toFixed(4)}</div>
                         <div class="claim-label">GRAM</div>
-                    </div>
-                    <div class="claim-card">
-                        <img src="${APP_CONFIG.ICONS.STARS}">
-                        <div class="claim-amount">${totalEarnings.stars.toFixed(0)}</div>
-                        <div class="claim-label">STARS</div>
                     </div>
                 </div>
             </div>
@@ -2324,22 +2469,9 @@ class App {
             this.showNotification(this.t('copy_success'), this.t('link_copied'), 'success');
         });
 
-        document.getElementById('claim-usdt')?.addEventListener('click', async () => {
-            if (this.claimableEarnings.usdt <= 0) return;
-            if (await this.showAd('SPIN')) {
-                this.usdtBalance += this.claimableEarnings.usdt;
-                this.claimableEarnings.usdt = 0;
-                this._dirty = true;
-                this.saveUserData(false);
-                this.updateHeaderBalances();
-                this.showNotification('Claimed!', 'USDT rewards claimed', 'success');
-                this.renderInvite();
-            }
-        });
-
         document.getElementById('claim-gram')?.addEventListener('click', async () => {
             if (this.claimableEarnings.gram <= 0) return;
-            if (await this.showAd('SPIN')) {
+            if (await this.showAd('TICTACTOE')) {
                 this.gramBalance += this.claimableEarnings.gram;
                 this.claimableEarnings.gram = 0;
                 this._dirty = true;
@@ -2349,35 +2481,11 @@ class App {
                 this.renderInvite();
             }
         });
-
-        document.getElementById('claim-stars')?.addEventListener('click', async () => {
-            if (this.claimableEarnings.stars <= 0) return;
-            if (await this.showAd('SPIN')) {
-                this.starsBalance += this.claimableEarnings.stars;
-                this.claimableEarnings.stars = 0;
-                this._dirty = true;
-                this.saveUserData(false);
-                this.updateHeaderBalances();
-                this.showNotification('Claimed!', 'STARS rewards claimed', 'success');
-                this.renderInvite();
-            }
-        });
     }
 
     renderMy() {
         const el = document.getElementById('my-page');
         if (!el) return;
-
-        const selectedCurrency = this._selectedCurrency || 'gram';
-        const currencies = [
-            { id: 'usdt', label: 'USDT', icon: APP_CONFIG.ICONS.USDT, minWithdraw: 0.03 },
-            { id: 'gram', label: 'GRAM', icon: APP_CONFIG.ICONS.GRAM, minWithdraw: 0.03 },
-            { id: 'stars', label: 'STARS', icon: APP_CONFIG.ICONS.STARS, minWithdraw: 15 }
-        ];
-
-        const showStarsOptions = selectedCurrency === 'stars';
-        const currencyInfo = currencies.find(c => c.id === selectedCurrency);
-        const minWithdraw = currencyInfo?.minWithdraw || 0.03;
 
         if (!this.depositMemo) {
             this.depositMemo = 'DEP_' + Date.now().toString(36).toUpperCase() + '_' + this.tgUser.id.toString(36).toUpperCase();
@@ -2409,50 +2517,26 @@ class App {
             <div class="withdraw-card glass-card">
                 <div class="withdraw-title"><i class="fas fa-arrow-up-right-from-square"></i> ${this.t('withdraw_funds')}</div>
                 <div class="withdraw-options">
-                    ${currencies.map(c => `
-                        <div class="withdraw-option ${c.id === selectedCurrency ? 'active' : ''}" data-currency="${c.id}">
-                            <img src="${c.icon}">
-                            <div class="option-label">${c.label}</div>
-                        </div>
-                    `).join('')}
+                    <div class="withdraw-option active">
+                        <img src="${APP_CONFIG.ICONS.GRAM}">
+                        <div class="option-label">GRAM</div>
+                    </div>
                 </div>
 
-                ${!showStarsOptions ? `
-                    <div class="form-group">
-                        <label class="form-label">${this.t('wallet')}</label>
-                        <input type="text" id="wallet-input" class="form-input" placeholder="Enter wallet address">
+                <div class="form-group">
+                    <label class="form-label">${this.t('wallet')}</label>
+                    <input type="text" id="wallet-input" class="form-input" placeholder="Enter wallet address">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">${this.t('amount')}</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="amount-input" class="form-input" step="0.00001" placeholder="0.00">
+                        <button class="action-btn" id="max-btn">MAX</button>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">${this.t('amount')}</label>
-                        <div class="input-wrapper">
-                            <input type="number" id="amount-input" class="form-input" step="0.00001" placeholder="0.00">
-                            <button class="action-btn" id="max-btn">MAX</button>
-                        </div>
-                    </div>
-                    <div class="withdraw-note">${this.t('min_withdraw', { min: minWithdraw })} ${selectedCurrency.toUpperCase()}</div>
-                    ${APP_CONFIG.WITHDRAWAL_FEES > 0 ? `<div class="withdraw-note">${this.t('withdrawal_fees_note', { fees: APP_CONFIG.WITHDRAWAL_FEES })}</div>` : ''}
-                    <button class="withdraw-confirm-btn disabled" id="withdraw-btn">${this.t('confirm_withdrawal')}</button>
-                ` : `
-                    <div class="stars-options">
-                        <div class="stars-option" data-value="15">
-                            <img src="${APP_CONFIG.ICONS.STARS}">
-                            <div class="option-value">15</div>
-                        </div>
-                        <div class="stars-option" data-value="25">
-                            <img src="${APP_CONFIG.ICONS.STARS}">
-                            <div class="option-value">25</div>
-                        </div>
-                        <div class="stars-option" data-value="50">
-                            <img src="${APP_CONFIG.ICONS.STARS}">
-                            <div class="option-value">50</div>
-                        </div>
-                        <div class="stars-option" data-value="100">
-                            <img src="${APP_CONFIG.ICONS.STARS}">
-                            <div class="option-value">100</div>
-                        </div>
-                    </div>
-                    <button class="withdraw-confirm-btn" id="withdraw-stars-btn">${this.t('confirm_withdrawal')}</button>
-                `}
+                </div>
+                <div class="withdraw-note">${this.t('min_withdraw', { min: APP_CONFIG.MINIMUM_WITHDRAW })} GRAM</div>
+                ${APP_CONFIG.WITHDRAWAL_FEES > 0 ? `<div class="withdraw-note">${this.t('withdrawal_fees_note', { fees: APP_CONFIG.WITHDRAWAL_FEES })}</div>` : ''}
+                <button class="withdraw-confirm-btn disabled" id="withdraw-btn">${this.t('confirm_withdrawal')}</button>
             </div>
 
             <div class="section-title">
@@ -2470,25 +2554,6 @@ class App {
                 <div id="withdrawals-container"></div>
             </div>
         `;
-
-        el.querySelectorAll('.withdraw-option').forEach(opt => {
-            opt.addEventListener('click', () => {
-                const currency = opt.dataset.currency;
-                this._selectedCurrency = currency;
-                this.renderMy();
-            });
-        });
-
-        el.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                el.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const tab = btn.dataset.tab;
-                el.querySelectorAll('.transaction-tab-content').forEach(c => c.classList.remove('active'));
-                document.getElementById(`${tab}-tab`).classList.add('active');
-                this.renderTransactions(tab);
-            });
-        });
 
         document.getElementById('copy-deposit-address')?.addEventListener('click', () => {
             navigator.clipboard.writeText(APP_CONFIG.TON_WALLET_ADDRESS);
@@ -2540,89 +2605,61 @@ class App {
             this.pendingDepositCheck = false;
         });
 
-        if (!showStarsOptions) {
-            const walletInput = document.getElementById('wallet-input');
-            const amountInput = document.getElementById('amount-input');
-            const withdrawBtn = document.getElementById('withdraw-btn');
-            const maxBtn = document.getElementById('max-btn');
+        const walletInput = document.getElementById('wallet-input');
+        const amountInput = document.getElementById('amount-input');
+        const withdrawBtn = document.getElementById('withdraw-btn');
+        const maxBtn = document.getElementById('max-btn');
 
-            const checkWithdraw = () => {
-                const wallet = walletInput?.value.trim();
-                const amount = parseFloat(amountInput?.value);
-                const balance = selectedCurrency === 'usdt' ? this.usdtBalance : this.gramBalance;
+        const checkWithdraw = () => {
+            const wallet = walletInput?.value.trim();
+            const amount = parseFloat(amountInput?.value);
+            const totalRequired = amount + (APP_CONFIG.WITHDRAWAL_FEES || 0);
+            const isValid = wallet && wallet.length >= 10 && amount >= APP_CONFIG.MINIMUM_WITHDRAW && totalRequired <= this.gramBalance && amount > 0;
+            if (withdrawBtn) {
+                if (isValid) withdrawBtn.classList.remove('disabled');
+                else withdrawBtn.classList.add('disabled');
+            }
+        };
+
+        maxBtn?.addEventListener('click', () => {
+            if (amountInput) {
+                let maxAmount = this.gramBalance - (APP_CONFIG.WITHDRAWAL_FEES || 0) - 0.00001;
+                if (maxAmount < 0) maxAmount = 0;
+                amountInput.value = maxAmount.toFixed(6);
+                checkWithdraw();
+            }
+        });
+
+        walletInput?.addEventListener('input', checkWithdraw);
+        amountInput?.addEventListener('input', checkWithdraw);
+
+        withdrawBtn?.addEventListener('click', async () => {
+            if (withdrawBtn.classList.contains('disabled')) return;
+            const amount = parseFloat(amountInput.value);
+            const wallet = walletInput.value.trim();
+
+            if (await this.showAd('TICTACTOE')) {
                 const totalRequired = amount + (APP_CONFIG.WITHDRAWAL_FEES || 0);
-                const isValid = wallet && wallet.length >= 10 && amount >= minWithdraw && totalRequired <= balance && amount > 0;
-                if (withdrawBtn) {
-                    if (isValid) withdrawBtn.classList.remove('disabled');
-                    else withdrawBtn.classList.add('disabled');
-                }
-            };
+                this.gramBalance -= totalRequired;
+                this.addWithdrawal(amount, 'GRAM', wallet);
+                this._dirty = true;
+                this.saveUserData(false);
+                this.updateHeaderBalances();
+                this.showNotification('Withdrawal Requested', `${amount} GRAM sent to ${wallet}`, 'success');
+                this.renderMy();
+            }
+        });
 
-            maxBtn?.addEventListener('click', () => {
-                if (amountInput) {
-                    const balance = selectedCurrency === 'usdt' ? this.usdtBalance : this.gramBalance;
-                    let maxAmount = balance - (APP_CONFIG.WITHDRAWAL_FEES || 0) - 0.00001;
-                    if (maxAmount < 0) maxAmount = 0;
-                    amountInput.value = maxAmount.toFixed(6);
-                    checkWithdraw();
-                }
+        el.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                el.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const tab = btn.dataset.tab;
+                el.querySelectorAll('.transaction-tab-content').forEach(c => c.classList.remove('active'));
+                document.getElementById(`${tab}-tab`).classList.add('active');
+                this.renderTransactions(tab);
             });
-
-            walletInput?.addEventListener('input', checkWithdraw);
-            amountInput?.addEventListener('input', checkWithdraw);
-
-            withdrawBtn?.addEventListener('click', async () => {
-                if (withdrawBtn.classList.contains('disabled')) return;
-                const amount = parseFloat(amountInput.value);
-                const wallet = walletInput.value.trim();
-
-                if (await this.showAd('SPIN')) {
-                    const currency = selectedCurrency === 'usdt' ? 'USDT' : 'GRAM';
-                    const totalRequired = amount + (APP_CONFIG.WITHDRAWAL_FEES || 0);
-
-                    if (selectedCurrency === 'usdt') {
-                        this.usdtBalance -= totalRequired;
-                    } else {
-                        this.gramBalance -= totalRequired;
-                    }
-                    this.addWithdrawal(amount, currency, wallet);
-                    this._dirty = true;
-                    this.saveUserData(false);
-                    this.updateHeaderBalances();
-                    this.showNotification('Withdrawal Requested', `${amount} ${currency} sent to ${wallet}`, 'success');
-                    this.renderMy();
-                }
-            });
-        } else {
-            document.getElementById('withdraw-stars-btn')?.addEventListener('click', async () => {
-                const selected = document.querySelector('.stars-option.active');
-                if (!selected) {
-                    this.showNotification('Error', 'Select an amount first', 'error');
-                    return;
-                }
-                const amount = parseInt(selected.dataset.value);
-                if (this.starsBalance < amount) {
-                    this.showNotification('Error', 'Insufficient balance', 'error');
-                    return;
-                }
-                if (await this.showAd('SPIN')) {
-                    this.starsBalance -= amount;
-                    this.addWithdrawal(amount, 'STARS', 'STARS Withdrawal');
-                    this._dirty = true;
-                    this.saveUserData(false);
-                    this.updateHeaderBalances();
-                    this.showNotification('Withdrawal Requested', `${amount} STARS withdrawn`, 'success');
-                    this.renderMy();
-                }
-            });
-
-            el.querySelectorAll('.stars-option').forEach(opt => {
-                opt.addEventListener('click', () => {
-                    el.querySelectorAll('.stars-option').forEach(o => o.classList.remove('active'));
-                    opt.classList.add('active');
-                });
-            });
-        }
+        });
 
         this.renderTransactions('deposits');
     }
@@ -2645,7 +2682,7 @@ class App {
                     <span class="transaction-name">${tab === 'deposits' ? 'Deposit' : 'Withdrawal'}</span>
                     ${tx.memo ? `<span style="font-size:0.6rem;color:var(--text-secondary);">${tx.memo}</span>` : ''}
                 </div>
-                <span class="transaction-amount ${tab === 'deposits' ? 'positive' : 'negative'}">${tab === 'deposits' ? '+' : '-'}${tx.amount.toFixed(4)} ${tx.currency}</span>
+                <span class="transaction-amount ${tab === 'deposits' ? 'positive' : 'negative'}">${tab === 'deposits' ? '+' : '-'}${tx.amount.toFixed(4)} ${tx.currency || 'GRAM'}</span>
             </div>
         `).join('');
     }
@@ -2677,16 +2714,12 @@ class App {
             return false;
         }
 
-        if (await this.showAd('SPIN')) {
+        if (await this.showAd('TICTACTOE')) {
             await usedRef.set(true);
             this.userCompletedPromoCodes.add(code);
 
-            if (promoData.rewardType === 'usdt') {
-                this.usdtBalance += promoData.reward;
-            } else if (promoData.rewardType === 'gram') {
+            if (promoData.rewardType === 'gram') {
                 this.gramBalance += promoData.reward;
-            } else if (promoData.rewardType === 'stars') {
-                this.starsBalance += promoData.reward;
             } else {
                 this.showNotification('Error', 'Invalid reward type', 'error');
                 return false;
@@ -2706,21 +2739,15 @@ class App {
     navigateTo(page) {
         const pageMap = {
             'home-page': 'home-page',
+            'games-page': 'games-page',
             'tasks-page': 'tasks-page',
             'invite-page': 'invite-page',
             'my-page': 'my-page',
-            'spin-page': 'spin-page',
+            'tictactoe-page': 'tictactoe-page',
+            'dice-page': 'dice-page',
+            'lottery-page': 'lottery-page',
             'add-task-page': 'add-task-page'
         };
-
-        if (page === 'dice-page') {
-            this.renderDicePage();
-            return;
-        }
-        if (page === 'lottery-page') {
-            this.renderLotteryPage();
-            return;
-        }
 
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
         const target = document.getElementById(page);
@@ -2729,9 +2756,10 @@ class App {
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
         const navMap = {
             'home-page': 0,
-            'tasks-page': 1,
-            'invite-page': 2,
-            'my-page': 3
+            'games-page': 1,
+            'tasks-page': 2,
+            'invite-page': 3,
+            'my-page': 4
         };
         if (navMap[page] !== undefined) {
             const btns = document.querySelectorAll('.nav-btn');
@@ -2739,10 +2767,13 @@ class App {
         }
 
         if (page === 'home-page') this.renderHome();
+        else if (page === 'games-page') this.renderGamesPage();
         else if (page === 'tasks-page') this.renderTasksPage();
         else if (page === 'invite-page') this.renderInvite();
         else if (page === 'my-page') this.renderMy();
-        else if (page === 'spin-page') this.renderSpinPage();
+        else if (page === 'tictactoe-page') this.renderTicTacToePage();
+        else if (page === 'dice-page') this.renderDicePage();
+        else if (page === 'lottery-page') this.renderLotteryPage();
         else if (page === 'add-task-page') this.renderAddTaskPage();
     }
 
@@ -2809,7 +2840,7 @@ class App {
             }
             if (this.adCountDate !== today) {
                 this.adCountDate = today;
-                this.adCounts = { SPIN: 0, DICE: 0, LOTTERY: 0 };
+                this.adCounts = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
             }
             this.dailyTasksCompleted = 0;
         }, 60000);
