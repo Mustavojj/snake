@@ -29,42 +29,51 @@ export const APP_CONFIG = {
     REFERRAL_LINK: "https://t.me/NEJARS",
     
     ICONS: {
-        TICTACTOE: "https://cdn-icons-png.flaticon.com/512/1508/1508947.png",
-        DICE: "https://cdn-icons-png.flaticon.com/512/12907/12907818.png",
-        LOTTERY: "https://cdn-icons-png.flaticon.com/512/2108/2108661.png",
-        GRAM: "https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png"
+        TICTACTOE: "https://cdn-icons-png.flaticon.com/512/18936/18936008.png",
+        DICE: "https://cdn-icons-png.flaticon.com/512/11101/11101687.png",
+        LOTTERY: "https://cdn-icons-png.flaticon.com/512/10751/10751062.png",
+        GRAM: "https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png",
+        GAMES: "https://cdn-icons-png.flaticon.com/512/17301/17301413.png",
+        POINTS: "https://cdn-icons-png.flaticon.com/512/4108/4108370.png",
+        LOTTERY_SYMBOL: "https://cdn-icons-png.flaticon.com/512/8616/8616978.png"
     },
     
     GAME_REWARDS: {
         TICTACTOE: {
-            win: 0.0005,
-            draw: 0.0002,
-            lose: 0.0001
+            win: { gram: 0.0005, points: 100 },
+            draw: { gram: 0, points: 25 },
+            lose: { gram: 0, points: 0 }
         },
         DICE: {
-            '666': 0.001,
-            '555': 0.0005,
-            '444': 0.0004,
-            '333': 0.0003,
-            '222': 0.0002,
-            '111': 0.0001,
-            defaultMultiplier: 0.0001
+            pointsMultiplier: 1,
+            gramReward: 0.0005,
+            defaultPoints: 20
         },
         LOTTERY: {
-            '🍇🍇🍇': 0.0006,
-            '🍋🍋🍋': 0.0003,
-            '777777777': 0.001,
-            defaultReward: 0.0001
+            '🍋🍋🍋': { gram: 0.0005, points: 50 },
+            '🍇🍇🍇': { gram: 0.0005, points: 50 },
+            '🍎🍎🍎': { gram: 0.0005, points: 50 },
+            'jackpot': { gram: 0.0005, points: 100 },
+            default: { gram: 0.0002, points: 20 }
         }
     },
     
     AD_LIMITS: {
-        TICTACTOE: { dailyLimit: 3, cooldownMinutes: 1 },
-        DICE: { dailyLimit: 3, cooldownMinutes: 1 },
-        LOTTERY: { dailyLimit: 3, cooldownMinutes: 1 }
+        dailyLimit: 30,
+        cooldownMinutes: 1
     },
     
     SOCIAL_TASK_REWARDS: {
-        GRAM: 0.0001
+        GRAM: 0.0001,
+        GAMES: 1
+    },
+    
+    LEADERBOARD: {
+        rewards: {
+            1: 1.0,
+            2: 0.70,
+            3: 0.30
+        },
+        topDisplay: 10
     }
 };
