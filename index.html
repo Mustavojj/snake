@@ -1,3 +1,4 @@
+[file name: index.html]
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +37,7 @@
             </div>
             <div class="header-balances" id="header-balances">
                 <div class="header-balance" id="header-gram"><img src="https://i.ibb.co/bgX518dY/IMG-20260622-025621-420.png" class="balance-icon"> <span id="gram-balance">0.0000</span></div>
+                <div class="header-balance" id="header-games"><img src="https://cdn-icons-png.flaticon.com/512/17301/17301413.png" class="balance-icon"> <span id="games-balance">0</span></div>
             </div>
             <button id="settings-btn" class="header-icon-btn"><i class="fas fa-cog"></i></button>
         </div>
@@ -71,10 +73,10 @@
 
     <main id="main-content">
         <div id="home-page" class="page active"></div>
+        <div id="games-page" class="page"></div>
         <div id="tasks-page" class="page"></div>
         <div id="invite-page" class="page"></div>
-        <div id="my-page" class="page"></div>
-        <div id="games-page" class="page"></div>
+        <div id="wallet-page" class="page"></div>
         <div id="tictactoe-page" class="page"></div>
         <div id="dice-page" class="page"></div>
         <div id="lottery-page" class="page"></div>
@@ -86,42 +88,8 @@
         <button class="nav-btn" data-page="games-page"><i class="fas fa-gamepad"></i><span id="nav-games">Games</span></button>
         <button class="nav-btn" data-page="tasks-page"><i class="fas fa-tasks"></i><span id="nav-tasks">Tasks</span></button>
         <button class="nav-btn" data-page="invite-page"><i class="fas fa-users"></i><span id="nav-invite">Invite</span></button>
-        <button class="nav-btn" data-page="my-page"><i class="fas fa-user"></i><span id="nav-my">My</span></button>
+        <button class="nav-btn" data-page="wallet-page"><i class="fas fa-wallet"></i><span id="nav-wallet">Wallet</span></button>
     </nav>
-</div>
-
-<div id="settings-modal" class="modal" style="display:none;">
-    <div class="modal-content glass-modal">
-        <div class="modal-header">
-            <h3><i class="fas fa-cog"></i> Settings</h3>
-            <button class="modal-close" id="close-settings">&times;</button>
-        </div>
-        <div class="modal-body">
-            <div class="settings-item">
-                <span><i class="fas fa-moon"></i> Dark Mode</span>
-                <label class="toggle-switch">
-                    <input type="checkbox" id="dark-mode-modal" checked>
-                    <span class="toggle-slider"></span>
-                </label>
-            </div>
-            <div class="settings-item">
-                <span><i class="fas fa-vibrate"></i> Vibration</span>
-                <label class="toggle-switch">
-                    <input type="checkbox" id="vibration-modal" checked>
-                    <span class="toggle-slider"></span>
-                </label>
-            </div>
-            <div class="settings-item">
-                <span><i class="fas fa-language"></i> Language</span>
-                <select id="lang-modal" class="lang-select">
-                    <option value="en">🇬🇧 English</option>
-                    <option value="ru">🇷🇺 Русский</option>
-                    <option value="tr">🇹🇷 Türkçe</option>
-                    <option value="ar">🇸🇦 العربية</option>
-                </select>
-            </div>
-        </div>
-    </div>
 </div>
 
 <div id="game-result-modal" class="modal" style="display:none;">
@@ -133,9 +101,10 @@
         <div class="modal-body" style="text-align:center">
             <div id="game-result-icon" class="game-result-icon"><i class="fas fa-trophy"></i></div>
             <div id="game-result-detail" class="game-result-detail"></div>
-            <div id="game-result-amount" class="game-result-amount">+0.0000 GRAM</div>
+            <div id="game-result-gram" class="game-result-amount"></div>
+            <div id="game-result-points" class="game-result-points"></div>
             <div id="game-result-effect" class="game-result-effect"></div>
-            <button class="claim-prize-btn" id="game-claim-prize">Claim</button>
+            <button class="claim-prize-btn" id="game-claim-prize">OK</button>
         </div>
     </div>
 </div>
