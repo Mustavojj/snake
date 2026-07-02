@@ -2,31 +2,40 @@ import { APP_CONFIG } from './data.js';
 
 const translations = {
     en: {
-        home: 'Home', games: 'Games', tasks: 'Tasks', invite: 'Invite', my: 'My',
+        home: 'Home', games: 'Games', tasks: 'Tasks', invite: 'Invite', wallet: 'Wallet',
         watch_ad: 'Watch Reward AD',
         watch: 'Watch',
-        daily_tasks: 'Daily Tasks', daily_checkin: 'Daily Check-in',
-        invite_3_friends: 'Invite 3 Friends', complete_10_tasks: 'Complete 10 Tasks',
+        daily_tasks: 'Daily Tasks',
+        daily_checkin: 'Daily Check-in',
+        invite_3_friends: 'Invite 3 Friends',
+        complete_10_tasks: 'Complete 10 Tasks',
         watch_10_ads: 'Watch 10 Ads',
-        claim: 'Claim', progress: '{current}/{total}',
+        claim: 'Claim',
+        progress: '{current}/{total}',
         gram_snake_tasks: 'GRAM SNAKE Tasks',
-        add_task: 'Add Task', back: 'Back',
-        task_name: 'Task Name', task_url: 'Task URL',
-        verification: 'Verification', max_completions: 'Max Completions',
-        yes: 'YES', no: 'NO',
+        add_task: 'Add Task',
+        back: 'Back',
+        task_name: 'Task Name',
+        task_description: 'Description (optional)',
+        task_url: 'Task URL',
+        verification: 'Verification',
+        max_completions: 'Max Completions',
+        yes: 'YES',
+        no: 'NO',
         pay_stars: 'PAY {stars} GRAM',
-        all_fields_required: 'Please fill all fields',
+        all_fields_required: 'Please fill all required fields',
         choose_completions: 'Choose total completions first',
         add_bot_as_admin: 'Add Bot As Admin',
         task_added: 'Task Added!',
         copy_success: 'Copied!',
         link_copied: 'Link copied to clipboard',
-        invite_earn: 'Invite & Earn Money',
+        invite_earn: 'Invite & Earn',
         total_earnings: 'Total Earnings',
         available_rewards: 'Available Rewards',
         withdraw_funds: 'Withdraw Funds',
-        wallet: 'Wallet', amount: 'Amount',
-        min_withdraw: 'Min. withdrawal: {min}',
+        wallet_address: 'Wallet Address',
+        amount: 'Amount',
+        min_withdraw: 'Min. withdrawal: {min} GRAM',
         confirm_withdrawal: 'Confirm Withdrawal',
         transactions: 'Transactions',
         deposits: 'Deposits',
@@ -39,22 +48,28 @@ const translations = {
         gram: 'GRAM',
         enter_promo: 'Enter promo code',
         promo_code: 'Promo Code',
-        loading: 'Loading...',
         no_tasks: 'No tasks available',
         check_later: 'Check back later',
         save_error: 'Failed to save data! Please try again.',
         no_tasks_created: 'No tasks created',
         create_first_task: 'Create your first task now!',
-        pending: 'PENDING', active: 'ACTIVE',
+        pending: 'PENDING',
+        active: 'ACTIVE',
+        completed: 'COMPLETED',
         completions: 'completions',
         task_name_placeholder: 'Enter Task Name',
+        task_desc_placeholder: 'Short description (max 25 chars)',
         task_url_placeholder: 'Enter Task URL (https://t.me/..)',
-        completions_100: '100', completions_250: '250', completions_500: '500', completions_1000: '1000',
+        completions_100: '100',
+        completions_250: '250',
+        completions_500: '500',
+        completions_1000: '1000',
         my_tasks: 'My Tasks',
         withdrawal_fees_note: 'Withdrawal fees: {fees} GRAM',
         available: 'Available',
         copy: 'Copy',
-        total_members: 'Total Members', active_members: 'Active Members',
+        total_members: 'Total Members',
+        active_members: 'Active Members',
         earn_percent: 'Earn {percent}% from referrals',
         referrer_reward_notification: 'You received a bonus! Your referral completed the requirements',
         referral_bonus: 'Referral Bonus',
@@ -68,9 +83,9 @@ const translations = {
         tic_tac_toe: 'Tic-Tac-Toe',
         roll_dice: 'Roll Dice',
         lottery_game: 'Lottery Game',
-        play: 'PLAY ({available})',
-        spin: 'SPIN ({available})',
-        ad_limit_reached: 'Daily ad limit reached for this game',
+        play: 'PLAY',
+        spin: 'SPIN',
+        ad_limit_reached: 'Daily ad limit reached',
         ad_cooldown: 'Please wait {minutes} minute(s) before watching another ad',
         dice_reward: 'Dice Reward',
         lottery_reward: 'Lottery Reward',
@@ -85,7 +100,6 @@ const translations = {
         payment_not_found: 'Payment not found. Please try again later.',
         invalid_memo: 'Invalid memo. Please use the memo provided.',
         deposit_success: 'Deposit successful! {amount} GRAM added.',
-        wallet_address: 'Wallet Address',
         memo: 'Memo',
         go: 'GO ➜',
         social_tasks: 'Social Tasks',
@@ -94,41 +108,68 @@ const translations = {
         tictactoe: 'Tic-Tac-Toe',
         dice: 'Roll Dice',
         lottery: 'Lottery',
-        easy: 'Easy',
-        medium: 'Medium',
-        hard: 'Hard',
-        your_turn: 'Your turn ({symbol})',
-        ai_thinking: 'AI thinking...',
-        you_win: '🎉 You win!',
-        ai_wins: '😔 AI wins!',
-        draw: '🤝 Draw!'
+        your_turn: 'Your Turn',
+        opponent_turn: 'Opponent\'s Turn',
+        play_earn: 'Play & Earn',
+        play_earn_desc: 'Play games and earn GRAM and Points!',
+        invite_earn_desc: 'Invite friends and earn rewards!',
+        get_more_games: 'Get More Games',
+        complete_tasks: 'Complete Tasks',
+        games_battle: 'Games Battle',
+        time_remaining: 'Time Remaining',
+        updating: 'Updating',
+        points: 'Points',
+        games_balance: 'Games',
+        task_reward_games: '+1 Game per task',
+        ad_reward_games: '+1 Game per ad',
+        leaderboard: 'Leaderboard',
+        rank: 'Rank',
+        player: 'Player',
+        score: 'Score',
+        your_rank: 'Your Rank',
+        not_in_top: 'Not in top {count}',
+        ok: 'OK',
+        gram_reward: 'GRAM Reward',
+        points_reward: 'Points Reward',
+        no_reward: 'No Reward',
+        task_preview: 'Task Preview',
+        pay: 'PAY'
     },
     ru: {
-        home: 'Главная', games: 'Игры', tasks: 'Задания', invite: 'Пригласить', my: 'Мой',
+        home: 'Главная', games: 'Игры', tasks: 'Задания', invite: 'Пригласить', wallet: 'Кошелек',
         watch_ad: 'Смотреть рекламу',
         watch: 'Смотреть',
-        daily_tasks: 'Ежедневные задания', daily_checkin: 'Ежедневная проверка',
-        invite_3_friends: 'Пригласить 3 друзей', complete_10_tasks: 'Выполнить 10 заданий',
+        daily_tasks: 'Ежедневные задания',
+        daily_checkin: 'Ежедневная проверка',
+        invite_3_friends: 'Пригласить 3 друзей',
+        complete_10_tasks: 'Выполнить 10 заданий',
         watch_10_ads: 'Посмотреть 10 реклам',
-        claim: 'Получить', progress: '{current}/{total}',
+        claim: 'Получить',
+        progress: '{current}/{total}',
         gram_snake_tasks: 'GRAM SNAKE Задания',
-        add_task: 'Добавить задание', back: 'Назад',
-        task_name: 'Название задания', task_url: 'Ссылка',
-        verification: 'Проверка', max_completions: 'Макс. выполнений',
-        yes: 'ДА', no: 'НЕТ',
+        add_task: 'Добавить задание',
+        back: 'Назад',
+        task_name: 'Название задания',
+        task_description: 'Описание (опционально)',
+        task_url: 'Ссылка',
+        verification: 'Проверка',
+        max_completions: 'Макс. выполнений',
+        yes: 'ДА',
+        no: 'НЕТ',
         pay_stars: 'ОПЛАТИТЬ {stars} GRAM',
-        all_fields_required: 'Заполните все поля',
+        all_fields_required: 'Заполните все обязательные поля',
         choose_completions: 'Сначала выберите общее количество выполнений',
         add_bot_as_admin: 'Добавить бота администратором',
         task_added: 'Задание добавлено!',
         copy_success: 'Скопировано!',
         link_copied: 'Ссылка скопирована',
-        invite_earn: 'Приглашай и зарабатывай деньги',
+        invite_earn: 'Приглашай и зарабатывай',
         total_earnings: 'Общий заработок',
         available_rewards: 'Доступные награды',
         withdraw_funds: 'Вывод средств',
-        wallet: 'Кошелек', amount: 'Сумма',
-        min_withdraw: 'Мин. вывод: {min}',
+        wallet_address: 'Адрес кошелька',
+        amount: 'Сумма',
+        min_withdraw: 'Мин. вывод: {min} GRAM',
         confirm_withdrawal: 'Подтвердить вывод',
         transactions: 'Транзакции',
         deposits: 'Депозиты',
@@ -141,22 +182,28 @@ const translations = {
         gram: 'GRAM',
         enter_promo: 'Введите промокод',
         promo_code: 'Промокод',
-        loading: 'Загрузка...',
         no_tasks: 'Нет доступных заданий',
         check_later: 'Заходите позже',
         save_error: 'Ошибка сохранения! Попробуйте снова.',
         no_tasks_created: 'Нет созданных заданий',
         create_first_task: 'Создайте свое первое задание!',
-        pending: 'НА РАССМОТРЕНИИ', active: 'АКТИВНА',
+        pending: 'НА РАССМОТРЕНИИ',
+        active: 'АКТИВНА',
+        completed: 'ЗАВЕРШЕНА',
         completions: 'выполнений',
         task_name_placeholder: 'Введите название задания',
+        task_desc_placeholder: 'Краткое описание (макс 25 символов)',
         task_url_placeholder: 'Введите URL задания (https://t.me/..)',
-        completions_100: '100', completions_250: '250', completions_500: '500', completions_1000: '1000',
+        completions_100: '100',
+        completions_250: '250',
+        completions_500: '500',
+        completions_1000: '1000',
         my_tasks: 'Мои задания',
         withdrawal_fees_note: 'Комиссия за вывод: {fees} GRAM',
         available: 'Доступно',
         copy: 'Копировать',
-        total_members: 'Всего участников', active_members: 'Активных',
+        total_members: 'Всего участников',
+        active_members: 'Активных',
         earn_percent: 'Зарабатывайте {percent}% от рефералов',
         referrer_reward_notification: 'Вы получили бонус! Ваш реферал выполнил условия',
         referral_bonus: 'Реферальный бонус',
@@ -170,9 +217,9 @@ const translations = {
         tic_tac_toe: 'Крестики-нолики',
         roll_dice: 'Бросить кости',
         lottery_game: 'Лотерея',
-        play: 'ИГРАТЬ ({available})',
-        spin: 'SPIN ({available})',
-        ad_limit_reached: 'Дневной лимит рекламы для этой игры достигнут',
+        play: 'ИГРАТЬ',
+        spin: 'SPIN',
+        ad_limit_reached: 'Дневной лимит рекламы достигнут',
         ad_cooldown: 'Подождите {minutes} минут(ы) перед просмотром следующей рекламы',
         dice_reward: 'Награда за кости',
         lottery_reward: 'Награда за лотерею',
@@ -187,7 +234,6 @@ const translations = {
         payment_not_found: 'Платеж не найден. Попробуйте позже.',
         invalid_memo: 'Неверный комментарий. Используйте указанный комментарий.',
         deposit_success: 'Пополнение успешно! {amount} GRAM добавлено.',
-        wallet_address: 'Адрес кошелька',
         memo: 'Комментарий',
         go: 'ПЕРЕЙТИ ➜',
         social_tasks: 'Социальные задания',
@@ -196,41 +242,68 @@ const translations = {
         tictactoe: 'Крестики-нолики',
         dice: 'Бросить кости',
         lottery: 'Лотерея',
-        easy: 'Легкий',
-        medium: 'Средний',
-        hard: 'Сложный',
-        your_turn: 'Ваш ход ({symbol})',
-        ai_thinking: 'ИИ думает...',
-        you_win: '🎉 Вы победили!',
-        ai_wins: '😔 ИИ победил!',
-        draw: '🤝 Ничья!'
+        your_turn: 'Ваш ход',
+        opponent_turn: 'Ход противника',
+        play_earn: 'Играй и зарабатывай',
+        play_earn_desc: 'Играй в игры и зарабатывай GRAM и Очки!',
+        invite_earn_desc: 'Приглашай друзей и получай награды!',
+        get_more_games: 'Получить больше игр',
+        complete_tasks: 'Выполнить задания',
+        games_battle: 'Games Battle',
+        time_remaining: 'Осталось времени',
+        updating: 'Обновление',
+        points: 'Очки',
+        games_balance: 'Игры',
+        task_reward_games: '+1 Игра за задание',
+        ad_reward_games: '+1 Игра за рекламу',
+        leaderboard: 'Таблица лидеров',
+        rank: 'Место',
+        player: 'Игрок',
+        score: 'Очки',
+        your_rank: 'Ваше место',
+        not_in_top: 'Не в топ {count}',
+        ok: 'ОК',
+        gram_reward: 'Награда GRAM',
+        points_reward: 'Награда Очки',
+        no_reward: 'Нет награды',
+        task_preview: 'Предпросмотр задания',
+        pay: 'ОПЛАТИТЬ'
     },
     tr: {
-        home: 'Ana Sayfa', games: 'Oyunlar', tasks: 'Görevler', invite: 'Davet', my: 'Benim',
+        home: 'Ana Sayfa', games: 'Oyunlar', tasks: 'Görevler', invite: 'Davet', wallet: 'Cüzdan',
         watch_ad: 'Ödüllü Reklam İzle',
         watch: 'İzle',
-        daily_tasks: 'Günlük Görevler', daily_checkin: 'Günlük Kontrol',
-        invite_3_friends: '3 Arkadaş Davet Et', complete_10_tasks: '10 Görevi Tamamla',
+        daily_tasks: 'Günlük Görevler',
+        daily_checkin: 'Günlük Kontrol',
+        invite_3_friends: '3 Arkadaş Davet Et',
+        complete_10_tasks: '10 Görevi Tamamla',
         watch_10_ads: '10 Reklam İzle',
-        claim: 'Al', progress: '{current}/{total}',
+        claim: 'Al',
+        progress: '{current}/{total}',
         gram_snake_tasks: 'GRAM SNAKE Görevler',
-        add_task: 'Görev Ekle', back: 'Geri',
-        task_name: 'Görev Adı', task_url: 'Bağlantı',
-        verification: 'Doğrulama', max_completions: 'Maks. Tamamlama',
-        yes: 'EVET', no: 'HAYIR',
+        add_task: 'Görev Ekle',
+        back: 'Geri',
+        task_name: 'Görev Adı',
+        task_description: 'Açıklama (isteğe bağlı)',
+        task_url: 'Bağlantı',
+        verification: 'Doğrulama',
+        max_completions: 'Maks. Tamamlama',
+        yes: 'EVET',
+        no: 'HAYIR',
         pay_stars: '{stars} GRAM ÖDE',
-        all_fields_required: 'Tüm alanları doldurun',
+        all_fields_required: 'Tüm zorunlu alanları doldurun',
         choose_completions: 'Önce toplam tamamlama sayısını seçin',
         add_bot_as_admin: 'Botu Yönetici Olarak Ekle',
         task_added: 'Görev Eklendi!',
         copy_success: 'Kopyalandı!',
         link_copied: 'Bağlantı kopyalandı',
-        invite_earn: 'Davet Et ve Para Kazan',
+        invite_earn: 'Davet Et ve Kazan',
         total_earnings: 'Toplam Kazanç',
         available_rewards: 'Mevcut Ödüller',
         withdraw_funds: 'Para Çek',
-        wallet: 'Cüzdan', amount: 'Miktar',
-        min_withdraw: 'Min. çekim: {min}',
+        wallet_address: 'Cüzdan Adresi',
+        amount: 'Miktar',
+        min_withdraw: 'Min. çekim: {min} GRAM',
         confirm_withdrawal: 'Çekimi Onayla',
         transactions: 'İşlemler',
         deposits: 'Yatırımlar',
@@ -243,22 +316,28 @@ const translations = {
         gram: 'GRAM',
         enter_promo: 'Promosyon kodunu girin',
         promo_code: 'Promosyon Kodu',
-        loading: 'Yükleniyor...',
         no_tasks: 'Görev yok',
         check_later: 'Daha sonra kontrol edin',
         save_error: 'Veri kaydedilemedi! Lütfen tekrar deneyin.',
         no_tasks_created: 'Görev oluşturulmadı',
         create_first_task: 'Şimdi ilk görevinizi oluşturun!',
-        pending: 'BEKLEMEDE', active: 'AKTİF',
+        pending: 'BEKLEMEDE',
+        active: 'AKTİF',
+        completed: 'TAMAMLANDI',
         completions: 'tamamlama',
         task_name_placeholder: 'Görev Adını Girin',
+        task_desc_placeholder: 'Kısa açıklama (max 25 karakter)',
         task_url_placeholder: 'Görev URL\'sini Girin (https://t.me/..)',
-        completions_100: '100', completions_250: '250', completions_500: '500', completions_1000: '1000',
+        completions_100: '100',
+        completions_250: '250',
+        completions_500: '500',
+        completions_1000: '1000',
         my_tasks: 'Görevlerim',
         withdrawal_fees_note: 'Çekim ücreti: {fees} GRAM',
         available: 'Mevcut',
         copy: 'Kopyala',
-        total_members: 'Toplam Üye', active_members: 'Aktif Üyeler',
+        total_members: 'Toplam Üye',
+        active_members: 'Aktif Üyeler',
         earn_percent: 'Referanslardan %{percent} kazanın',
         referrer_reward_notification: 'Bonus kazandınız! Referansınız koşulları tamamladı',
         referral_bonus: 'Referans Bonusu',
@@ -272,9 +351,9 @@ const translations = {
         tic_tac_toe: 'X-O Oyunu',
         roll_dice: 'Zar At',
         lottery_game: 'Piyango',
-        play: 'OYNA ({available})',
-        spin: 'SPIN ({available})',
-        ad_limit_reached: 'Bu oyun için günlük reklam limiti aşıldı',
+        play: 'OYNA',
+        spin: 'SPIN',
+        ad_limit_reached: 'Günlük reklam limiti aşıldı',
         ad_cooldown: 'Lütfen bir sonraki reklam için {minutes} dakika bekleyin',
         dice_reward: 'Zar Ödülü',
         lottery_reward: 'Piyango Ödülü',
@@ -289,7 +368,6 @@ const translations = {
         payment_not_found: 'Ödeme bulunamadı. Lütfen daha sonra tekrar deneyin.',
         invalid_memo: 'Geçersiz açıklama. Lütfen belirtilen açıklamayı kullanın.',
         deposit_success: 'Yatırım başarılı! {amount} GRAM eklendi.',
-        wallet_address: 'Cüzdan Adresi',
         memo: 'Açıklama',
         go: 'GİT ➜',
         social_tasks: 'Sosyal Görevler',
@@ -298,41 +376,68 @@ const translations = {
         tictactoe: 'X-O Oyunu',
         dice: 'Zar At',
         lottery: 'Piyango',
-        easy: 'Kolay',
-        medium: 'Orta',
-        hard: 'Zor',
-        your_turn: 'Sıra sende ({symbol})',
-        ai_thinking: 'Yapay zeka düşünüyor...',
-        you_win: '🎉 Kazandın!',
-        ai_wins: '😔 Yapay zeka kazandı!',
-        draw: '🤝 Berabere!'
+        your_turn: 'Sıra Sende',
+        opponent_turn: 'Rakibin Sırası',
+        play_earn: 'Oyna ve Kazan',
+        play_earn_desc: 'Oyun oyna ve GRAM ve Puan kazan!',
+        invite_earn_desc: 'Arkadaşlarını davet et ve ödüller kazan!',
+        get_more_games: 'Daha Fazla Oyun Al',
+        complete_tasks: 'Görevleri Tamamla',
+        games_battle: 'Games Battle',
+        time_remaining: 'Kalan Süre',
+        updating: 'Güncelleniyor',
+        points: 'Puan',
+        games_balance: 'Oyunlar',
+        task_reward_games: 'Görev başına +1 Oyun',
+        ad_reward_games: 'Reklam başına +1 Oyun',
+        leaderboard: 'Sıralama',
+        rank: 'Sıra',
+        player: 'Oyuncu',
+        score: 'Puan',
+        your_rank: 'Sıralaman',
+        not_in_top: 'İlk {count} içinde değil',
+        ok: 'TAMAM',
+        gram_reward: 'GRAM Ödülü',
+        points_reward: 'Puan Ödülü',
+        no_reward: 'Ödül Yok',
+        task_preview: 'Görev Önizleme',
+        pay: 'ÖDE'
     },
     ar: {
-        home: 'الرئيسية', games: 'الألعاب', tasks: 'المهام', invite: 'دعوة', my: 'حسابي',
+        home: 'الرئيسية', games: 'الألعاب', tasks: 'المهام', invite: 'دعوة', wallet: 'المحفظة',
         watch_ad: 'مشاهدة إعلان',
         watch: 'مشاهدة',
-        daily_tasks: 'المهام اليومية', daily_checkin: 'تسجيل الدخول اليومي',
-        invite_3_friends: 'دعوة 3 أصدقاء', complete_10_tasks: 'إكمال 10 مهام',
+        daily_tasks: 'المهام اليومية',
+        daily_checkin: 'تسجيل الدخول اليومي',
+        invite_3_friends: 'دعوة 3 أصدقاء',
+        complete_10_tasks: 'إكمال 10 مهام',
         watch_10_ads: 'مشاهدة 10 إعلانات',
-        claim: 'استلام', progress: '{current}/{total}',
+        claim: 'استلام',
+        progress: '{current}/{total}',
         gram_snake_tasks: 'مهام GRAM SNAKE',
-        add_task: 'إضافة مهمة', back: 'رجوع',
-        task_name: 'اسم المهمة', task_url: 'الرابط',
-        verification: 'التحقق', max_completions: 'الحد الأقصى للإكمال',
-        yes: 'نعم', no: 'لا',
+        add_task: 'إضافة مهمة',
+        back: 'رجوع',
+        task_name: 'اسم المهمة',
+        task_description: 'الوصف (اختياري)',
+        task_url: 'الرابط',
+        verification: 'التحقق',
+        max_completions: 'الحد الأقصى للإكمال',
+        yes: 'نعم',
+        no: 'لا',
         pay_stars: 'ادفع {stars} GRAM',
-        all_fields_required: 'الرجاء ملء جميع الحقول',
+        all_fields_required: 'الرجاء ملء جميع الحقول المطلوبة',
         choose_completions: 'اختر العدد الإجمالي للإكمال أولاً',
         add_bot_as_admin: 'إضافة البوت كمدير',
         task_added: 'تمت إضافة المهمة!',
         copy_success: 'تم النسخ!',
         link_copied: 'تم نسخ الرابط',
-        invite_earn: 'دعوة واربح المال',
+        invite_earn: 'دعوة واربح',
         total_earnings: 'إجمالي الأرباح',
         available_rewards: 'المكافآت المتاحة',
         withdraw_funds: 'سحب الأموال',
-        wallet: 'المحفظة', amount: 'المبلغ',
-        min_withdraw: 'الحد الأدنى للسحب: {min}',
+        wallet_address: 'عنوان المحفظة',
+        amount: 'المبلغ',
+        min_withdraw: 'الحد الأدنى للسحب: {min} GRAM',
         confirm_withdrawal: 'تأكيد السحب',
         transactions: 'المعاملات',
         deposits: 'الإيداعات',
@@ -345,22 +450,28 @@ const translations = {
         gram: 'GRAM',
         enter_promo: 'أدخل الرمز الترويجي',
         promo_code: 'الرمز الترويجي',
-        loading: 'جاري التحميل...',
         no_tasks: 'لا توجد مهام متاحة',
         check_later: 'تحقق لاحقاً',
         save_error: 'فشل حفظ البيانات! حاول مرة أخرى.',
         no_tasks_created: 'لا توجد مهام منشأة',
         create_first_task: 'أنشئ مهمتك الأولى الآن!',
-        pending: 'قيد المراجعة', active: 'نشطة',
+        pending: 'قيد المراجعة',
+        active: 'نشطة',
+        completed: 'مكتملة',
         completions: 'إكمال',
         task_name_placeholder: 'أدخل اسم المهمة',
+        task_desc_placeholder: 'وصف قصير (حد أقصى 25 حرف)',
         task_url_placeholder: 'أدخل رابط المهمة (https://t.me/..)',
-        completions_100: '100', completions_250: '250', completions_500: '500', completions_1000: '1000',
+        completions_100: '100',
+        completions_250: '250',
+        completions_500: '500',
+        completions_1000: '1000',
         my_tasks: 'مهامي',
         withdrawal_fees_note: 'رسوم السحب: {fees} GRAM',
         available: 'متوفر',
         copy: 'نسخ',
-        total_members: 'إجمالي الأعضاء', active_members: 'الأعضاء النشطاء',
+        total_members: 'إجمالي الأعضاء',
+        active_members: 'الأعضاء النشطاء',
         earn_percent: 'اربح {percent}% من الإحالات',
         referrer_reward_notification: 'لقد تلقيت مكافأة! أكمل المحال الخاص بك المتطلبات',
         referral_bonus: 'مكافأة الإحالة',
@@ -373,10 +484,10 @@ const translations = {
         task_reward: 'مكافأة المهمة',
         tic_tac_toe: 'إكس-أو',
         roll_dice: 'رمي النرد',
-        lottery_game: 'لعبة اليانصيب',
-        play: 'لعب ({available})',
-        spin: 'SPIN ({available})',
-        ad_limit_reached: 'تم الوصول إلى الحد اليومي للإعلانات لهذه اللعبة',
+        lottery_game: 'اليانصيب',
+        play: 'لعب',
+        spin: 'SPIN',
+        ad_limit_reached: 'تم الوصول إلى الحد اليومي للإعلانات',
         ad_cooldown: 'يرجى الانتظار {minutes} دقيقة(ق) قبل مشاهدة إعلان آخر',
         dice_reward: 'مكافأة النرد',
         lottery_reward: 'مكافأة اليانصيب',
@@ -391,7 +502,6 @@ const translations = {
         payment_not_found: 'لم يتم العثور على الدفع. يرجى المحاولة مرة أخرى لاحقاً.',
         invalid_memo: 'مذكرة غير صالحة. يرجى استخدام المذكرة المقدمة.',
         deposit_success: 'تم الإيداع بنجاح! تمت إضافة {amount} GRAM.',
-        wallet_address: 'عنوان المحفظة',
         memo: 'المذكرة',
         go: 'اذهب ➜',
         social_tasks: 'المهام الاجتماعية',
@@ -400,14 +510,32 @@ const translations = {
         tictactoe: 'إكس-أو',
         dice: 'رمي النرد',
         lottery: 'اليانصيب',
-        easy: 'سهل',
-        medium: 'متوسط',
-        hard: 'صعب',
-        your_turn: 'دورك ({symbol})',
-        ai_thinking: 'الذكاء الاصطناعي يفكر...',
-        you_win: '🎉 لقد فزت!',
-        ai_wins: '😔 فاز الذكاء الاصطناعي!',
-        draw: '🤝 تعادل!'
+        your_turn: 'دورك',
+        opponent_turn: 'دور الخصم',
+        play_earn: 'العب واربح',
+        play_earn_desc: 'العب الألعاب واربح GRAM ونقاط!',
+        invite_earn_desc: 'ادعُ أصدقائك واربح المكافآت!',
+        get_more_games: 'احصل على المزيد من الألعاب',
+        complete_tasks: 'أكمل المهام',
+        games_battle: 'Games Battle',
+        time_remaining: 'الوقت المتبقي',
+        updating: 'تحديث',
+        points: 'نقاط',
+        games_balance: 'ألعاب',
+        task_reward_games: '+1 لعبة لكل مهمة',
+        ad_reward_games: '+1 لعبة لكل إعلان',
+        leaderboard: 'لوحة المتصدرين',
+        rank: 'الترتيب',
+        player: 'اللاعب',
+        score: 'النقاط',
+        your_rank: 'ترتيبك',
+        not_in_top: 'ليس في أفضل {count}',
+        ok: 'حسناً',
+        gram_reward: 'مكافأة GRAM',
+        points_reward: 'مكافأة النقاط',
+        no_reward: 'لا توجد مكافأة',
+        task_preview: 'معاينة المهمة',
+        pay: 'ادفع'
     }
 };
 
@@ -421,9 +549,8 @@ class App {
         this.deviceId = null;
 
         this.gramBalance = 0;
-        this.tictactoeGames = 0;
-        this.diceGames = 0;
-        this.lotteryGames = 0;
+        this.gamesBalance = 0;
+        this.pointsBalance = 0;
 
         this.dailyCheckinClaimed = false;
         this.dailyCheckinDate = null;
@@ -441,7 +568,6 @@ class App {
         this.claimableEarnings = { gram: 0 };
         this.totalEarnings = { gram: 0 };
 
-        this.transactions = [];
         this.deposits = [];
         this.withdrawals = [];
         this.userTasks = [];
@@ -456,12 +582,17 @@ class App {
         this.isTaskRunning = false;
         this.membershipCache = new Map();
 
-        this.adCounts = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
+        this.adCount = 0;
         this.adCountDate = null;
-        this.adCooldowns = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
+        this.adCooldown = 0;
 
         this.depositMemo = null;
         this.pendingDepositCheck = false;
+        this.pendingPaymentInterval = null;
+
+        this.leaderboardData = [];
+        this.leaderboardLastUpdate = 0;
+        this.leaderboardTimerInterval = null;
 
         this.loadSettings();
 
@@ -564,7 +695,7 @@ class App {
         }, 3000);
     }
 
-    async showAd(gameType) {
+    async showAd() {
         try {
             const AdController = window.Adsgram.init({ blockId: APP_CONFIG.INTERSTITIAL_AD_BLOCK_ID });
             await AdController.show();
@@ -572,19 +703,18 @@ class App {
             const today = this.getTodayUTC();
             if (this.adCountDate !== today) {
                 this.adCountDate = today;
-                this.adCounts = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
-                this.adCooldowns = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
+                this.adCount = 0;
+                this.adCooldown = 0;
             }
             
-            const limit = APP_CONFIG.AD_LIMITS[gameType]?.dailyLimit || 3;
-            if (this.adCounts[gameType] >= limit) {
+            const limit = APP_CONFIG.AD_LIMITS.dailyLimit || 30;
+            if (this.adCount >= limit) {
                 this.showNotification('Error', this.t('ad_limit_reached'), 'warning');
                 return false;
             }
             
-            const cooldownMinutes = APP_CONFIG.AD_LIMITS[gameType]?.cooldownMinutes || 1;
-            const cooldownKey = `${gameType}_cooldown`;
-            const lastAdTime = parseInt(localStorage.getItem(cooldownKey) || '0');
+            const cooldownMinutes = APP_CONFIG.AD_LIMITS.cooldownMinutes || 1;
+            const lastAdTime = parseInt(localStorage.getItem('ad_cooldown_time') || '0');
             const elapsed = (Date.now() - lastAdTime) / 60000;
             if (elapsed < cooldownMinutes) {
                 const remaining = Math.ceil(cooldownMinutes - elapsed);
@@ -592,8 +722,8 @@ class App {
                 return false;
             }
             
-            this.adCounts[gameType]++;
-            localStorage.setItem(cooldownKey, Date.now().toString());
+            this.adCount++;
+            localStorage.setItem('ad_cooldown_time', Date.now().toString());
             
             this._dirty = true;
             await this.saveUserData(false);
@@ -607,7 +737,9 @@ class App {
 
     updateHeaderBalances() {
         const gramEl = document.getElementById('gram-balance');
+        const gamesEl = document.getElementById('games-balance');
         if (gramEl) gramEl.textContent = this.gramBalance.toFixed(4);
+        if (gamesEl) gamesEl.textContent = this.gamesBalance;
     }
 
     scheduleSave() {
@@ -635,9 +767,8 @@ class App {
         try {
             const data = {
                 gramBalance: this.gramBalance,
-                tictactoeGames: this.tictactoeGames,
-                diceGames: this.diceGames,
-                lotteryGames: this.lotteryGames,
+                gamesBalance: this.gamesBalance,
+                pointsBalance: this.pointsBalance,
                 dailyCheckinClaimed: this.dailyCheckinClaimed,
                 dailyCheckinDate: this.dailyCheckinDate,
                 invite3Claimed: this.invite3Claimed,
@@ -652,7 +783,7 @@ class App {
                 referralEarnings: this.referralEarnings,
                 claimableEarnings: this.claimableEarnings,
                 totalEarnings: this.totalEarnings,
-                adCounts: this.adCounts,
+                adCount: this.adCount,
                 adCountDate: this.adCountDate
             };
             await this.db.ref(`users/${this.tgUser.id}`).update(data);
@@ -757,9 +888,8 @@ class App {
             referredBy: referredBy,
             createdAt: Date.now(),
             gramBalance: 0,
-            tictactoeGames: 0,
-            diceGames: 0,
-            lotteryGames: 0,
+            gamesBalance: 0,
+            pointsBalance: 0,
             dailyCheckinClaimed: false,
             dailyCheckinDate: null,
             invite3Claimed: false,
@@ -794,9 +924,8 @@ class App {
         }
 
         this.gramBalance = 0;
-        this.tictactoeGames = 0;
-        this.diceGames = 0;
-        this.lotteryGames = 0;
+        this.gamesBalance = 0;
+        this.pointsBalance = 0;
         this.dailyCheckinClaimed = false;
         this.dailyCheckinDate = null;
         this.invite3Claimed = false;
@@ -811,7 +940,6 @@ class App {
         this.referralEarnings = { gram: 0 };
         this.claimableEarnings = { gram: 0 };
         this.totalEarnings = { gram: 0 };
-        this.transactions = [];
         this.deposits = [];
         this.withdrawals = [];
 
@@ -829,9 +957,8 @@ class App {
         if (cachedUser) {
             const data = JSON.parse(cachedUser);
             this.gramBalance = data.gramBalance ?? 0;
-            this.tictactoeGames = data.tictactoeGames ?? 0;
-            this.diceGames = data.diceGames ?? 0;
-            this.lotteryGames = data.lotteryGames ?? 0;
+            this.gamesBalance = data.gamesBalance ?? 0;
+            this.pointsBalance = data.pointsBalance ?? 0;
             this.dailyCheckinClaimed = data.dailyCheckinClaimed ?? false;
             this.dailyCheckinDate = data.dailyCheckinDate ?? null;
             this.invite3Claimed = data.invite3Claimed ?? false;
@@ -846,7 +973,7 @@ class App {
             this.referralEarnings = data.referralEarnings ?? { gram: 0 };
             this.claimableEarnings = data.claimableEarnings ?? { gram: 0 };
             this.totalEarnings = data.totalEarnings ?? { gram: 0 };
-            this.adCounts = data.adCounts ?? { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
+            this.adCount = data.adCount ?? 0;
             this.adCountDate = data.adCountDate ?? null;
         }
 
@@ -856,9 +983,8 @@ class App {
             if (snap.exists()) {
                 const d = snap.val();
                 this.gramBalance = d.gramBalance ?? this.gramBalance;
-                this.tictactoeGames = d.tictactoeGames ?? this.tictactoeGames;
-                this.diceGames = d.diceGames ?? this.diceGames;
-                this.lotteryGames = d.lotteryGames ?? this.lotteryGames;
+                this.gamesBalance = d.gamesBalance ?? this.gamesBalance;
+                this.pointsBalance = d.pointsBalance ?? this.pointsBalance;
                 this.dailyCheckinClaimed = d.dailyCheckinClaimed ?? false;
                 this.dailyCheckinDate = d.dailyCheckinDate ?? null;
                 this.invite3Claimed = d.invite3Claimed ?? false;
@@ -873,14 +999,13 @@ class App {
                 this.referralEarnings = d.referralEarnings ?? { gram: 0 };
                 this.claimableEarnings = d.claimableEarnings ?? { gram: 0 };
                 this.totalEarnings = d.totalEarnings ?? { gram: 0 };
-                this.adCounts = d.adCounts ?? { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
+                this.adCount = d.adCount ?? 0;
                 this.adCountDate = d.adCountDate ?? null;
 
                 const userDataForCache = {
                     gramBalance: this.gramBalance,
-                    tictactoeGames: this.tictactoeGames,
-                    diceGames: this.diceGames,
-                    lotteryGames: this.lotteryGames,
+                    gamesBalance: this.gamesBalance,
+                    pointsBalance: this.pointsBalance,
                     dailyCheckinClaimed: this.dailyCheckinClaimed,
                     dailyCheckinDate: this.dailyCheckinDate,
                     invite3Claimed: this.invite3Claimed,
@@ -895,7 +1020,7 @@ class App {
                     referralEarnings: this.referralEarnings,
                     claimableEarnings: this.claimableEarnings,
                     totalEarnings: this.totalEarnings,
-                    adCounts: this.adCounts,
+                    adCount: this.adCount,
                     adCountDate: this.adCountDate
                 };
                 localStorage.setItem(`gram_snake_user_${this.tgUser.id}`, JSON.stringify(userDataForCache));
@@ -910,7 +1035,7 @@ class App {
         const today = this.getTodayUTC();
         if (this.adCountDate !== today) {
             this.adCountDate = today;
-            this.adCounts = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
+            this.adCount = 0;
         }
 
         const nameSpan = document.getElementById('user-name');
@@ -923,6 +1048,8 @@ class App {
         await this.loadCompletedTasks();
         await this.loadUserTasks();
         await this.loadSocialTasks();
+        await this.loadLeaderboard();
+        this.startLeaderboardTimer();
     }
 
     async loadDepositsWithdrawals() {
@@ -1066,6 +1193,55 @@ class App {
         return [];
     }
 
+    async loadLeaderboard() {
+        try {
+            const snap = await this.db.ref('leaderboard').orderByChild('points').limitToLast(100).once('value');
+            if (snap.exists()) {
+                const data = [];
+                snap.forEach(child => {
+                    data.push({ id: child.key, ...child.val() });
+                });
+                this.leaderboardData = data.sort((a, b) => (b.points || 0) - (a.points || 0));
+                this.leaderboardLastUpdate = Date.now();
+            }
+        } catch (error) {
+            console.warn('Failed to load leaderboard:', error);
+        }
+    }
+
+    startLeaderboardTimer() {
+        if (this.leaderboardTimerInterval) clearInterval(this.leaderboardTimerInterval);
+        this.leaderboardTimerInterval = setInterval(() => {
+            this.updateLeaderboardTimer();
+        }, 1000);
+    }
+
+    updateLeaderboardTimer() {
+        const timerEl = document.getElementById('leaderboard-timer');
+        if (!timerEl) return;
+        
+        const now = Date.now();
+        const endOfDay = new Date();
+        endOfDay.setUTCHours(24, 0, 0, 0);
+        const remaining = endOfDay.getTime() - now;
+        
+        if (remaining <= 0) {
+            timerEl.textContent = this.t('updating') + '...';
+            this.updateLeaderboardData();
+            return;
+        }
+        
+        const hours = Math.floor(remaining / 3600000);
+        const minutes = Math.floor((remaining % 3600000) / 60000);
+        const seconds = Math.floor((remaining % 60000) / 1000);
+        timerEl.textContent = `${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    async updateLeaderboardData() {
+        await this.loadLeaderboard();
+        this.renderGamesPage();
+    }
+
     extractChatId(url) {
         const match = url.match(/t\.me\/([^\/\?]+)/);
         return match ? match[1] : null;
@@ -1125,6 +1301,130 @@ class App {
         }
     }
 
+    async verifyTonPayment(taskId, expectedAmount, name, url, verification, maxCompletions, description) {
+        const savedTaskId = localStorage.getItem('pending_task_id');
+        const searchId = taskId || savedTaskId;
+        const walletAddress = APP_CONFIG.TON_WALLET_ADDRESS;
+        
+        this.showNotification('Payment Verification', 'Checking blockchain for your payment...', 'info');
+        
+        if (this.pendingPaymentInterval) clearInterval(this.pendingPaymentInterval);
+        
+        let attempts = 0;
+        const maxAttempts = 5;
+        
+        this.pendingPaymentInterval = setInterval(async () => {
+            attempts++;
+            this.showNotification('Verifying', `Attempt ${attempts}/${maxAttempts}...`, 'info');
+            
+            try {
+                const response = await fetch(`https://toncenter.com/api/v2/getTransactions?address=${walletAddress}&limit=20`);
+                const data = await response.json();
+                
+                if (!data.ok) {
+                    this.showNotification('API Error', 'Failed to fetch transactions. Retrying...', 'warning');
+                    return;
+                }
+                
+                if (data.result && data.result.length > 0) {
+                    const found = data.result.find(tx => {
+                        const msg = tx.in_msg?.message;
+                        const value = tx.in_msg?.value;
+                        const expectedValue = localStorage.getItem('pending_task_amount') || expectedAmount;
+                        return msg && msg.includes(searchId) && parseFloat(value) >= parseFloat(expectedValue);
+                    });
+                    
+                    if (found) {
+                        clearInterval(this.pendingPaymentInterval);
+                        this.pendingPaymentInterval = null;
+                        
+                        const savedData = JSON.parse(localStorage.getItem('pending_task_data') || '{}');
+                        const finalName = name || savedData.name;
+                        const finalUrl = url || savedData.url;
+                        const finalVerification = verification || savedData.verification;
+                        const finalMaxCompletions = maxCompletions || savedData.maxCompletions;
+                        const finalDescription = description || savedData.description || '';
+                        const finalTaskId = searchId;
+                        
+                        localStorage.removeItem('pending_task_id');
+                        localStorage.removeItem('pending_task_amount');
+                        localStorage.removeItem('pending_task_data');
+                        
+                        this.showNotification('Success', 'Payment verified! Creating task...', 'success');
+                        await this.createTaskAfterPayment(finalName, finalUrl, finalVerification, finalMaxCompletions, finalTaskId, finalDescription);
+                    } else if (attempts >= maxAttempts) {
+                        clearInterval(this.pendingPaymentInterval);
+                        this.pendingPaymentInterval = null;
+                        this.showNotification('Not Found', 'Payment not found. Did you complete the transaction?', 'warning');
+                    }
+                }
+            } catch (error) {
+                this.showNotification('Connection Error', 'Cannot connect to blockchain. Retrying...', 'error');
+                console.log('Verification error:', error);
+            }
+        }, 5000);
+        
+        setTimeout(() => {
+            if (this.pendingPaymentInterval) {
+                clearInterval(this.pendingPaymentInterval);
+                this.pendingPaymentInterval = null;
+                this.showNotification('Timeout', 'Verification timeout.', 'warning');
+                localStorage.removeItem('pending_task_id');
+                localStorage.removeItem('pending_task_amount');
+                localStorage.removeItem('pending_task_data');
+            }
+        }, 60000);
+    }
+
+    async createTaskAfterPayment(name, url, verification, maxCompletions, taskId, description) {
+        try {
+            const taskData = {
+                name: name,
+                url: url,
+                description: description || '',
+                category: 'social',
+                verification: verification === 'true',
+                max: maxCompletions,
+                status: 'active',
+                owner: this.tgUser.id,
+                createdAt: Date.now(),
+                total: 0
+            };
+
+            await this.db.ref(`userTasks/${this.tgUser.id}/${taskId}`).set(taskData);
+            this._dirty = true;
+            this.saveUserData(false);
+            this.showNotification('Success', this.t('task_added'), 'success');
+            await this.loadUserTasks();
+            this.renderMyTasks();
+            this.renderAddTaskPage();
+        } catch (error) {
+            this.showNotification('Error', 'Failed to create task: ' + error.message, 'error');
+        }
+    }
+
+    async createTonConnectPayment(amount, taskId, name, url, verification, maxCompletions, description) {
+        try {
+            const amountNano = Math.round(amount * 1000000000);
+            const amountNanoStr = amountNano.toString();
+
+            localStorage.setItem('pending_task_amount', amountNanoStr);
+            localStorage.setItem('pending_task_data', JSON.stringify({ name, url, verification, maxCompletions, description }));
+            
+            const walletAddress = APP_CONFIG.TON_WALLET_ADDRESS;
+            const tonkeeperUrl = `https://app.tonkeeper.com/transfer/${walletAddress}?amount=${amountNanoStr}&text=${taskId}`;
+            
+            this.showNotification('Payment Required', `Please send ${amount} GRAM to complete your task`, 'info');
+            
+            window.open(tonkeeperUrl, '_blank');
+            
+            return true;
+        } catch (error) {
+            this.showNotification('Error', error.message, 'error');
+            return false;
+        }
+    }
+
     renderHome() {
         const el = document.getElementById('home-page');
         if (!el) return;
@@ -1137,7 +1437,7 @@ class App {
 
         const invite3Progress = this.totalReferrals >= 3 ? 3 : this.totalReferrals;
         const complete10Progress = Math.min(this.dailyTasksCompleted, 10);
-        const totalAdsWatched = this.adCounts.TICTACTOE + this.adCounts.DICE + this.adCounts.LOTTERY;
+        const totalAdsWatched = this.adCount;
 
         el.innerHTML = `
             <div class="promo-card glass-card">
@@ -1145,29 +1445,6 @@ class App {
                 <div class="promo-input-group">
                     <input type="text" id="promo-input" class="form-input" placeholder="${this.t('enter_promo')}">
                     <button class="promo-submit-btn" id="promo-submit" disabled>${this.t('claim')}</button>
-                </div>
-            </div>
-
-            <div class="section-title">
-                <span class="icon-circle"><i class="fas fa-gamepad"></i></span>
-                ${this.t('games')}
-            </div>
-
-            <div class="games-grid">
-                <div class="game-grid-card" data-game="tictactoe">
-                    <div class="game-icon">❌</div>
-                    <div class="game-name">${this.t('tictactoe')}</div>
-                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${this.tictactoeGames}</div>
-                </div>
-                <div class="game-grid-card" data-game="dice">
-                    <div class="game-icon">🎲</div>
-                    <div class="game-name">${this.t('dice')}</div>
-                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.DICE}"> ${this.diceGames}</div>
-                </div>
-                <div class="game-grid-card" data-game="lottery">
-                    <div class="game-icon">🎰</div>
-                    <div class="game-name">${this.t('lottery')}</div>
-                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.LOTTERY}"> ${this.lotteryGames}</div>
                 </div>
             </div>
 
@@ -1222,15 +1499,28 @@ class App {
                 </div>
                 <button class="daily-task-btn ${watch10AdsDone ? 'done' : (totalAdsWatched >= 10 ? 'primary' : 'progress')}" id="watch10ads-btn">${watch10AdsDone ? this.t('claim') : (totalAdsWatched >= 10 ? this.t('claim') : this.t('go'))}</button>
             </div>
+
+            <div class="feature-card" id="play-earn-card">
+                <div class="feature-icon">🎮</div>
+                <div class="feature-title">${this.t('play_earn')}</div>
+                <div class="feature-desc">${this.t('play_earn_desc')}</div>
+                <button class="feature-btn" id="play-earn-btn">${this.t('go')}</button>
+            </div>
+
+            <div class="feature-card" id="invite-earn-card">
+                <div class="feature-icon">👥</div>
+                <div class="feature-title">${this.t('invite_earn')}</div>
+                <div class="feature-desc">${this.t('invite_earn_desc')}</div>
+                <button class="feature-btn" id="invite-earn-btn">${this.t('go')}</button>
+            </div>
         `;
 
-        document.querySelectorAll('[data-game]').forEach(card => {
-            card.addEventListener('click', () => {
-                const game = card.dataset.game;
-                if (game === 'tictactoe') this.navigateTo('tictactoe-page');
-                else if (game === 'dice') this.navigateTo('dice-page');
-                else if (game === 'lottery') this.navigateTo('lottery-page');
-            });
+        document.getElementById('play-earn-btn')?.addEventListener('click', () => {
+            this.navigateTo('games-page');
+        });
+
+        document.getElementById('invite-earn-btn')?.addEventListener('click', () => {
+            this.navigateTo('invite-page');
         });
 
         const promoInput = document.getElementById('promo-input');
@@ -1254,7 +1544,7 @@ class App {
                 this.showNotification('Info', this.t('daily_bonus_claimed'), 'warning');
                 return;
             }
-            if (await this.showAd('TICTACTOE')) {
+            if (await this.showAd()) {
                 this.gramBalance += 0.001;
                 this.dailyCheckinClaimed = true;
                 this.dailyCheckinDate = today;
@@ -1275,7 +1565,7 @@ class App {
                 this.navigateTo('invite-page');
                 return;
             }
-            if (await this.showAd('TICTACTOE')) {
+            if (await this.showAd()) {
                 this.gramBalance += 0.003;
                 this.invite3Claimed = true;
                 this.invite3Date = today;
@@ -1296,7 +1586,7 @@ class App {
                 this.navigateTo('tasks-page');
                 return;
             }
-            if (await this.showAd('TICTACTOE')) {
+            if (await this.showAd()) {
                 this.gramBalance += 0.002;
                 this.complete10Claimed = true;
                 this.complete10Date = today;
@@ -1317,7 +1607,7 @@ class App {
                 this.showNotification('Info', 'Watch 10 ads first!', 'warning');
                 return;
             }
-            if (await this.showAd('TICTACTOE')) {
+            if (await this.showAd()) {
                 this.gramBalance += 0.001;
                 this.watch10AdsClaimed = true;
                 this.watch10AdsDate = today;
@@ -1334,36 +1624,100 @@ class App {
         const el = document.getElementById('games-page');
         if (!el) return;
 
+        const today = this.getTodayUTC();
+        const adCount = this.adCountDate === today ? this.adCount : 0;
+        const limit = APP_CONFIG.AD_LIMITS.dailyLimit || 30;
+        const adsLeft = Math.max(0, limit - adCount);
+
+        const userRank = this.getUserRank();
+
         el.innerHTML = `
             <div class="page-header">
                 <h2>${this.t('games')}</h2>
             </div>
 
-            <div class="games-grid">
-                <div class="game-grid-card" data-game="tictactoe">
-                    <div class="game-icon">❌</div>
-                    <div class="game-name">${this.t('tictactoe')}</div>
-                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${this.tictactoeGames}</div>
-                    <div style="font-size:0.6rem;color:var(--text-secondary);margin-top:4px;">Win up to 0.0005 GRAM</div>
+            <div style="display:flex;gap:8px;margin-bottom:16px;">
+                <div class="game-balance-badge" style="padding:8px 16px;font-size:0.8rem;">
+                    <img src="${APP_CONFIG.ICONS.GAMES}"> ${this.gamesBalance} ${this.t('games_balance')}
                 </div>
-                <div class="game-grid-card" data-game="dice">
-                    <div class="game-icon">🎲</div>
-                    <div class="game-name">${this.t('dice')}</div>
-                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.DICE}"> ${this.diceGames}</div>
-                    <div style="font-size:0.6rem;color:var(--text-secondary);margin-top:4px;">Win up to 0.001 GRAM</div>
-                </div>
-                <div class="game-grid-card" data-game="lottery">
-                    <div class="game-icon">🎰</div>
-                    <div class="game-name">${this.t('lottery')}</div>
-                    <div class="game-badge"><img src="${APP_CONFIG.ICONS.LOTTERY}"> ${this.lotteryGames}</div>
-                    <div style="font-size:0.6rem;color:var(--text-secondary);margin-top:4px;">Win up to 0.001 GRAM</div>
+                <div class="game-balance-badge" style="padding:8px 16px;font-size:0.8rem;">
+                    <img src="${APP_CONFIG.ICONS.POINTS}"> ${this.pointsBalance} ${this.t('points')}
                 </div>
             </div>
 
-            <div style="text-align:center;padding:20px;color:var(--text-secondary);font-size:0.8rem;">
-                <i class="fas fa-info-circle"></i> Watch ads to get more game plays
+            <div class="game-card" data-game="tictactoe">
+                <div class="game-card-left">
+                    <div class="game-icon-wrapper"><img src="${APP_CONFIG.ICONS.TICTACTOE}"></div>
+                    <div class="game-info">
+                        <h4>${this.t('tictactoe')}</h4>
+                        <p>Win: 0.0005 GRAM + 100 Points</p>
+                    </div>
+                </div>
+                <button class="game-go-btn">${this.t('go')}</button>
+            </div>
+
+            <div class="game-card" data-game="dice">
+                <div class="game-card-left">
+                    <div class="game-icon-wrapper"><img src="${APP_CONFIG.ICONS.DICE}"></div>
+                    <div class="game-info">
+                        <h4>${this.t('dice')}</h4>
+                        <p>Win: 0.0005 GRAM + Points</p>
+                    </div>
+                </div>
+                <button class="game-go-btn">${this.t('go')}</button>
+            </div>
+
+            <div class="game-card" data-game="lottery">
+                <div class="game-card-left">
+                    <div class="game-icon-wrapper"><img src="${APP_CONFIG.ICONS.LOTTERY}"></div>
+                    <div class="game-info">
+                        <h4>${this.t('lottery')}</h4>
+                        <p>Win: 0.0005 GRAM + 100 Points</p>
+                    </div>
+                </div>
+                <button class="game-go-btn">${this.t('go')}</button>
+            </div>
+
+            <div class="section-title">
+                <span class="icon-circle"><i class="fas fa-plus-circle"></i></span>
+                ${this.t('get_more_games')}
+            </div>
+
+            <div class="earn-option glass-card">
+                <div class="earn-option-left">
+                    <span class="icon-circle-small"><i class="fas fa-play"></i></span>
+                    <div>
+                        <span>${this.t('watch_ad')}</span>
+                        <div class="reward-badge"><img src="${APP_CONFIG.ICONS.GAMES}"> +1 ${this.t('games_balance')}</div>
+                        <div style="font-size:0.55rem;color:var(--text-secondary);">(${adsLeft} left today)</div>
+                    </div>
+                </div>
+                <button class="earn-btn" id="games-watch-ad" ${adsLeft <= 0 ? 'disabled' : ''}>${this.t('watch')}</button>
+            </div>
+
+            <div class="earn-option glass-card">
+                <div class="earn-option-left">
+                    <span class="icon-circle-small"><i class="fas fa-tasks"></i></span>
+                    <div>
+                        <span>${this.t('complete_tasks')}</span>
+                        <div class="reward-badge"><img src="${APP_CONFIG.ICONS.GAMES}"> +1 ${this.t('games_balance')}</div>
+                    </div>
+                </div>
+                <button class="earn-btn secondary" id="games-tasks-btn">${this.t('go')}</button>
+            </div>
+
+            <div class="leaderboard-card">
+                <div class="leaderboard-header">
+                    <h4><i class="fas fa-trophy" style="color:var(--gold);"></i> ${this.t('games_battle')}</h4>
+                    <div class="leaderboard-timer">${this.t('time_remaining')}: <span id="leaderboard-timer">--</span></div>
+                </div>
+                <div id="leaderboard-list"></div>
+                ${userRank ? `<div style="text-align:center;font-size:0.8rem;color:var(--text-secondary);margin-top:8px;">${this.t('your_rank')}: #${userRank}</div>` : ''}
             </div>
         `;
+
+        this.renderLeaderboard();
+        this.updateLeaderboardTimer();
 
         document.querySelectorAll('[data-game]').forEach(card => {
             card.addEventListener('click', () => {
@@ -1373,30 +1727,96 @@ class App {
                 else if (game === 'lottery') this.navigateTo('lottery-page');
             });
         });
+
+        document.getElementById('games-watch-ad')?.addEventListener('click', async () => {
+            if (await this.showAd()) {
+                this.gamesBalance++;
+                this._dirty = true;
+                this.saveUserData(false);
+                this.updateHeaderBalances();
+                this.showNotification('+1 Game', 'Game added to your balance!', 'success');
+                this.renderGamesPage();
+            }
+        });
+
+        document.getElementById('games-tasks-btn')?.addEventListener('click', () => {
+            this.navigateTo('tasks-page');
+        });
+    }
+
+    getUserRank() {
+        const sorted = this.leaderboardData.sort((a, b) => (b.points || 0) - (a.points || 0));
+        const index = sorted.findIndex(item => item.id === this.tgUser.id.toString());
+        return index !== -1 ? index + 1 : null;
+    }
+
+    renderLeaderboard() {
+        const container = document.getElementById('leaderboard-list');
+        if (!container) return;
+
+        const sorted = this.leaderboardData.sort((a, b) => (b.points || 0) - (a.points || 0));
+        const top = sorted.slice(0, 10);
+        const userRank = this.getUserRank();
+
+        if (top.length === 0) {
+            container.innerHTML = `<div class="no-data"><i class="fas fa-trophy"></i><p>No players yet</p></div>`;
+            return;
+        }
+
+        let html = '';
+        top.forEach((item, index) => {
+            const rank = index + 1;
+            let rankClass = '';
+            if (rank === 1) rankClass = 'gold';
+            else if (rank === 2) rankClass = 'silver';
+            else if (rank === 3) rankClass = 'bronze';
+            
+            const isCurrent = item.id === this.tgUser.id.toString();
+            html += `
+                <div class="leaderboard-item ${isCurrent ? 'current-user' : ''} ${rank <= 3 ? 'top' + rank : ''}">
+                    <span class="rank ${rankClass}">#${rank}</span>
+                    <img src="${item.photoUrl || APP_CONFIG.DEFAULT_USER_AVATAR}" class="player-avatar">
+                    <span class="player-name">${item.firstName || 'User'}</span>
+                    <span class="player-points">${item.points || 0}</span>
+                </div>
+            `;
+        });
+
+        if (userRank && userRank > 10) {
+            html += `<div style="text-align:center;font-size:0.7rem;color:var(--text-secondary);padding:8px;">...</div>`;
+            const userData = sorted.find(item => item.id === this.tgUser.id.toString());
+            if (userData) {
+                html += `
+                    <div class="leaderboard-item current-user">
+                        <span class="rank">#${userRank}</span>
+                        <img src="${userData.photoUrl || APP_CONFIG.DEFAULT_USER_AVATAR}" class="player-avatar">
+                        <span class="player-name">${userData.firstName || 'User'}</span>
+                        <span class="player-points">${userData.points || 0}</span>
+                    </div>
+                `;
+            }
+        }
+
+        container.innerHTML = html;
     }
 
     renderTicTacToePage() {
         const el = document.getElementById('tictactoe-page');
         if (!el) return;
 
-        const limit = APP_CONFIG.AD_LIMITS.TICTACTOE.dailyLimit || 3;
-        const today = this.getTodayUTC();
-        const adCount = this.adCountDate === today ? this.adCounts.TICTACTOE : 0;
-        const adsLeft = Math.max(0, limit - adCount);
-
         el.innerHTML = `
             <div class="page-header">
                 <button class="back-btn" data-back="games"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
                 <h2>${this.t('tictactoe')}</h2>
+                <div class="game-balance-badge" style="font-size:0.7rem;"><img src="${APP_CONFIG.ICONS.GAMES}"> ${this.gamesBalance}</div>
             </div>
 
             <div class="glass-card" style="padding:20px;">
-                <div class="game-balance-display"><img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${this.tictactoeGames} GAMES</div>
-                
-                <div class="difficulty-selector">
-                    <button class="difficulty-btn active" data-difficulty="easy">${this.t('easy')}</button>
-                    <button class="difficulty-btn" data-difficulty="medium">${this.t('medium')}</button>
-                    <button class="difficulty-btn" data-difficulty="hard">${this.t('hard')}</button>
+                <div class="game-header">
+                    <div class="game-header-left">
+                        <img src="${APP_CONFIG.ICONS.TICTACTOE}" class="game-icon-small">
+                        <span class="game-name">${this.t('tictactoe')}</span>
+                    </div>
                 </div>
 
                 <div class="game-board-container">
@@ -1405,29 +1825,11 @@ class App {
                     </div>
                 </div>
 
-                <div class="game-status" id="ttt-status">${this.t('your_turn', { symbol: 'X' })}</div>
+                <div class="game-status-text" id="ttt-status">${this.t('your_turn')}</div>
                 
-                <button class="game-btn" id="ttt-new-game">New Game</button>
-            </div>
-
-            <div class="earn-option glass-card">
-                <div class="earn-option-left">
-                    <span class="icon-circle-small"><i class="fas fa-play"></i></span>
-                    <span>${this.t('watch_ad')} <span style="font-size:0.6rem;color:var(--text-secondary);">(${adsLeft} left)</span></span>
-                </div>
-                <button class="earn-btn" id="ttt-watch-ad" ${adsLeft <= 0 ? 'disabled' : ''}>${this.t('watch')}</button>
+                <button class="game-btn" id="ttt-play-btn">${this.t('play')}</button>
             </div>
         `;
-
-        document.getElementById('ttt-watch-ad')?.addEventListener('click', async () => {
-            if (await this.showAd('TICTACTOE')) {
-                this.tictactoeGames++;
-                this._dirty = true;
-                this.saveUserData(false);
-                this.showNotification('+1 Game', 'Tic-Tac-Toe game added!', 'success');
-                this.renderTicTacToePage();
-            }
-        });
 
         this.initTicTacToe();
 
@@ -1440,23 +1842,11 @@ class App {
         let board = Array(9).fill(null);
         let currentPlayer = 'X';
         let gameActive = true;
-        let difficulty = 'easy';
-        let gamesAvailable = this.tictactoeGames;
+        let gamesAvailable = this.gamesBalance;
 
         const cells = document.querySelectorAll('.ttt-cell');
         const status = document.getElementById('ttt-status');
-        const newGameBtn = document.getElementById('ttt-new-game');
-
-        document.querySelectorAll('.difficulty-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.difficulty-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                difficulty = btn.dataset.difficulty;
-                if (!gameActive) {
-                    this.startNewTicTacToeGame();
-                }
-            });
-        });
+        const playBtn = document.getElementById('ttt-play-btn');
 
         const checkWinner = (board) => {
             const lines = [
@@ -1474,88 +1864,31 @@ class App {
             return board.every(cell => cell !== null) ? { winner: 'draw' } : null;
         };
 
-        const getAIMove = (board, difficulty) => {
-            if (difficulty === 'easy') {
-                const empty = board.map((v, i) => v === null ? i : null).filter(v => v !== null);
-                return empty[Math.floor(Math.random() * empty.length)];
-            }
-            
-            if (difficulty === 'medium') {
-                for (let i = 0; i < 9; i++) {
-                    if (board[i] === null) {
-                        board[i] = 'O';
-                        const result = checkWinner(board);
-                        board[i] = null;
-                        if (result && result.winner === 'O') return i;
-                    }
-                }
-                for (let i = 0; i < 9; i++) {
-                    if (board[i] === null) {
-                        board[i] = 'X';
-                        const result = checkWinner(board);
-                        board[i] = null;
-                        if (result && result.winner === 'X') return i;
-                    }
-                }
-                const empty = board.map((v, i) => v === null ? i : null).filter(v => v !== null);
-                return empty[Math.floor(Math.random() * empty.length)];
-            }
-            
-            if (difficulty === 'hard') {
-                const minimax = (board, depth, isMaximizing) => {
+        const getAIMove = (board) => {
+            for (let i = 0; i < 9; i++) {
+                if (board[i] === null) {
+                    board[i] = 'O';
                     const result = checkWinner(board);
-                    if (result) {
-                        if (result.winner === 'O') return 10 - depth;
-                        if (result.winner === 'X') return depth - 10;
-                        if (result.winner === 'draw') return 0;
-                    }
-                    
-                    if (isMaximizing) {
-                        let best = -Infinity;
-                        for (let i = 0; i < 9; i++) {
-                            if (board[i] === null) {
-                                board[i] = 'O';
-                                const score = minimax(board, depth + 1, false);
-                                board[i] = null;
-                                best = Math.max(best, score);
-                            }
-                        }
-                        return best;
-                    } else {
-                        let best = Infinity;
-                        for (let i = 0; i < 9; i++) {
-                            if (board[i] === null) {
-                                board[i] = 'X';
-                                const score = minimax(board, depth + 1, true);
-                                board[i] = null;
-                                best = Math.min(best, score);
-                            }
-                        }
-                        return best;
-                    }
-                };
-                
-                let bestScore = -Infinity;
-                let bestMove = null;
-                for (let i = 0; i < 9; i++) {
-                    if (board[i] === null) {
-                        board[i] = 'O';
-                        const score = minimax(board, 0, false);
-                        board[i] = null;
-                        if (score > bestScore) {
-                            bestScore = score;
-                            bestMove = i;
-                        }
-                    }
+                    board[i] = null;
+                    if (result && result.winner === 'O') return i;
                 }
-                return bestMove;
             }
+            for (let i = 0; i < 9; i++) {
+                if (board[i] === null) {
+                    board[i] = 'X';
+                    const result = checkWinner(board);
+                    board[i] = null;
+                    if (result && result.winner === 'X') return i;
+                }
+            }
+            const empty = board.map((v, i) => v === null ? i : null).filter(v => v !== null);
+            return empty[Math.floor(Math.random() * empty.length)];
         };
 
         const handleMove = (index) => {
             if (!gameActive || board[index] !== null || currentPlayer === 'O' || gamesAvailable <= 0) {
                 if (gamesAvailable <= 0) {
-                    this.showNotification('No Games', 'Watch an ad to get more games!', 'warning');
+                    this.showNotification('No Games', 'Get more games from the Games page!', 'warning');
                 }
                 return;
             }
@@ -1571,10 +1904,11 @@ class App {
             }
             
             currentPlayer = 'O';
-            status.textContent = this.t('ai_thinking');
+            status.textContent = this.t('opponent_turn');
+            status.className = 'game-status-text opponent-turn';
             
             setTimeout(() => {
-                const aiMove = getAIMove(board, difficulty);
+                const aiMove = getAIMove(board);
                 if (aiMove !== null) {
                     board[aiMove] = 'O';
                     cells[aiMove].textContent = 'O';
@@ -1587,7 +1921,8 @@ class App {
                     }
                     
                     currentPlayer = 'X';
-                    status.textContent = this.t('your_turn', { symbol: 'X' });
+                    status.textContent = this.t('your_turn');
+                    status.className = 'game-status-text your-turn';
                 }
             }, 500);
         };
@@ -1599,7 +1934,7 @@ class App {
             });
         });
 
-        this.startNewTicTacToeGame = () => {
+        const resetBoard = () => {
             board = Array(9).fill(null);
             currentPlayer = 'X';
             gameActive = true;
@@ -1607,49 +1942,56 @@ class App {
                 cell.textContent = '';
                 cell.className = 'ttt-cell';
             });
-            status.textContent = this.t('your_turn', { symbol: 'X' });
+            status.textContent = this.t('your_turn');
+            status.className = 'game-status-text your-turn';
         };
 
-        newGameBtn?.addEventListener('click', () => {
+        playBtn?.addEventListener('click', () => {
             if (gamesAvailable <= 0) {
-                this.showNotification('No Games', 'Watch an ad to get more games!', 'warning');
+                this.showNotification('No Games', 'Get more games from the Games page!', 'warning');
                 return;
             }
             gamesAvailable--;
-            this.tictactoeGames = gamesAvailable;
+            this.gamesBalance = gamesAvailable;
             this._dirty = true;
             this.saveUserData(false);
-            this.startNewTicTacToeGame();
-            document.querySelector('.game-balance-display').innerHTML = `<img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${gamesAvailable} GAMES`;
+            this.updateHeaderBalances();
+            resetBoard();
+            document.querySelector('.game-balance-badge').innerHTML = `<img src="${APP_CONFIG.ICONS.GAMES}"> ${gamesAvailable}`;
         });
 
         this.handleTicTacToeEnd = (result) => {
             gameActive = false;
             gamesAvailable--;
-            this.tictactoeGames = gamesAvailable;
+            this.gamesBalance = gamesAvailable;
             this._dirty = true;
             this.saveUserData(false);
-            document.querySelector('.game-balance-display').innerHTML = `<img src="${APP_CONFIG.ICONS.TICTACTOE}"> ${gamesAvailable} GAMES`;
+            this.updateHeaderBalances();
+            document.querySelector('.game-balance-badge').innerHTML = `<img src="${APP_CONFIG.ICONS.GAMES}"> ${gamesAvailable}`;
 
-            let reward = 0;
-            let title = '';
-            let icon = '';
+            let gramReward = 0;
+            let pointsReward = 0;
+            let detail = '';
 
             if (result.winner === 'X') {
-                reward = APP_CONFIG.GAME_REWARDS.TICTACTOE.win;
-                status.textContent = this.t('you_win');
-                this.showNotification(`+${reward.toFixed(4)} GRAM`, this.t('you_win'), 'success');
+                gramReward = APP_CONFIG.GAME_REWARDS.TICTACTOE.win.gram;
+                pointsReward = APP_CONFIG.GAME_REWARDS.TICTACTOE.win.points;
+                detail = 'You Win! 🎉';
+                status.textContent = 'You Win! 🎉';
             } else if (result.winner === 'O') {
-                reward = APP_CONFIG.GAME_REWARDS.TICTACTOE.lose;
-                status.textContent = this.t('ai_wins');
-                this.showNotification(`+${reward.toFixed(4)} GRAM`, this.t('ai_wins'), 'info');
+                gramReward = APP_CONFIG.GAME_REWARDS.TICTACTOE.lose.gram;
+                pointsReward = APP_CONFIG.GAME_REWARDS.TICTACTOE.lose.points;
+                detail = 'AI Wins 😔';
+                status.textContent = 'AI Wins 😔';
             } else if (result.winner === 'draw') {
-                reward = APP_CONFIG.GAME_REWARDS.TICTACTOE.draw;
-                status.textContent = this.t('draw');
-                this.showNotification(`+${reward.toFixed(4)} GRAM`, this.t('draw'), 'info');
+                gramReward = APP_CONFIG.GAME_REWARDS.TICTACTOE.draw.gram;
+                pointsReward = APP_CONFIG.GAME_REWARDS.TICTACTOE.draw.points;
+                detail = 'Draw 🤝';
+                status.textContent = 'Draw 🤝';
             }
 
-            this.gramBalance += reward;
+            this.gramBalance += gramReward;
+            this.pointsBalance += pointsReward;
             this.saveUserData(false);
             this.updateHeaderBalances();
 
@@ -1660,7 +2002,7 @@ class App {
             }
 
             setTimeout(() => {
-                this.showGameResult('Tic-Tac-Toe', result, reward);
+                this.showGameResult('Tic-Tac-Toe', detail, gramReward, pointsReward);
             }, 500);
         };
     }
@@ -1669,53 +2011,30 @@ class App {
         const el = document.getElementById('dice-page');
         if (!el) return;
 
-        const limit = APP_CONFIG.AD_LIMITS.DICE.dailyLimit || 3;
-        const today = this.getTodayUTC();
-        const adCount = this.adCountDate === today ? this.adCounts.DICE : 0;
-        const adsLeft = Math.max(0, limit - adCount);
-
         el.innerHTML = `
             <div class="page-header">
                 <button class="back-btn" data-back="games"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
-                <h2>${this.t('roll_dice')}</h2>
+                <h2>${this.t('dice')}</h2>
+                <div class="game-balance-badge" style="font-size:0.7rem;"><img src="${APP_CONFIG.ICONS.GAMES}"> ${this.gamesBalance}</div>
             </div>
 
             <div class="glass-card" style="padding:20px;">
-                <div class="game-balance-display"><img src="${APP_CONFIG.ICONS.DICE}"> ${this.diceGames} ROLLS</div>
-                
+                <div class="game-header">
+                    <div class="game-header-left">
+                        <img src="${APP_CONFIG.ICONS.DICE}" class="game-icon-small">
+                        <span class="game-name">${this.t('dice')}</span>
+                    </div>
+                </div>
+
                 <div class="dice-container" id="dice-game-container">
-                    <div class="dice-item" id="dice-1">
-                        <div class="dice-dots dice-dots-grid-1"><div class="dice-dot"></div></div>
-                    </div>
-                    <div class="dice-item" id="dice-2">
-                        <div class="dice-dots dice-dots-grid-1"><div class="dice-dot"></div></div>
-                    </div>
-                    <div class="dice-item" id="dice-3">
-                        <div class="dice-dots dice-dots-grid-1"><div class="dice-dot"></div></div>
-                    </div>
+                    <div class="dice-item" id="dice-1"><span class="dice-number">1</span></div>
+                    <div class="dice-item" id="dice-2"><span class="dice-number">1</span></div>
+                    <div class="dice-item" id="dice-3"><span class="dice-number">1</span></div>
                 </div>
 
-                <button class="game-btn" id="dice-roll-btn">${this.t('play', { available: this.diceGames })}</button>
-            </div>
-
-            <div class="earn-option glass-card">
-                <div class="earn-option-left">
-                    <span class="icon-circle-small"><i class="fas fa-play"></i></span>
-                    <span>${this.t('watch_ad')} <span style="font-size:0.6rem;color:var(--text-secondary);">(${adsLeft} left)</span></span>
-                </div>
-                <button class="earn-btn" id="dice-watch-ad" ${adsLeft <= 0 ? 'disabled' : ''}>${this.t('watch')}</button>
+                <button class="game-btn" id="dice-play-btn">${this.t('play')}</button>
             </div>
         `;
-
-        document.getElementById('dice-watch-ad')?.addEventListener('click', async () => {
-            if (await this.showAd('DICE')) {
-                this.diceGames++;
-                this._dirty = true;
-                this.saveUserData(false);
-                this.showNotification('+1 Roll', 'Dice roll added!', 'success');
-                this.renderDicePage();
-            }
-        });
 
         this.initDiceGame();
 
@@ -1725,74 +2044,39 @@ class App {
     }
 
     initDiceGame() {
-        let rollCount = this.diceGames;
+        let gamesAvailable = this.gamesBalance;
         let isRolling = false;
 
         const dice1 = document.getElementById('dice-1');
         const dice2 = document.getElementById('dice-2');
         const dice3 = document.getElementById('dice-3');
-        const rollBtn = document.getElementById('dice-roll-btn');
-
-        const diceDotsMap = {
-            1: 'dice-dots-grid-1',
-            2: 'dice-dots-grid-2',
-            3: 'dice-dots-grid-3',
-            4: 'dice-dots-grid-4',
-            5: 'dice-dots-grid-5',
-            6: 'dice-dots-grid-6'
-        };
-
-        const getDotsHtml = (num) => {
-            const dots = [];
-            const positions = {
-                1: [4],
-                2: [0, 8],
-                3: [0, 4, 8],
-                4: [0, 2, 6, 8],
-                5: [0, 2, 4, 6, 8],
-                6: [0, 2, 3, 5, 6, 8]
-            };
-            const pos = positions[num] || [];
-            for (let i = 0; i < 9; i++) {
-                dots.push(pos.includes(i) ? '<div class="dice-dot"></div>' : '<div></div>');
-            }
-            return dots.join('');
-        };
-
-        const updateDiceDisplay = (dice, value) => {
-            dice.innerHTML = `<div class="dice-dots ${diceDotsMap[value]}">${getDotsHtml(value)}</div>`;
-        };
+        const playBtn = document.getElementById('dice-play-btn');
 
         const rollDiceValue = () => Math.floor(Math.random() * 6) + 1;
 
         const calculateDiceReward = (values) => {
             const [v1, v2, v3] = values;
-            
-            if (v1 === v2 && v2 === v3) {
-                const key = `${v1}${v1}${v1}`;
-                return APP_CONFIG.GAME_REWARDS.DICE[key] || 0;
-            }
-            
-            const sum = v1 + v2 + v3;
-            return sum * APP_CONFIG.GAME_REWARDS.DICE.defaultMultiplier;
+            const points = v1 + v2 * v3;
+            return { points: points, gram: APP_CONFIG.GAME_REWARDS.DICE.gramReward };
         };
 
-        rollBtn?.addEventListener('click', () => {
+        playBtn?.addEventListener('click', () => {
             if (isRolling) return;
-            if (rollCount <= 0) {
-                this.showNotification('No Rolls', 'Watch an ad to get more rolls!', 'warning');
+            if (gamesAvailable <= 0) {
+                this.showNotification('No Games', 'Get more games from the Games page!', 'warning');
                 return;
             }
 
             isRolling = true;
-            rollCount--;
-            this.diceGames = rollCount;
+            gamesAvailable--;
+            this.gamesBalance = gamesAvailable;
             this._dirty = true;
             this.saveUserData(false);
+            this.updateHeaderBalances();
 
-            rollBtn.textContent = 'ROLLING...';
-            rollBtn.disabled = true;
-            document.querySelector('.game-balance-display').innerHTML = `<img src="${APP_CONFIG.ICONS.DICE}"> ${rollCount} ROLLS`;
+            playBtn.textContent = 'ROLLING...';
+            playBtn.disabled = true;
+            document.querySelector('.game-balance-badge').innerHTML = `<img src="${APP_CONFIG.ICONS.GAMES}"> ${gamesAvailable}`;
 
             let results = [];
             let resultCount = 0;
@@ -1802,14 +2086,14 @@ class App {
                 const maxCount = 12 + Math.floor(Math.random() * 8);
                 const interval = setInterval(() => {
                     const val = rollDiceValue();
-                    updateDiceDisplay(element, val);
+                    element.querySelector('.dice-number').textContent = val;
                     element.classList.add('rolling');
                     count++;
                     if (count >= maxCount) {
                         clearInterval(interval);
                         element.classList.remove('rolling');
                         const finalVal = rollDiceValue();
-                        updateDiceDisplay(element, finalVal);
+                        element.querySelector('.dice-number').textContent = finalVal;
                         callback(finalVal);
                     }
                 }, 60);
@@ -1822,15 +2106,20 @@ class App {
                 if (resultCount >= 3) {
                     setTimeout(() => {
                         const reward = calculateDiceReward(results);
-                        this.gramBalance += reward;
+                        const totalPoints = reward.points;
+                        const gramReward = reward.gram;
+
+                        this.gramBalance += gramReward;
+                        this.pointsBalance += totalPoints;
                         this.saveUserData(false);
                         this.updateHeaderBalances();
 
-                        this.showGameResult('Dice', { values: results }, reward);
+                        const detail = `${results[0]} + ${results[1]} × ${results[2]} = ${totalPoints} Points`;
+                        this.showGameResult('Dice', detail, gramReward, totalPoints);
 
                         isRolling = false;
-                        rollBtn.disabled = false;
-                        rollBtn.textContent = this.t('play', { available: rollCount });
+                        playBtn.disabled = false;
+                        playBtn.textContent = this.t('play');
                     }, 500);
                 }
             };
@@ -1851,49 +2140,32 @@ class App {
         const el = document.getElementById('lottery-page');
         if (!el) return;
 
-        const limit = APP_CONFIG.AD_LIMITS.LOTTERY.dailyLimit || 3;
-        const today = this.getTodayUTC();
-        const adCount = this.adCountDate === today ? this.adCounts.LOTTERY : 0;
-        const adsLeft = Math.max(0, limit - adCount);
-
-        const symbols = ['🍋', '🍇', '🍒', '777'];
+        const symbols = ['🍋', '🍇', '🍎', '🎰'];
 
         el.innerHTML = `
             <div class="page-header">
                 <button class="back-btn" data-back="games"><i class="fas fa-arrow-left"></i> ${this.t('back')}</button>
-                <h2>${this.t('lottery_game')}</h2>
+                <h2>${this.t('lottery')}</h2>
+                <div class="game-balance-badge" style="font-size:0.7rem;"><img src="${APP_CONFIG.ICONS.GAMES}"> ${this.gamesBalance}</div>
             </div>
 
             <div class="glass-card" style="padding:20px;">
-                <div class="game-balance-display"><img src="${APP_CONFIG.ICONS.LOTTERY}"> ${this.lotteryGames} GAMES</div>
-                
+                <div class="game-header">
+                    <div class="game-header-left">
+                        <img src="${APP_CONFIG.ICONS.LOTTERY}" class="game-icon-small">
+                        <span class="game-name">${this.t('lottery')}</span>
+                    </div>
+                </div>
+
                 <div class="lottery-container" id="lottery-container">
                     <div class="lottery-slot" id="lottery-1">🍋</div>
                     <div class="lottery-slot" id="lottery-2">🍋</div>
                     <div class="lottery-slot" id="lottery-3">🍋</div>
                 </div>
 
-                <button class="game-btn" id="lottery-spin-btn">${this.t('spin', { available: this.lotteryGames })}</button>
-            </div>
-
-            <div class="earn-option glass-card">
-                <div class="earn-option-left">
-                    <span class="icon-circle-small"><i class="fas fa-play"></i></span>
-                    <span>${this.t('watch_ad')} <span style="font-size:0.6rem;color:var(--text-secondary);">(${adsLeft} left)</span></span>
-                </div>
-                <button class="earn-btn" id="lottery-watch-ad" ${adsLeft <= 0 ? 'disabled' : ''}>${this.t('watch')}</button>
+                <button class="game-btn" id="lottery-play-btn">${this.t('play')}</button>
             </div>
         `;
-
-        document.getElementById('lottery-watch-ad')?.addEventListener('click', async () => {
-            if (await this.showAd('LOTTERY')) {
-                this.lotteryGames++;
-                this._dirty = true;
-                this.saveUserData(false);
-                this.showNotification('+1 Game', 'Lottery game added!', 'success');
-                this.renderLotteryPage();
-            }
-        });
 
         this.initLotteryGame();
 
@@ -1903,59 +2175,76 @@ class App {
     }
 
     initLotteryGame() {
-        let gameCount = this.lotteryGames;
+        let gamesAvailable = this.gamesBalance;
         let isSpinning = false;
-        const symbols = ['🍋', '🍇', '🍒', '777'];
+        const symbols = ['🍋', '🍇', '🍎', '🎰'];
 
         const slot1 = document.getElementById('lottery-1');
         const slot2 = document.getElementById('lottery-2');
         const slot3 = document.getElementById('lottery-3');
-        const spinBtn = document.getElementById('lottery-spin-btn');
+        const playBtn = document.getElementById('lottery-play-btn');
 
         const calculateLotteryReward = (results) => {
             const key = results.join('');
+            if (key === '🎰🎰🎰') {
+                return APP_CONFIG.GAME_REWARDS.LOTTERY.jackpot;
+            }
             if (APP_CONFIG.GAME_REWARDS.LOTTERY[key]) {
                 return APP_CONFIG.GAME_REWARDS.LOTTERY[key];
             }
-            return APP_CONFIG.GAME_REWARDS.LOTTERY.defaultReward;
+            if (results[0] === results[1] && results[1] === results[2]) {
+                return APP_CONFIG.GAME_REWARDS.LOTTERY[key] || APP_CONFIG.GAME_REWARDS.LOTTERY.default;
+            }
+            return APP_CONFIG.GAME_REWARDS.LOTTERY.default;
         };
 
-        spinBtn?.addEventListener('click', () => {
+        playBtn?.addEventListener('click', () => {
             if (isSpinning) return;
-            if (gameCount <= 0) {
-                this.showNotification('No Games', 'Watch an ad to get more lottery games!', 'warning');
+            if (gamesAvailable <= 0) {
+                this.showNotification('No Games', 'Get more games from the Games page!', 'warning');
                 return;
             }
 
             isSpinning = true;
-            gameCount--;
-            this.lotteryGames = gameCount;
+            gamesAvailable--;
+            this.gamesBalance = gamesAvailable;
             this._dirty = true;
             this.saveUserData(false);
+            this.updateHeaderBalances();
 
-            spinBtn.textContent = 'SPINNING...';
-            spinBtn.disabled = true;
-            document.querySelector('.game-balance-display').innerHTML = `<img src="${APP_CONFIG.ICONS.LOTTERY}"> ${gameCount} GAMES`;
+            playBtn.textContent = 'SPINNING...';
+            playBtn.disabled = true;
+            document.querySelector('.game-balance-badge').innerHTML = `<img src="${APP_CONFIG.ICONS.GAMES}"> ${gamesAvailable}`;
 
             let results = [];
             let resultCount = 0;
 
             const spinSlot = (element, callback) => {
                 let count = 0;
-                const maxCount = 12 + Math.floor(Math.random() * 8);
+                const maxCount = 18 + Math.floor(Math.random() * 10);
                 const interval = setInterval(() => {
                     const idx = Math.floor(Math.random() * symbols.length);
-                    element.textContent = symbols[idx];
+                    const val = symbols[idx];
+                    if (val === '🎰') {
+                        element.innerHTML = `<img src="${APP_CONFIG.ICONS.LOTTERY_SYMBOL}" style="width:50px;height:50px;object-fit:contain;">`;
+                    } else {
+                        element.textContent = val;
+                    }
                     element.classList.add('rolling');
                     count++;
                     if (count >= maxCount) {
                         clearInterval(interval);
                         element.classList.remove('rolling');
                         const finalIdx = Math.floor(Math.random() * symbols.length);
-                        element.textContent = symbols[finalIdx];
-                        callback(symbols[finalIdx]);
+                        const finalVal = symbols[finalIdx];
+                        if (finalVal === '🎰') {
+                            element.innerHTML = `<img src="${APP_CONFIG.ICONS.LOTTERY_SYMBOL}" style="width:50px;height:50px;object-fit:contain;">`;
+                        } else {
+                            element.textContent = finalVal;
+                        }
+                        callback(finalVal);
                     }
-                }, 60);
+                }, 80);
                 return interval;
             };
 
@@ -1965,15 +2254,20 @@ class App {
                 if (resultCount >= 3) {
                     setTimeout(() => {
                         const reward = calculateLotteryReward(results);
-                        this.gramBalance += reward;
+                        const gramReward = reward.gram || 0;
+                        const pointsReward = reward.points || 0;
+
+                        this.gramBalance += gramReward;
+                        this.pointsBalance += pointsReward;
                         this.saveUserData(false);
                         this.updateHeaderBalances();
 
-                        this.showGameResult('Lottery', { symbols: results }, reward);
+                        const detail = results.join(' ');
+                        this.showGameResult('Lottery', detail, gramReward, pointsReward);
 
                         isSpinning = false;
-                        spinBtn.disabled = false;
-                        spinBtn.textContent = this.t('spin', { available: gameCount });
+                        playBtn.disabled = false;
+                        playBtn.textContent = this.t('play');
                     }, 500);
                 }
             };
@@ -1984,42 +2278,47 @@ class App {
                     spinSlot(slot2, onResult);
                     setTimeout(() => {
                         spinSlot(slot3, onResult);
-                    }, 500);
-                }, 500);
-            }, 300);
+                    }, 1000);
+                }, 1000);
+            }, 500);
         });
     }
 
-    showGameResult(gameName, result, reward) {
+    showGameResult(gameName, detail, gramReward, pointsReward) {
         const modal = document.getElementById('game-result-modal');
         const title = document.getElementById('game-result-title');
         const icon = document.getElementById('game-result-icon');
-        const detail = document.getElementById('game-result-detail');
-        const amount = document.getElementById('game-result-amount');
+        const detailEl = document.getElementById('game-result-detail');
+        const gramEl = document.getElementById('game-result-gram');
+        const pointsEl = document.getElementById('game-result-points');
         const effect = document.getElementById('game-result-effect');
 
-        title.textContent = gameName + ' Result';
+        const icons = {
+            'Tic-Tac-Toe': '❌',
+            'Dice': '🎲',
+            'Lottery': '🎰'
+        };
 
-        if (gameName === 'Tic-Tac-Toe') {
-            if (result.winner === 'X') {
-                icon.innerHTML = '🎉';
-                detail.textContent = 'You Win!';
-            } else if (result.winner === 'O') {
-                icon.innerHTML = '😔';
-                detail.textContent = 'AI Wins';
-            } else {
-                icon.innerHTML = '🤝';
-                detail.textContent = 'Draw';
-            }
-        } else if (gameName === 'Dice') {
-            icon.innerHTML = '🎲';
-            detail.textContent = `${result.values[0]} ${result.values[1]} ${result.values[2]}`;
-        } else if (gameName === 'Lottery') {
-            icon.innerHTML = '🎰';
-            detail.textContent = `${result.symbols[0]} ${result.symbols[1]} ${result.symbols[2]}`;
+        title.textContent = gameName + ' Result';
+        icon.innerHTML = icons[gameName] || '🎮';
+        detailEl.textContent = detail;
+
+        if (gramReward > 0) {
+            gramEl.textContent = `+${gramReward.toFixed(4)} GRAM`;
+            gramEl.style.display = 'block';
+        } else {
+            gramEl.textContent = this.t('no_reward');
+            gramEl.style.display = 'block';
         }
 
-        amount.textContent = `+${reward.toFixed(4)} GRAM`;
+        if (pointsReward > 0) {
+            pointsEl.textContent = `+${pointsReward} ${this.t('points')}`;
+            pointsEl.style.display = 'block';
+        } else {
+            pointsEl.textContent = '';
+            pointsEl.style.display = 'none';
+        }
+
         effect.className = 'game-result-effect show';
         effect.innerHTML = '✨';
         setTimeout(() => { effect.className = 'game-result-effect'; }, 1000);
@@ -2067,18 +2366,21 @@ class App {
         if (socialTasks.length > 0) {
             html += socialTasks.map(t => {
                 const rewardGram = APP_CONFIG.SOCIAL_TASK_REWARDS.GRAM || 0.0001;
+                const rewardGames = APP_CONFIG.SOCIAL_TASK_REWARDS.GAMES || 1;
                 return `
                     <div class="task-item glass-card">
                         <div class="task-item-left">
                             <img src="${APP_CONFIG.TASK_IMAGE}" class="task-img">
                             <div class="task-item-info">
                                 <h4>${t.name}</h4>
+                                ${t.description ? `<div class="task-desc">${t.description}</div>` : ''}
                                 <div class="task-reward">
                                     <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS.GRAM}"> ${rewardGram} GRAM</span>
+                                    <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS.GAMES}"> +${rewardGames}</span>
                                 </div>
                             </div>
                         </div>
-                        <button class="task-btn start" data-id="${t.id}" data-reward-gram="${rewardGram}" data-url="${t.url}" data-verify="${t.verification}">Start</button>
+                        <button class="task-btn start" data-id="${t.id}" data-reward-gram="${rewardGram}" data-reward-games="${rewardGames}" data-url="${t.url}" data-verify="${t.verification}">Start</button>
                     </div>
                 `;
             }).join('');
@@ -2090,19 +2392,19 @@ class App {
         if (partnerTasks.length > 0) {
             html += partnerTasks.map(t => {
                 const reward = t.rewardValue || 0.0001;
-                const currency = t.rewardCurrency || 'GRAM';
                 return `
                     <div class="task-item glass-card">
                         <div class="task-item-left">
                             <img src="${APP_CONFIG.TASK_IMAGE}" class="task-img">
                             <div class="task-item-info">
                                 <h4>${t.name}</h4>
+                                ${t.description ? `<div class="task-desc">${t.description}</div>` : ''}
                                 <div class="task-reward">
-                                    <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS.GRAM}"> ${reward} ${currency}</span>
+                                    <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS.GRAM}"> ${reward} GRAM</span>
                                 </div>
                             </div>
                         </div>
-                        <button class="task-btn start" data-id="partner_${t.id}" data-reward-gram="${reward}" data-url="${t.url}" data-verify="${t.verification || false}" data-partner="true">Start</button>
+                        <button class="task-btn start" data-id="partner_${t.id}" data-reward-gram="${reward}" data-reward-games="0" data-url="${t.url}" data-verify="${t.verification || false}" data-partner="true">Start</button>
                     </div>
                 `;
             }).join('');
@@ -2120,6 +2422,7 @@ class App {
                 }
                 const id = btn.dataset.id;
                 const rewardGram = parseFloat(btn.dataset.rewardGram) || 0;
+                const rewardGames = parseFloat(btn.dataset.rewardGames) || 0;
                 const url = btn.dataset.url;
                 const verify = btn.dataset.verify === 'true';
                 const isPartner = btn.dataset.partner === 'true';
@@ -2169,6 +2472,9 @@ class App {
                                 if (rewardGram > 0) {
                                     this.gramBalance += rewardGram;
                                 }
+                                if (rewardGames > 0) {
+                                    this.gamesBalance += rewardGames;
+                                }
 
                                 this._dirty = true;
                                 await this.saveUserData(false);
@@ -2179,7 +2485,10 @@ class App {
                                 newBtn.classList.add('done');
                                 newBtn.classList.remove('check');
 
-                                this.showNotification('Task Completed!', `+${rewardGram} GRAM`, 'success');
+                                let msg = '';
+                                if (rewardGram > 0) msg += `+${rewardGram} GRAM `;
+                                if (rewardGames > 0) msg += `+${rewardGames} Game`;
+                                this.showNotification('Task Completed!', msg, 'success');
                                 this.renderTaskLists();
                                 this.renderHome();
                             } else {
@@ -2215,32 +2524,55 @@ class App {
             <div class="glass-card" style="padding:20px;">
                 <div class="form-group">
                     <label class="form-label">${this.t('task_name')}</label>
-                    <input type="text" id="task-name-input" class="form-input" maxlength="15" placeholder="${this.t('task_name_placeholder')}">
+                    <input type="text" id="task-name-input" class="form-input" maxlength="15" placeholder="${this.t('task_name_placeholder')}" oninput="window.app.updateTaskPreview()">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">${this.t('task_description')}</label>
+                    <input type="text" id="task-desc-input" class="form-input" maxlength="25" placeholder="${this.t('task_desc_placeholder')}" oninput="window.app.updateTaskPreview()">
                 </div>
                 <div class="form-group">
                     <label class="form-label">${this.t('task_url')}</label>
-                    <input type="url" id="task-url-input" class="form-input" placeholder="${this.t('task_url_placeholder')}">
+                    <input type="url" id="task-url-input" class="form-input" placeholder="${this.t('task_url_placeholder')}" oninput="window.app.updateTaskPreview()">
                     <div id="add-admin-div" style="display:none;margin-top:8px;"></div>
                 </div>
                 <div class="form-group">
                     <label class="form-label">${this.t('verification')}</label>
                     <div class="toggle-group">
-                        <button class="toggle-option" data-value="true">${this.t('yes')}</button>
-                        <button class="toggle-option active" data-value="false">${this.t('no')}</button>
+                        <button class="toggle-option" data-value="true" onclick="window.app.toggleVerification(this)">${this.t('yes')}</button>
+                        <button class="toggle-option active" data-value="false" onclick="window.app.toggleVerification(this)">${this.t('no')}</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="form-label">${this.t('max_completions')}</label>
                     <div class="toggle-group completions-group">
                         ${completions.map((c, i) => `
-                            <button class="toggle-option ${i === 0 ? 'active' : ''}" data-value="${c}">${completionsLabels[i]}</button>
+                            <button class="toggle-option ${i === 0 ? 'active' : ''}" data-value="${c}" onclick="window.app.selectCompletions(this)">${completionsLabels[i]}</button>
                         `).join('')}
                     </div>
                 </div>
-                <div class="payment-buttons-group">
-                    <button class="pay-btn" id="pay-task-btn">${this.t('pay_stars', { stars: taskPrice })}</button>
+
+                <div class="task-preview">
+                    <div class="preview-header">${this.t('task_preview')}</div>
+                    <div id="task-preview-container">
+                        <div class="task-item glass-card">
+                            <div class="task-item-left">
+                                <img src="${APP_CONFIG.TASK_IMAGE}" class="task-img">
+                                <div class="task-item-info">
+                                    <h4 id="preview-name">Task Name</h4>
+                                    <div id="preview-desc" class="task-desc"></div>
+                                    <div class="task-reward">
+                                        <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS.GRAM}"> ${APP_CONFIG.SOCIAL_TASK_REWARDS.GRAM || 0.0001} GRAM</span>
+                                        <span class="task-reward-badge"><img src="${APP_CONFIG.ICONS.GAMES}"> +${APP_CONFIG.SOCIAL_TASK_REWARDS.GAMES || 1}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="task-btn" style="opacity:0.5;pointer-events:none;">Start</button>
+                        </div>
+                    </div>
                 </div>
-                <div id="add-task-status" style="margin-top:12px;"></div>
+
+                <button class="pay-btn-full" id="pay-task-btn">${this.t('pay_stars', { stars: taskPrice })}</button>
+                <div id="add-task-status" style="margin-top:12px;text-align:center;"></div>
             </div>
 
             <div class="section-title">
@@ -2251,41 +2583,14 @@ class App {
         `;
 
         this.renderMyTasks();
-
-        el.querySelectorAll('.toggle-option[data-value]').forEach(opt => {
-            opt.addEventListener('click', () => {
-                const parent = opt.parentElement;
-                parent.querySelectorAll('.toggle-option').forEach(o => o.classList.remove('active'));
-                opt.classList.add('active');
-
-                const addAdminDiv = document.getElementById('add-admin-div');
-                if (addAdminDiv) {
-                    if (opt.dataset.value === 'true') {
-                        const botLink = `https://t.me/${APP_CONFIG.BOT_USERNAME}?startchannel=m&admin=invite_users`;
-                        addAdminDiv.innerHTML = `<button class="add-bot-btn" onclick="window.open('${botLink}', '_blank')"><i class="fab fa-telegram"></i> ${this.t('add_bot_as_admin')}</button>`;
-                        addAdminDiv.style.display = 'block';
-                    } else {
-                        addAdminDiv.style.display = 'none';
-                    }
-                }
-                this.updatePayButton();
-            });
-        });
-
-        el.querySelectorAll('.completions-group .toggle-option').forEach(opt => {
-            opt.addEventListener('click', () => {
-                const parent = opt.parentElement;
-                parent.querySelectorAll('.toggle-option').forEach(o => o.classList.remove('active'));
-                opt.classList.add('active');
-                this.updatePayButton();
-            });
-        });
+        this.updateTaskPreview();
 
         document.getElementById('pay-task-btn')?.addEventListener('click', async () => {
             const name = document.getElementById('task-name-input').value.trim();
+            const description = document.getElementById('task-desc-input').value.trim();
             const url = document.getElementById('task-url-input').value.trim();
-            const verification = el.querySelector('.toggle-option.active[data-value]')?.dataset.value || 'false';
-            const maxCompletions = parseInt(el.querySelector('.completions-group .toggle-option.active')?.dataset.value || 0);
+            const verification = document.querySelector('.toggle-option.active[data-value]')?.dataset.value || 'false';
+            const maxCompletions = parseInt(document.querySelector('.completions-group .toggle-option.active')?.dataset.value || 0);
 
             if (!name || name.length > 15 || !/^[a-zA-Z0-9\s]+$/.test(name)) {
                 this.showNotification('Error', 'Name must be max 15 chars, English only', 'error');
@@ -2320,10 +2625,14 @@ class App {
             }
 
             this.gramBalance -= price;
+            this._dirty = true;
+            this.saveUserData(false);
+            this.updateHeaderBalances();
 
             const taskData = {
                 name: name,
                 url: url,
+                description: description || '',
                 category: 'social',
                 verification: verification === 'true',
                 max: maxCompletions,
@@ -2335,17 +2644,18 @@ class App {
 
             try {
                 await this.db.ref(`userTasks/${this.tgUser.id}/${taskId}`).set(taskData);
-                this._dirty = true;
-                this.saveUserData(false);
-                this.updateHeaderBalances();
                 this.showNotification('Success', this.t('task_added'), 'success');
                 status.innerHTML = '<span style="color:var(--success);">Task added successfully!</span>';
                 await this.loadUserTasks();
                 this.renderMyTasks();
                 document.getElementById('task-name-input').value = '';
+                document.getElementById('task-desc-input').value = '';
                 document.getElementById('task-url-input').value = '';
+                this.updateTaskPreview();
             } catch (error) {
                 this.gramBalance += price;
+                this.saveUserData(false);
+                this.updateHeaderBalances();
                 status.innerHTML = `<span style="color:var(--error);">Failed to add task: ${error.message}</span>`;
             }
         });
@@ -2355,12 +2665,41 @@ class App {
         });
     }
 
-    updatePayButton() {
-        const max = parseInt(document.querySelector('.completions-group .toggle-option.active')?.dataset.value || 0);
-        const price = (APP_CONFIG.TON_PRICE_PER_100 * (max / 100));
-        const payBtn = document.getElementById('pay-task-btn');
-        if (payBtn) {
-            payBtn.textContent = this.t('pay_stars', { stars: price.toFixed(2) });
+    toggleVerification(el) {
+        const parent = el.parentElement;
+        parent.querySelectorAll('.toggle-option').forEach(o => o.classList.remove('active'));
+        el.classList.add('active');
+
+        const addAdminDiv = document.getElementById('add-admin-div');
+        if (addAdminDiv) {
+            if (el.dataset.value === 'true') {
+                const botLink = `https://t.me/${APP_CONFIG.BOT_USERNAME}?startchannel=m&admin=invite_users`;
+                addAdminDiv.innerHTML = `<button class="add-bot-btn" onclick="window.open('${botLink}', '_blank')"><i class="fab fa-telegram"></i> ${this.t('add_bot_as_admin')}</button>`;
+                addAdminDiv.style.display = 'block';
+            } else {
+                addAdminDiv.style.display = 'none';
+            }
+        }
+        this.updateTaskPreview();
+    }
+
+    selectCompletions(el) {
+        const parent = el.parentElement;
+        parent.querySelectorAll('.toggle-option').forEach(o => o.classList.remove('active'));
+        el.classList.add('active');
+        this.updateTaskPreview();
+    }
+
+    updateTaskPreview() {
+        const name = document.getElementById('task-name-input')?.value.trim() || 'Task Name';
+        const desc = document.getElementById('task-desc-input')?.value.trim() || '';
+        const previewName = document.getElementById('preview-name');
+        const previewDesc = document.getElementById('preview-desc');
+        
+        if (previewName) previewName.textContent = name;
+        if (previewDesc) {
+            previewDesc.textContent = desc;
+            previewDesc.style.display = desc ? 'block' : 'none';
         }
     }
 
@@ -2374,9 +2713,10 @@ class App {
         }
 
         container.innerHTML = this.userTasks.map(task => {
-            const statusClass = task.status === 'active' ? 'active' : 'pending';
-            const statusText = task.status === 'active' ? this.t('active') : this.t('pending');
-            const progress = (task.total / task.max) * 100;
+            const isCompleted = task.total >= task.max;
+            const statusClass = isCompleted ? 'completed' : (task.status === 'active' ? 'active' : 'pending');
+            const statusText = isCompleted ? this.t('completed') : (task.status === 'active' ? this.t('active') : this.t('pending'));
+            const progress = isCompleted ? 100 : (task.total / task.max) * 100;
 
             return `
                 <div class="my-task-card">
@@ -2384,12 +2724,11 @@ class App {
                         <span class="task-name">${task.name}</span>
                         <span class="task-status ${statusClass}">${statusText}</span>
                     </div>
-                    ${task.status === 'active' ? `
-                        <div class="task-progress">
-                            <div class="progress-bar" style="width:${progress}%"></div>
-                            <div class="progress-text">${task.total}/${task.max} ${this.t('completions')}</div>
-                        </div>
-                    ` : ''}
+                    ${task.description ? `<div style="font-size:0.7rem;color:var(--text-secondary);margin-top:4px;">${task.description}</div>` : ''}
+                    <div class="task-progress-bar">
+                        <div class="progress-bar" style="width:${Math.min(progress, 100)}%"></div>
+                        <div class="progress-text">${task.total}/${task.max} ${this.t('completions')}</div>
+                    </div>
                 </div>
             `;
         }).join('');
@@ -2403,13 +2742,15 @@ class App {
         const claimable = this.claimableEarnings;
         const totalEarnings = this.totalEarnings;
 
+        const hasClaimable = claimable.gram > 0;
+
         el.innerHTML = `
             <div class="glass-card" style="padding:20px;margin-bottom:16px;">
                 <h3 style="text-align:center;margin-bottom:12px;"><i class="fas fa-users" style="color:var(--primary);"></i> ${this.t('invite_earn')}</h3>
                 <div class="invite-earnings-details">
                     <div class="invite-earning-item">
-                        <span class="icon-circle-small"><i class="fas fa-ad"></i></span>
-                        <span class="earning-text">${this.t('earn_30_ads')}</span>
+                        <span class="icon-circle-small"><i class="fas fa-percent"></i></span>
+                        <span class="earning-text">${this.t('earn_percent', { percent: APP_CONFIG.REFERRAL_PERCENTAGE || 10 })}</span>
                     </div>
                     <div class="invite-earning-item">
                         <span class="icon-circle-small"><i class="fas fa-tasks"></i></span>
@@ -2429,36 +2770,21 @@ class App {
                 </div>
 
                 <div style="display:flex;gap:8px;margin-top:12px;">
-                    <button class="earn-btn" id="copy-invite-link" style="flex:1;"><i class="fas fa-copy"></i> ${this.t('copy')}</button>
+                    <button class="earn-btn" id="copy-invite-link" style="flex:1;padding:10px;font-size:0.8rem;"><i class="fas fa-copy"></i> ${this.t('copy')}</button>
                 </div>
             </div>
 
-            <div class="earnings-section">
-                <div class="section-title">
-                    <span class="icon-circle"><i class="fas fa-gift"></i></span>
-                    ${this.t('available_rewards')}
+            <div class="earnings-grid">
+                <div class="claim-card">
+                    <img src="${APP_CONFIG.ICONS.GRAM}">
+                    <div class="claim-amount">${claimable.gram.toFixed(4)}</div>
+                    <div class="claim-label">${this.t('available_rewards')}</div>
+                    ${hasClaimable ? `<button class="claim-btn" id="claim-gram">${this.t('claim')}</button>` : ''}
                 </div>
-                <div class="claim-section">
-                    <div class="claim-card">
-                        <img src="${APP_CONFIG.ICONS.GRAM}">
-                        <div class="claim-amount">${claimable.gram.toFixed(4)}</div>
-                        <div class="claim-label">GRAM</div>
-                        <button class="claim-btn ${claimable.gram <= 0 ? 'done' : ''}" id="claim-gram">${claimable.gram <= 0 ? '0' : 'Claim'}</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="earnings-section">
-                <div class="section-title">
-                    <span class="icon-circle"><i class="fas fa-coins"></i></span>
-                    ${this.t('total_earnings')}
-                </div>
-                <div class="claim-section">
-                    <div class="claim-card">
-                        <img src="${APP_CONFIG.ICONS.GRAM}">
-                        <div class="claim-amount">${totalEarnings.gram.toFixed(4)}</div>
-                        <div class="claim-label">GRAM</div>
-                    </div>
+                <div class="claim-card">
+                    <img src="${APP_CONFIG.ICONS.GRAM}">
+                    <div class="claim-amount">${totalEarnings.gram.toFixed(4)}</div>
+                    <div class="claim-label">${this.t('total_earnings')}</div>
                 </div>
             </div>
         `;
@@ -2470,7 +2796,7 @@ class App {
 
         document.getElementById('claim-gram')?.addEventListener('click', async () => {
             if (this.claimableEarnings.gram <= 0) return;
-            if (await this.showAd('TICTACTOE')) {
+            if (await this.showAd()) {
                 this.gramBalance += this.claimableEarnings.gram;
                 this.claimableEarnings.gram = 0;
                 this._dirty = true;
@@ -2482,8 +2808,8 @@ class App {
         });
     }
 
-    renderMy() {
-        const el = document.getElementById('my-page');
+    renderWalletPage() {
+        const el = document.getElementById('wallet-page');
         if (!el) return;
 
         if (!this.depositMemo) {
@@ -2491,39 +2817,37 @@ class App {
         }
 
         el.innerHTML = `
+            <div class="page-header">
+                <h2><i class="fas fa-wallet"></i> ${this.t('wallet')}</h2>
+            </div>
+
             <div class="deposit-card glass-card">
                 <div class="deposit-title"><i class="fas fa-arrow-down"></i> ${this.t('deposit_funds')}</div>
                 <div class="deposit-info">
                     <div class="deposit-info-item">
-                        <span class="label">${this.t('wallet_address')}</span>
+                        <span class="label">${this.t('deposit_address')}</span>
                         <span class="value">
-                            ${APP_CONFIG.TON_WALLET_ADDRESS}
+                            <span class="addr-text">${APP_CONFIG.TON_WALLET_ADDRESS}</span>
                             <button class="copy-btn" id="copy-deposit-address"><i class="fas fa-copy"></i></button>
                         </span>
                     </div>
                     <div class="deposit-info-item">
-                        <span class="label">${this.t('memo')}</span>
+                        <span class="label">${this.t('deposit_memo')}</span>
                         <span class="value">
-                            ${this.depositMemo}
+                            <span class="addr-text">${this.depositMemo}</span>
                             <button class="copy-btn" id="copy-deposit-memo"><i class="fas fa-copy"></i></button>
                         </span>
                     </div>
                 </div>
                 <button class="withdraw-confirm-btn" id="check-deposit-btn">${this.t('check_payment')}</button>
-                <div id="deposit-status" style="margin-top:8px;text-align:center;font-size:0.8rem;"></div>
+                <div id="deposit-status" style="margin-top:8px;text-align:center;font-size:0.75rem;"></div>
             </div>
 
             <div class="withdraw-card glass-card">
                 <div class="withdraw-title"><i class="fas fa-arrow-up-right-from-square"></i> ${this.t('withdraw_funds')}</div>
-                <div class="withdraw-options">
-                    <div class="withdraw-option active">
-                        <img src="${APP_CONFIG.ICONS.GRAM}">
-                        <div class="option-label">GRAM</div>
-                    </div>
-                </div>
 
                 <div class="form-group">
-                    <label class="form-label">${this.t('wallet')}</label>
+                    <label class="form-label">${this.t('wallet_address')}</label>
                     <input type="text" id="wallet-input" class="form-input" placeholder="Enter wallet address">
                 </div>
                 <div class="form-group">
@@ -2533,7 +2857,7 @@ class App {
                         <button class="action-btn" id="max-btn">MAX</button>
                     </div>
                 </div>
-                <div class="withdraw-note">${this.t('min_withdraw', { min: APP_CONFIG.MINIMUM_WITHDRAW })} GRAM</div>
+                <div class="withdraw-note">${this.t('min_withdraw', { min: APP_CONFIG.MINIMUM_WITHDRAW })}</div>
                 ${APP_CONFIG.WITHDRAWAL_FEES > 0 ? `<div class="withdraw-note">${this.t('withdrawal_fees_note', { fees: APP_CONFIG.WITHDRAWAL_FEES })}</div>` : ''}
                 <button class="withdraw-confirm-btn disabled" id="withdraw-btn">${this.t('confirm_withdrawal')}</button>
             </div>
@@ -2592,7 +2916,7 @@ class App {
                     this.depositMemo = 'DEP_' + Date.now().toString(36).toUpperCase() + '_' + this.tgUser.id.toString(36).toUpperCase();
                     statusEl.innerHTML = `<span style="color:var(--success);">${this.t('payment_verified')} +${amount} GRAM</span>`;
                     this.showNotification('Success', this.t('deposit_success', { amount: amount }), 'success');
-                    this.renderMy();
+                    this.renderWalletPage();
                 } else if (data.success && !data.found) {
                     statusEl.innerHTML = `<span style="color:var(--warning);">${this.t('payment_not_found')}</span>`;
                 } else {
@@ -2637,7 +2961,7 @@ class App {
             const amount = parseFloat(amountInput.value);
             const wallet = walletInput.value.trim();
 
-            if (await this.showAd('TICTACTOE')) {
+            if (await this.showAd()) {
                 const totalRequired = amount + (APP_CONFIG.WITHDRAWAL_FEES || 0);
                 this.gramBalance -= totalRequired;
                 this.addWithdrawal(amount, 'GRAM', wallet);
@@ -2645,7 +2969,7 @@ class App {
                 this.saveUserData(false);
                 this.updateHeaderBalances();
                 this.showNotification('Withdrawal Requested', `${amount} GRAM sent to ${wallet}`, 'success');
-                this.renderMy();
+                this.renderWalletPage();
             }
         });
 
@@ -2679,7 +3003,7 @@ class App {
                 <div class="transaction-left">
                     <i class="fas ${tab === 'deposits' ? 'fa-arrow-down' : 'fa-arrow-up'}" style="color:${tab === 'deposits' ? 'var(--success)' : 'var(--error)'};"></i>
                     <span class="transaction-name">${tab === 'deposits' ? 'Deposit' : 'Withdrawal'}</span>
-                    ${tx.memo ? `<span style="font-size:0.6rem;color:var(--text-secondary);">${tx.memo}</span>` : ''}
+                    ${tx.memo ? `<span style="font-size:0.55rem;color:var(--text-secondary);font-family:monospace;">${tx.memo}</span>` : ''}
                 </div>
                 <span class="transaction-amount ${tab === 'deposits' ? 'positive' : 'negative'}">${tab === 'deposits' ? '+' : '-'}${tx.amount.toFixed(4)} ${tx.currency || 'GRAM'}</span>
             </div>
@@ -2713,7 +3037,7 @@ class App {
             return false;
         }
 
-        if (await this.showAd('TICTACTOE')) {
+        if (await this.showAd()) {
             await usedRef.set(true);
             this.userCompletedPromoCodes.add(code);
 
@@ -2741,7 +3065,7 @@ class App {
             'games-page': 'games-page',
             'tasks-page': 'tasks-page',
             'invite-page': 'invite-page',
-            'my-page': 'my-page',
+            'wallet-page': 'wallet-page',
             'tictactoe-page': 'tictactoe-page',
             'dice-page': 'dice-page',
             'lottery-page': 'lottery-page',
@@ -2758,7 +3082,7 @@ class App {
             'games-page': 1,
             'tasks-page': 2,
             'invite-page': 3,
-            'my-page': 4
+            'wallet-page': 4
         };
         if (navMap[page] !== undefined) {
             const btns = document.querySelectorAll('.nav-btn');
@@ -2769,7 +3093,7 @@ class App {
         else if (page === 'games-page') this.renderGamesPage();
         else if (page === 'tasks-page') this.renderTasksPage();
         else if (page === 'invite-page') this.renderInvite();
-        else if (page === 'my-page') this.renderMy();
+        else if (page === 'wallet-page') this.renderWalletPage();
         else if (page === 'tictactoe-page') this.renderTicTacToePage();
         else if (page === 'dice-page') this.renderDicePage();
         else if (page === 'lottery-page') this.renderLotteryPage();
@@ -2839,7 +3163,7 @@ class App {
             }
             if (this.adCountDate !== today) {
                 this.adCountDate = today;
-                this.adCounts = { TICTACTOE: 0, DICE: 0, LOTTERY: 0 };
+                this.adCount = 0;
             }
             this.dailyTasksCompleted = 0;
         }, 60000);
